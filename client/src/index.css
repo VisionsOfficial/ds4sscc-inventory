@@ -1,0 +1,59 @@
+@font-face {
+	font-family: WorkSansRegular;
+	src: url("./assets/fonts/WorkSans-Regular.ttf");
+}
+@font-face {
+	font-family: WorkSansBold;
+	src: url("./assets/fonts/WorkSans-Bold.ttf");
+}
+@font-face {
+	font-family: WorkSansMedium;
+	src: url("./assets/fonts/WorkSans-Medium.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: WorkSansRegular, sans-serif;
+}
+
+html {
+	background: #ccf5e5;
+	color: #17214e;
+}
+
+p {
+	font-size: 16px;
+}
+
+body {
+	min-height: 100vh;
+}
+
+button {
+	padding: 10px 15px;
+	margin: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	background: #17214e;
+	border: none;
+	color: white;
+	transition: all 0.1s ease;
+}
+
+button:hover {
+	background: #5fa342;
+}
+
+table {
+	border-collapse: collapse;
+  margin: 20px 10px;
+}
+table tbody tr td {
+	border: 1px solid black;
+}
+
+.bg-gray {
+	background-color: #f4f4f4;
+}

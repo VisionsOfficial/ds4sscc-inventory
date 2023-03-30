@@ -1,0 +1,106 @@
+@use "../../shared/styles/colors";
+@use "../../shared/styles/mixins";
+
+.BuildingBlockPage {
+	section:nth-child(1) {
+		background-color: colors.$dark-primary;
+		// max-height: 500px;
+		// height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+		@media (max-width: 600px) {
+			flex-direction: column;
+			height: fit-content;
+		}
+
+		div:nth-child(1) {
+			display: flex;
+			flex-direction: column;
+
+			img {
+				height: 200px;
+				padding: 25px;
+			}
+
+			h1 {
+				padding: 30px;
+				color: white;
+			}
+
+			@media (max-width: 600px) {
+				img {
+					height: 100px;
+					padding: 15px;
+				}
+
+				h1 {
+					font-size: 18px;
+				}
+			}
+
+			p {
+				color: white;
+				padding: 30px;
+			}
+		}
+	}
+
+	section:nth-child(2) {
+		background-color: white;
+		padding: 100px 5% 50px 5%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+
+		@media (max-width: 1100px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: 765px) {
+			grid-template-columns: 1fr;
+		}
+
+		@media (max-width: 600px) {
+			padding: 50px 10px;
+		}
+
+		table {
+			border-collapse: collapse;
+			overflow-x: scroll;
+
+			tr {
+				border-bottom: 1px solid colors.$secondary;
+
+				td {
+					padding: 15px 0;
+					border: none;
+				}
+
+				td:nth-child(1) {
+					font-weight: bold;
+					color: colors.$dark-primary;
+					padding-right: 100px;
+				}
+
+				@media (max-width: 600px) {
+					td {
+						padding: 2px 0;
+					}
+
+					td:nth-child(1) {
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		background: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

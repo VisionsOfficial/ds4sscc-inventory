@@ -1,0 +1,17 @@
+@use "../../../shared/styles/colors";
+
+.Form {
+	label {
+		margin: 20px 0;
+		font-weight: bold;
+		color: colors.$secondary;
+	}
+
+	input {
+		border: none;
+	}
+
+	.formgroup {
+		margin: 20px 10px;
+	}
+}

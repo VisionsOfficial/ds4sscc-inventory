@@ -1,0 +1,13 @@
+@use '../../../shared/styles/colors';
+
+.title {
+    color: colors.$secondary;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 25px 20px 20px 0;
+
+    @media (max-width: 600px) {
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
+}

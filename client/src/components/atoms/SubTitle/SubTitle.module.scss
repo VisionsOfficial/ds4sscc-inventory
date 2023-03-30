@@ -1,0 +1,8 @@
+@use '../../../../shared/styles/colors';
+
+.SubTitle {
+    color: colors.$dark-primary;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 0;
+}

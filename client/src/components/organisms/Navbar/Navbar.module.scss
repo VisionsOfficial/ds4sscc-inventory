@@ -1,0 +1,28 @@
+@use "../../../shared/styles/mixins";
+
+.Navbar {
+	display: flex;
+	width: 100%;
+	background: white;
+
+	nav {
+		flex: 1;
+	}
+
+	img {
+		height: 100px;
+		padding: 10px;
+		cursor: pointer;
+	}
+
+	div {
+		flex: 1;
+		@include mixins.flexCenter;
+	}
+
+	@media (max-width: 600px) {
+		img {
+			height: 60px;
+		}
+	}
+}

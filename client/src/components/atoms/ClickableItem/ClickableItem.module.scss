@@ -1,0 +1,10 @@
+@use "../../../shared/styles/colors";
+
+.ClickableItem {
+	display: inline-block;
+	margin: 2px 5px;
+	padding: 5px 7px;
+	background: colors.$dark-primary;
+	color: white;
+	cursor: pointer;
+}

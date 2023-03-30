@@ -1,0 +1,95 @@
+@use "../../../shared/styles/colors";
+
+.ProjectFilter {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 12px;
+
+	.Header {
+		display: flex;
+		flex-direction: row;
+
+		h5 {
+			color: colors.$primary;
+			font-size: 16px;
+			flex: 4;
+		}
+
+		span {
+			flex: 1;
+			cursor: pointer;
+			color: colors.$secondary;
+
+			&:hover {
+				font-weight: bold;
+			}
+		}
+	}
+
+	.circle {
+        width: 20px;
+        height: 20px;
+        padding: 2px 5px;
+		margin-right: 5px;
+        border-radius: 50px;
+        background-color: black;
+	}
+}
+
+.Dropdown {
+	text-align: left;
+	border: 1px solid #ccc;
+	background: colors.$gray;
+	position: relative;
+	min-width: 150px;
+	max-width: 100%;
+	padding: 10px;
+	cursor: pointer;
+
+	.selected {
+		display: flex;
+
+		span {
+			flex: 5;
+		}
+
+		svg {
+			flex: 1;
+		}
+	}
+
+	.menu {
+		position: absolute;
+		transform: translateY(7px);
+		width: 100%;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		overflow: auto;
+		max-height: 150px;
+		background-color: #fff;
+		z-index: 50;
+	}
+
+	.item {
+		padding: 5px;
+		cursor: pointer;
+        display: flex;
+
+		&:hover {
+			background-color: #9fc3f870;
+		}
+	}
+
+    .few_mature div[data-circle] {
+		background: yellow;
+	}
+
+	.evolving div[data-circle] {
+		background: orange;
+	}
+
+	.quite_mature div[data-circle] {
+		background: green;
+	}
+}
