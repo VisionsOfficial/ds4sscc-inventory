@@ -14,20 +14,22 @@ export const LandingPage = () => {
 			<section className={Styles.header}>
 				<div>
 					<Title>
-						Interactive inventory of smart and sustainable cities and
-						communities
+						Interactive Catalogue of Specifications for building data spaces in
+						Smart and Sustainable Cities and Communities
 					</Title>
 					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-						Voluptatem, doloribus modi quae veritatis iste blanditiis enim harum
-						ipsam cumque culpa ducimus perferendis nisi quisquam voluptate
-						error, voluptatibus nemo sint perspiciatis commodi illo iusto
-						molestiae ipsa! Unde quibusdam nobis ad alias consequuntur. Nulla
-						expedita libero, magni sequi deleniti repudiandae odit incidunt?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-						vitae quo possimus suscipit sit sequi.
+						This interactive Catalogue of Specifications aims at providing an
+						overview of the identified building blocks (technical and
+						non-technical) required to set up and operate the data space for
+						smart and sustainable cities and communities. The listed eleven BBs
+						describe functionality required by data spaces in regard to data
+						interoperability, data trust and sovereignty, data value creation
+						and data spaces governance. For each BB, this Catalogue shows the
+						related and commonly used standards, industry body specifications
+						and reference implementations. The Catalogue is open for
+						contributions, so interested people may provide suggestions about
+						additional inputs. For general comments about the Catalogue, please
+						write us in our Contact form.
 					</p>
 				</div>
 			</section>
@@ -35,21 +37,6 @@ export const LandingPage = () => {
 			<section className={Styles.projects}>
 				<Projects />
 			</section>
-
-			{/* <section className={Styles.registration}>
-				<div className={Styles.imgBg}>
-					<div></div>
-				</div>
-				<div className="bg-gray">
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos illo
-						eius omnis sunt asperiores quam pariatur sint, quidem rem dolores.
-					</p>
-					<Button className="secondary" onClick={() => navigate("/newproject")}>
-						Add your project
-					</Button>
-				</div>
-			</section> */}
 		</div>
 	);
 };
