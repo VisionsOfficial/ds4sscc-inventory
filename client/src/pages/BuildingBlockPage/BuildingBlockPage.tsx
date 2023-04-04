@@ -7,6 +7,7 @@ import { FieldCard } from "../../components/molecules/FieldCard/FieldCard";
 import { useUniqueObjectData } from "../../hooks/api/useUniqueObjectData";
 import { IBuildingBlock } from "../../types";
 import Styles from "./BuildingBlockPage.module.scss";
+import ExtraStyles from "../../components/molecules/ProjectFilter/ProjectFilter.module.scss";
 
 export const BuildingBlockPage = () => {
 	const { id } = useParams();
@@ -50,7 +51,7 @@ export const BuildingBlockPage = () => {
 							</ClickableItem>
 						))}
 					</FieldCard>
-					<FieldCard title="Related Specifications">
+					<FieldCard title="Related Industry body Specifications">
 						{data?.related_specifications?.map((s) => (
 							<ClickableItem
 								key={s._id}
@@ -77,7 +78,17 @@ export const BuildingBlockPage = () => {
 						<p>{data?.scope}</p>
 					</FieldCard>
 					<FieldCard title="Maturity Level">
-						<p>{data?.maturity}</p>
+						<span
+							className={`${
+								ExtraStyles[
+									data?.maturity?.toLowerCase().replaceAll(" ", "_") || ""
+								] || ""
+							}`}
+							style={{ display: "flex" }}
+						>
+							<div className={`${ExtraStyles.circle}`} data-circle></div>{" "}
+							<p>{data?.maturity}</p>
+						</span>
 					</FieldCard>
 				</section>
 			)}

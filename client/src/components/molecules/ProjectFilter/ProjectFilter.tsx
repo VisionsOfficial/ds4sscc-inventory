@@ -1,9 +1,4 @@
-import {
-	PropsWithChildren,
-	useEffect,
-	useRef,
-	useState,
-} from "react";
+import { PropsWithChildren, useEffect, useRef, useState } from "react";
 import Styles from "./ProjectFilter.module.scss";
 
 type FilterType = "publisher" | "implemented_mims" | "scope" | "maturity";
@@ -11,7 +6,7 @@ type FilterType = "publisher" | "implemented_mims" | "scope" | "maturity";
 type ProjectFilterProps = {
 	type: FilterType;
 	filter: string;
-    filters: any;
+	filters: any;
 	placeholder: string;
 	options: { label: string; value: string }[];
 	onChange: (type: FilterType, value: string) => any;
@@ -20,7 +15,7 @@ type ProjectFilterProps = {
 
 export const ProjectFilter = ({
 	filter,
-    filters,
+	filters,
 	options,
 	type,
 	onChange,
@@ -104,7 +99,21 @@ const Dropdown = ({
 				}}
 				ref={selectRef}
 			>
-				<span>{value || placeholder}</span>
+				{(value === "Quite mature" ||
+					value === "Evolving" ||
+					value === "Few mature") && (
+					<div
+						className={`${Styles.item} ${
+							Styles[value?.toLowerCase().replaceAll(" ", "_") || ""]
+						}`}
+						data-circle
+					>
+						<div className={Styles.circle} data-circle></div>
+					</div>
+				)}
+				<span style={{ display: "flex", alignItems: "center" }}>
+					{value || placeholder}
+				</span>
 				<Icon />
 			</div>
 			{showMenu && (

@@ -51,7 +51,7 @@ export const Projects = () => {
 				<ProjectFilter
 					placeholder="Select..."
 					type="implemented_mims"
-					filter="Implemented MIMs"
+					filter="Relevant MIMs"
                     filters={filters}
 					options={MIMS.map((v) => {
 						return { label: v, value: v };

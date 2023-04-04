@@ -120,7 +120,7 @@ export const BuildingBlockForm = ({ onSubmit, data }: FormProps) => {
 					))}
 			</div>
 			<div className={Styles.formgroup}>
-				<Label>Related Specifications</Label>
+				<Label>Related Industry body Specifications</Label>
 				{specificationsLoading && <Loader />}
 				{!specificationsError &&
 					specifications.map((s, i) => (
