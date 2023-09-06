@@ -11,37 +11,45 @@ import { EditResourcePage } from "./pages/EditResourcePage/EditResourcePage";
 import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { ResourceDescriptionPage } from "./pages/ResourceDescriptionPage/ResourceDescriptionPage";
 import { SuggestionSubmitPage } from "./pages/SuggestionSubmitPage/SuggestionSubmitPage";
+import { HomePage } from "./pages/HomePage/HomePage";
 
 function App() {
-	return (
-		<Router>
-			<Navbar />
-			<ScrollTop>
-				<Routes>
-					<Route path="/" element={<LandingPage />} />
-					<Route path="/project/:id" element={<BuildingBlockPage />} />
-					<Route path="/suggest/:id" element={<SuggestionSubmitPage />} />
-					<Route
-						path="/resources/:resource/:id"
-						element={<ResourceDescriptionPage />}
-					/>
+  return (
+    <Router>
+      <Navbar />
+      <ScrollTop>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/multi-stakeholder-governance"></Route>
+          <Route path="/catalogue-of-specifications"></Route>
+          <Route path="/reference-architecture"></Route>
+          <Route path="/priority-datasets"></Route>
+          <Route path="/collected-use-cases"></Route>
+          <Route path="/action-plan"></Route>
 
-					<Route path="/admin" element={<AdminPage />} />
-					<Route path="/admin/portal" element={<AdminPortal />} />
-					<Route
-						path="/admin/portal/suggestion/:resource/:id"
-						element={<AdminReviewPage />}
-					/>
-					<Route path="/admin/add/:resource" element={<AddResourcePage />} />
-					<Route
-						path="/admin/portal/edit/:resource/:id"
-						element={<EditResourcePage />}
-					/>
-				</Routes>
-				<Footer />
-			</ScrollTop>
-		</Router>
-	);
+          <Route path="/project/:id" element={<BuildingBlockPage />} />
+          <Route path="/suggest/:id" element={<SuggestionSubmitPage />} />
+          <Route
+            path="/resources/:resource/:id"
+            element={<ResourceDescriptionPage />}
+          />
+
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/admin/portal" element={<AdminPortal />} />
+          <Route
+            path="/admin/portal/suggestion/:resource/:id"
+            element={<AdminReviewPage />}
+          />
+          <Route path="/admin/add/:resource" element={<AddResourcePage />} />
+          <Route
+            path="/admin/portal/edit/:resource/:id"
+            element={<EditResourcePage />}
+          />
+        </Routes>
+        <Footer />
+      </ScrollTop>
+    </Router>
+  );
 }
 
 export default App;

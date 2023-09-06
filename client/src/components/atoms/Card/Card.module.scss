@@ -1,0 +1,9 @@
+@use "../../../shared/styles/index" as *;
+
+.Card {
+  background-color: $card-bg;
+  padding: $medium;
+  width: 100%;
+  @include flexColumn(center, space-between);
+  gap: $x-small;
+}

@@ -1,0 +1,48 @@
+@use "../../shared//styles/index" as *;
+
+.HomePage {
+  &Header {
+    background-image: url("../../assets/imgs/featured_gb.jpg");
+    background-color: $dark-primary;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    div {
+      background: #17214ee0;
+      padding: $padding-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    p {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      color: $white;
+    }
+  }
+
+  .discover {
+    background-color: $white;
+    @include flexColumn();
+    gap: $medium;
+    padding: $padding-content;
+    min-height: 400px;
+
+    @include resolution(tablet) {
+      @include flexRow(space-between);
+      flex-wrap: wrap;
+    }
+
+    @include resolution(x-desktop) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      row-gap: $large;
+    }
+  }
+}
