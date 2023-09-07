@@ -1,0 +1,39 @@
+@use "../../../../shared/styles/index" as *;
+
+.HeaderPage {
+  background-color: $primary;
+  padding: $padding-content;
+  @include flexColumn();
+  gap: $medium;
+
+  img {
+    aspect-ratio: 1/1;
+    width: 180px;
+    max-width: 180px;
+  }
+
+  .content {
+    @include flexColumn();
+    gap: $s-medium;
+    text-align: center;
+
+    p {
+      text-align: justify;
+      color: $white;
+    }
+  }
+
+  @include resolution(tablet) {
+    @include flexRow(flex-start, flex-start);
+    gap: 50px;
+
+    img {
+      align-self: flex-start;
+    }
+
+    .content {
+      align-items: flex-start;
+      text-align: start;
+    }
+  }
+}

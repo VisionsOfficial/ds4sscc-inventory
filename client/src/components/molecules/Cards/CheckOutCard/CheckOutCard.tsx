@@ -1,28 +1,28 @@
 import { PropsWithChildren } from "react";
-import Styles from "./CategoryCard.module.scss";
+import Styles from "./CheckOutCard.module.scss";
 import { Card } from "../../../atoms/Card/Card";
 import { DiscoverCategory } from "../../../../types";
+import { useCategories } from "../../../../hooks/useCategories";
 import { Button } from "../../../atoms/Button/Button";
 import { useNavigate } from "react-router-dom";
-import { useCategories } from "../../../../hooks/useCategories";
 
-type CategoryCardProps = {
+type CheckOutCardProps = {
   className?: string;
-  category: DiscoverCategory;
   variantColor?: "bgGray";
+  category: DiscoverCategory;
 };
 
-export const CategoryCard = ({
-  category,
+export const CheckOutCard = ({
   className,
   variantColor,
-}: PropsWithChildren<CategoryCardProps>) => {
+  category,
+}: PropsWithChildren<CheckOutCardProps>) => {
   const { contentCategory } = useCategories({ category });
   const navigate = useNavigate();
 
   const setProps = () => {
     let color = "";
-    let classProps = className ? className : "";
+    let classNameProps = className ? className : "";
 
     switch (variantColor) {
       case "bgGray":
@@ -33,25 +33,35 @@ export const CategoryCard = ({
         break;
     }
 
-    return [Styles.CategoryCard, classProps, color].join(" ");
+    return [Styles.CheckOutCard, classNameProps, color].join("");
+  };
+
+  const contentTextCard = () => {
+    switch (category) {
+      case "collectedUseCases":
+        return "Find all use cases and their full descriptions.";
+
+      default:
+        break;
+    }
   };
 
   return (
     <Card className={setProps()}>
-      <div className={Styles.CategoryCardHeader}>
-        {contentCategory?.image}
-        <h3>{contentCategory?.title}</h3>
+      <div className={Styles.header}>
+        <h3>Check out</h3>
+        <p>{contentTextCard()}</p>
       </div>
 
       <Button
-        className={Styles.btn}
+        variantColor="secondary"
         onClick={() => {
           if (contentCategory?.link) {
             navigate(contentCategory?.link);
           }
         }}
       >
-        Discover
+        {contentCategory?.title}
       </Button>
     </Card>
   );

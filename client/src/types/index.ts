@@ -51,9 +51,11 @@ export type SuggestionAPIResponse = {
 };
 
 export type DiscoverCategory =
-  | "multi-stakeholder governance scheme"
-  | "catalogue of specifications"
-  | "reference architecture"
-  | "priority datasets"
-  | "collected use cases"
-  | "action plan";
+  | "multiStakeholderGovernanceScheme"
+  | "catalogueOfSpecifications"
+  | "referenceArchitecture"
+  | "priorityDatasets"
+  | "collectedUseCases"
+  | "actionPlan"
+  | "codeOfConducts"
+  | "DevelopingMultiStakeholder";

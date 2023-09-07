@@ -16,6 +16,7 @@ import developingMultiStakeholder from "../assets/imgs/icons/categories/developi
 import developingMultiStakeholderVariant from "../assets/imgs/icons/categories/developingMultiStakeholder/Developing_a_multi-stakeholder_data_cooperation_2.svg";
 // MULTI-STAKEHOLDER GOVERNANCE SCHEME
 import multiStakeholderGovernance from "../assets/imgs/icons/categories/multiStakeHolderGovernance/Multi-stakeholder_Governance_Scheme_1.svg";
+import multiStakeholderGovernanceVariant from "../assets/imgs/icons/categories/multiStakeHolderGovernance/Multi-stakeholder_Governance_Scheme_2.svg";
 // PRIORITY DATASETS
 import priorityDatasets from "../assets/imgs/icons/categories/priorityDatasets/Priority_Datasets_1.svg";
 import priorityDatasetsVariant from "../assets/imgs/icons/categories/priorityDatasets/Priority_dataset_2.svg";
@@ -47,6 +48,7 @@ export const APP_IMAGES_ASSETS = {
       },
       multiStakeholderGovernance: {
         multiStakeholderGovernance,
+        multiStakeholderGovernanceVariant,
       },
       priorityDatasets: {
         priorityDatasets,

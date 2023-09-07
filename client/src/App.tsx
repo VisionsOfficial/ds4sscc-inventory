@@ -12,6 +12,7 @@ import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { ResourceDescriptionPage } from "./pages/ResourceDescriptionPage/ResourceDescriptionPage";
 import { SuggestionSubmitPage } from "./pages/SuggestionSubmitPage/SuggestionSubmitPage";
 import { HomePage } from "./pages/HomePage/HomePage";
+import { MultiStakeholderGovernancePage } from "./pages/MultiStakeholderGovernancePage/MultiStakeholderGovernancePage";
 
 function App() {
   return (
@@ -20,7 +21,12 @@ function App() {
       <ScrollTop>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/multi-stakeholder-governance"></Route>
+          <Route
+            path="/multi-stakeholder-governance"
+            element={<MultiStakeholderGovernancePage />}
+          >
+            <Route path="code-of-conducts" element={<>Hello</>}></Route>
+          </Route>
           <Route path="/catalogue-of-specifications"></Route>
           <Route path="/reference-architecture"></Route>
           <Route path="/priority-datasets"></Route>

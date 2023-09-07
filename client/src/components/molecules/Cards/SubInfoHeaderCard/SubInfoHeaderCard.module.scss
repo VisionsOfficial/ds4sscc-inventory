@@ -1,0 +1,15 @@
+@use "../../../../shared/styles/index" as *;
+
+.SubInfoHeaderCard {
+  @include flexColumn();
+  text-align: center;
+  gap: $small;
+  padding: $padding-content;
+  transform: translateY(-50px);
+  margin: 0 10%;
+  width: auto;
+
+  h2 {
+    font-size: $title;
+  }
+}

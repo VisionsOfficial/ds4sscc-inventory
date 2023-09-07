@@ -7,12 +7,12 @@ import { DiscoverCategory } from "../../types";
 type HomePageProps = {};
 
 const setCategoryCard: DiscoverCategory[] = [
-  "multi-stakeholder governance scheme",
-  "catalogue of specifications",
-  "reference architecture",
-  "priority datasets",
-  "collected use cases",
-  "action plan",
+  "multiStakeholderGovernanceScheme",
+  "catalogueOfSpecifications",
+  "referenceArchitecture",
+  "priorityDatasets",
+  "collectedUseCases",
+  "actionPlan",
 ];
 
 export const HomePage = ({}: PropsWithChildren<HomePageProps>) => {
