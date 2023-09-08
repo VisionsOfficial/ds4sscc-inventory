@@ -1,0 +1,6 @@
+@use '../../../../shared/styles/index' as *;
+
+.LegalFramework {
+    @include flexColumn();
+    gap: $small;
+}

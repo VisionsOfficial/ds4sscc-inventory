@@ -1,0 +1,10 @@
+@use '../../../../shared/styles/index' as *;
+
+.TextWithIcon {
+    @include flexRow(flex-start, flex-start);
+    gap: $small;
+
+    svg {
+        min-width: 32px;
+    }
+}

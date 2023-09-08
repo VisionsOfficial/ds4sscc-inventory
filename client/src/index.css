@@ -46,6 +46,11 @@ button:hover {
   background: #5fa342;
 }
 
+.btn-secondary {
+  background-color: #7ed958;
+  color: #17214e;
+}
+
 h3 {
   font-size: 1.25rem;
 }
@@ -60,4 +65,15 @@ table tbody tr td {
 
 .bg-gray {
   background-color: #f4f4f4;
+}
+
+.img-placeholder {
+  background-color: black;
+  width: 250px;
+  max-width: 250px;
+  height: 250px;
+  min-height: 250px;
+  float: right;
+  margin: 20px;
+  margin-right: 0;
 }

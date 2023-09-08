@@ -1,0 +1,34 @@
+@use "../../shared/styles/index" as *;
+
+.CodeOfConductPage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .nav {
+    margin: 0 10% $large 10%;
+    @include flexColumn();
+
+    button {
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    @include resolution(mobile) {
+      @include flexRow(flex-start);
+      flex-wrap: wrap;
+    }
+
+    @include resolution(tablet) {
+      justify-content: center;
+    }
+
+    @include resolution(xx-desktop) {
+      justify-content: space-between;
+    }
+  }
+
+  .content {
+    margin: 0% 10%;
+    @include flexColumn();
+  }
+}

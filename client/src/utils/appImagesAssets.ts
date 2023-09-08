@@ -24,8 +24,14 @@ import priorityDatasetsVariant from "../assets/imgs/icons/categories/priorityDat
 import referenceArchitecture from "../assets/imgs/icons/categories/referenceArchitecture/Reference_Architecture_1.svg";
 import referenceArchitectureVariant from "../assets/imgs/icons/categories/referenceArchitecture/Reference_Architecture_2.svg";
 
+//BASICS
+import checkCircle from "../assets/imgs/icons/basics/check-circle.svg";
+
 export const APP_IMAGES_ASSETS = {
   icon: {
+    basic: {
+      checkCircle,
+    },
     categories: {
       actionPlan: {
         actionPlan,

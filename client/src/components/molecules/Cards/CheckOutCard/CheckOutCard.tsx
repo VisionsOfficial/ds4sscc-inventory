@@ -54,7 +54,7 @@ export const CheckOutCard = ({
       </div>
 
       <Button
-        variantColor="secondary"
+        className="btn-secondary"
         onClick={() => {
           if (contentCategory?.link) {
             navigate(contentCategory?.link);

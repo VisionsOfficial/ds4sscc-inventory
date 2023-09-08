@@ -1,0 +1,13 @@
+@use "../../../../shared/styles/index" as *;
+
+.TableHead {
+  background-color: $primary;
+  color: $secondary;
+  @include flexColumn(stretch, flex-start);
+  gap: $small;
+  width: 100%;
+
+  th {
+    padding: $medium;
+  }
+}

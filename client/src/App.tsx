@@ -13,6 +13,7 @@ import { ResourceDescriptionPage } from "./pages/ResourceDescriptionPage/Resourc
 import { SuggestionSubmitPage } from "./pages/SuggestionSubmitPage/SuggestionSubmitPage";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { MultiStakeholderGovernancePage } from "./pages/MultiStakeholderGovernancePage/MultiStakeholderGovernancePage";
+import { CodeOfConductPage } from "./pages/CodeOfConductPage/CodeOfConductPage";
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
             path="/multi-stakeholder-governance"
             element={<MultiStakeholderGovernancePage />}
           >
-            <Route path="code-of-conducts" element={<>Hello</>}></Route>
+            <Route
+              path="code-of-conducts"
+              element={<CodeOfConductPage />}
+            ></Route>
           </Route>
           <Route path="/catalogue-of-specifications"></Route>
           <Route path="/reference-architecture"></Route>

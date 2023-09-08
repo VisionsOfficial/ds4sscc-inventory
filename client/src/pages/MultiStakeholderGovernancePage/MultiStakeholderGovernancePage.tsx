@@ -4,11 +4,18 @@ import { HeaderPage } from "../../components/molecules/Headers/HeaderPage/Header
 import { SubInfoHeaderCard } from "../../components/molecules/Cards/SubInfoHeaderCard/SubInfoHeaderCard";
 import { CategoryCard } from "../../components/molecules/Cards/CategoryCard/CategoryCard";
 import { CheckOutCard } from "../../components/molecules/Cards/CheckOutCard/CheckOutCard";
+import { useOutlet } from "react-router-dom";
 
 type MultiStakeholderGovernancePageProps = {};
 
 export const MultiStakeholderGovernancePage =
   ({}: PropsWithChildren<MultiStakeholderGovernancePageProps>) => {
+    const outlet = useOutlet();
+
+    if (outlet) {
+      return outlet;
+    }
+
     return (
       <main className={Styles.MultiStakeholderGovernancePage}>
         <HeaderPage category="multiStakeholderGovernanceScheme" subInfoHeader />

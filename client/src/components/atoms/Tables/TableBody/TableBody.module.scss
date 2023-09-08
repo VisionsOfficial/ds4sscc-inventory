@@ -1,0 +1,52 @@
+@use "../../../../shared/styles/index" as *;
+
+.TableBody {
+  background-color: $gray;
+  @include flexColumn(stretch, flex-start);
+  width: 100%;
+
+  tr {
+    @include flexColumn(stretch, flex-start);
+    border-bottom: $small solid $white;
+
+    td {
+      padding: 0;
+      padding-right: $small;
+      border: 0px;
+      text-align: right;
+      @include flexRow(center, stretch);
+      gap: $small;
+
+      span {
+        text-transform: uppercase;
+        text-align: start;
+        background-color: $primary;
+        color: $secondary;
+        padding: $s-small;
+      }
+    }
+    &:is(:not(:last-child)) {
+      td {
+        border-bottom: 1px solid $secondary;
+      }
+    }
+  }
+
+  @include resolution(s-tablet) {
+    display: table-row-group;
+    tr {
+      display: table-row;
+      width: 100%;
+      gap: 0;
+      border-bottom: 0;
+      td {
+        display: table-cell;
+        padding: $medium $small;
+        text-align: initial;
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

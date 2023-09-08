@@ -7,6 +7,10 @@
     @media screen and ($query: 340px) {
       @content;
     }
+  } @else if $device == s-tablet {
+    @media screen and ($query: 650px) {
+      @content;
+    }
   } @else if $device == tablet {
     @media screen and ($query: 770px) {
       @content;

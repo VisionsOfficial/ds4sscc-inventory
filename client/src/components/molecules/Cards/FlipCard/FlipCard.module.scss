@@ -1,0 +1,15 @@
+@use "../../../../shared/styles/index" as *;
+
+.FlipCard {
+  width: 300px;
+  height: auto;
+  min-height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  @include flexRow();
+}
+
+.active {
+  background-color: $secondary;
+  @include flexColumn(center, flex-start);
+}
