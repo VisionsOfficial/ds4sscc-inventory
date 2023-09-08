@@ -35,7 +35,7 @@ export const MultiStakeholderGovernancePage =
           />
         </div>
 
-        <CheckOutCard category="collectedUseCases" />
+        <CheckOutCard category="collectedUseCases" sizing="mainContent" />
       </main>
     );
   };

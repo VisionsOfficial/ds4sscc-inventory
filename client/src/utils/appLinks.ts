@@ -2,7 +2,7 @@ export const APP_LINKS = {
   multiStakeholderGovernance: {
     index: "/multi-stakeholder-governance",
     codeOfConducts: "/multi-stakeholder-governance/code-of-conducts",
-    developing: "/multi-stakeholder-governance/developing-data-cooperation",
+    developing: "/multi-stakeholder-governance/developing-multi-stakeholder",
   },
   catalogueOfSpecifications: "/catalogue-of-specifications",
   referenceArchitecture: "/reference-architecture",

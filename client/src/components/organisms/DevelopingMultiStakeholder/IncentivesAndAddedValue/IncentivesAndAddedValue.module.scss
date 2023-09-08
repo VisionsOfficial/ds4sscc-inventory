@@ -1,0 +1,16 @@
+@use "../../../../shared/styles/index" as *;
+
+.IncentivesAndAddedValue {
+  width: 100%;
+  @include flexColumn(flex-start);
+  gap: $large;
+
+  .card {
+    align-items: flex-start;
+    gap: $medium;
+
+    table {
+      margin: 0;
+    }
+  }
+}

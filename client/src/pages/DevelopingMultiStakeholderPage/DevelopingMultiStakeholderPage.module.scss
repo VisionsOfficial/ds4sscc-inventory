@@ -1,0 +1,48 @@
+@use "../../shared/styles/index" as *;
+
+.DevelopingMultiStakeholderPage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .navContainer {
+    margin: 0 10%;
+    margin-bottom: $large;
+    @include flexColumn();
+    gap: $s-large;
+
+    .nav {
+      @include flexColumn(stretch);
+      gap: $s-small;
+    }
+
+    button {
+      text-transform: uppercase;
+      font-size: 16px;
+      width: 100%;
+      margin: 0;
+      max-width: 230px;
+      min-width: 230px;
+    }
+
+    .subNav {
+      @include flexColumn(stretch);
+      gap: $s-small;
+    }
+
+    @include resolution(mobile) {
+      @include flexRow(center, flex-start);
+      flex-wrap: wrap;
+    }
+
+    @include resolution(xx-desktop) {
+      @include flexRow(space-between, flex-start);
+      flex-wrap: wrap;
+    }
+  }
+
+  .content {
+    margin: 0% 10%;
+    @include flexColumn();
+    gap: $small;
+  }
+}

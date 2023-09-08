@@ -58,4 +58,5 @@ export type DiscoverCategory =
   | "collectedUseCases"
   | "actionPlan"
   | "codeOfConducts"
-  | "DevelopingMultiStakeholder";
+  | "DevelopingMultiStakeholder"
+  | "governanceRules";

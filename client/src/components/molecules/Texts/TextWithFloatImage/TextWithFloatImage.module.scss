@@ -1,0 +1,12 @@
+@use "../../../../shared/styles/index" as *;
+
+.TextWithFloatImage {
+  @include resolution(mobile, max-width) {
+    @include flexColumn();
+    img {
+      float: none;
+      margin: $small auto;
+    }
+  }
+
+}

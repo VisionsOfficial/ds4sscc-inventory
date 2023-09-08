@@ -14,6 +14,7 @@ import { SuggestionSubmitPage } from "./pages/SuggestionSubmitPage/SuggestionSub
 import { HomePage } from "./pages/HomePage/HomePage";
 import { MultiStakeholderGovernancePage } from "./pages/MultiStakeholderGovernancePage/MultiStakeholderGovernancePage";
 import { CodeOfConductPage } from "./pages/CodeOfConductPage/CodeOfConductPage";
+import { DevelopingMultiStakeholderPage } from "./pages/DevelopingMultiStakeholderPage/DevelopingMultiStakeholderPage";
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
             <Route
               path="code-of-conducts"
               element={<CodeOfConductPage />}
+            ></Route>
+            <Route
+              path="developing-multi-stakeholder"
+              element={<DevelopingMultiStakeholderPage />}
             ></Route>
           </Route>
           <Route path="/catalogue-of-specifications"></Route>

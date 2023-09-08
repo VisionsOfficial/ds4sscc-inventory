@@ -10,12 +10,14 @@ type CheckOutCardProps = {
   className?: string;
   variantColor?: "bgGray";
   category: DiscoverCategory;
+  sizing?: "mainContent";
 };
 
 export const CheckOutCard = ({
   className,
   variantColor,
   category,
+  sizing,
 }: PropsWithChildren<CheckOutCardProps>) => {
   const { contentCategory } = useCategories({ category });
   const navigate = useNavigate();
@@ -23,23 +25,36 @@ export const CheckOutCard = ({
   const setProps = () => {
     let color = "";
     let classNameProps = className ? className : "";
+    let size = "";
 
     switch (variantColor) {
       case "bgGray":
-        color = "bg-gray";
+        color = Styles.bgGray;
+
+      default:
+        break;
+    }
+
+    switch (sizing) {
+      case "mainContent":
+        size = Styles.mainContent;
         break;
 
       default:
         break;
     }
 
-    return [Styles.CheckOutCard, classNameProps, color].join("");
+    return [Styles.CheckOutCard, classNameProps, color, size].join(" ");
   };
 
   const contentTextCard = () => {
     switch (category) {
       case "collectedUseCases":
         return "Find all use cases and their full descriptions.";
+      case "priorityDatasets":
+        return "Discover the priority datasets, their application domains, and concrete examples of use cases.";
+      case "governanceRules":
+        return "Discover the roles and resposibilities of each";
 
       default:
         break;
@@ -61,7 +76,9 @@ export const CheckOutCard = ({
           }
         }}
       >
-        {contentCategory?.title}
+        {category === "governanceRules"
+          ? "Governance rules"
+          : contentCategory?.title}
       </Button>
     </Card>
   );

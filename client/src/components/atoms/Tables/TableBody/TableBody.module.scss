@@ -23,6 +23,7 @@
         background-color: $primary;
         color: $secondary;
         padding: $s-small;
+        font-weight: 600;
       }
     }
     &:is(:not(:last-child)) {
@@ -46,6 +47,19 @@
         span {
           display: none;
         }
+      }
+    }
+  }
+}
+
+.white {
+  background-color: $white;
+
+  tr {
+    td {
+      span {
+        background-color: $secondary;
+        color: $primary;
       }
     }
   }
