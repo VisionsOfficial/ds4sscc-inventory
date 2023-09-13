@@ -38,7 +38,7 @@
       flex-wrap: wrap;
     }
 
-    @include resolution(x-desktop) {
+    @include resolution(xs-desktop) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       justify-items: center;

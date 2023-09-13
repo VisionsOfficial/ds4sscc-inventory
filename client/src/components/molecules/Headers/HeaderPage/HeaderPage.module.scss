@@ -14,7 +14,7 @@
 
   .content {
     @include flexColumn();
-    gap: $s-medium;
+    gap: $xs-medium;
     text-align: center;
 
     p {

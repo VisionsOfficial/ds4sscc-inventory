@@ -3,11 +3,11 @@
     @media screen and ($query: 450px) {
       @content;
     }
-  } @else if $device == x-mobile {
+  } @else if $device == xs-mobile {
     @media screen and ($query: 340px) {
       @content;
     }
-  } @else if $device == s-tablet {
+  } @else if $device == xs-tablet {
     @media screen and ($query: 650px) {
       @content;
     }
@@ -15,11 +15,11 @@
     @media screen and ($query: 770px) {
       @content;
     }
-  } @else if $device == xx-desktop {
+  } @else if $device == xxs-desktop {
     @media screen and ($query: 1020px) {
       @content;
     }
-  } @else if $device == x-desktop {
+  } @else if $device == xs-desktop {
     @media screen and ($query: 1024px) {
       @content;
     }
@@ -53,4 +53,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin lineClampText($line-clamp: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
 }

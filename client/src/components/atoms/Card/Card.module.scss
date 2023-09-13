@@ -5,5 +5,5 @@
   padding: $medium;
   width: 100%;
   @include flexColumn(center, space-between);
-  gap: $s-small;
+  gap: $xs-small;
 }

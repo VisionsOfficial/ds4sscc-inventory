@@ -1,0 +1,7 @@
+@use '../../../../shared/styles/index' as *;
+
+.SectionTitleContainer {
+    @include flexColumn(stretch, stretch);
+    width: 100%;
+    gap: $small;
+}

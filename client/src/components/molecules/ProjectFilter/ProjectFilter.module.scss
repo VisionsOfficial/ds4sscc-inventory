@@ -1,95 +1,95 @@
 @use "../../../shared/styles/colors";
 
 .ProjectFilter {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	padding: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-	.Header {
-		display: flex;
-		flex-direction: row;
+  .Header {
+    display: flex;
+    flex-direction: row;
 
-		h5 {
-			color: colors.$primary;
-			font-size: 16px;
-			flex: 4;
-		}
+    h5 {
+      color: colors.$primary;
+      font-size: 16px;
+      flex: 4;
+    }
 
-		span {
-			flex: 1;
-			cursor: pointer;
-			color: colors.$secondary;
+    span {
+      flex: 1;
+      cursor: pointer;
+      color: colors.$secondary;
 
-			&:hover {
-				font-weight: bold;
-			}
-		}
-	}
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .Dropdown {
-	text-align: left;
-	border: 1px solid #ccc;
-	background: colors.$gray;
-	position: relative;
-	min-width: 150px;
-	max-width: 100%;
-	padding: 10px;
-	cursor: pointer;
+  text-align: left;
+  border: 1px solid #ccc;
+  background: colors.$gray;
+  position: relative;
+  min-width: 150px;
+  max-width: 100%;
+  padding: 10px;
+  cursor: pointer;
 
-	.selected {
-		display: flex;
+  .selected {
+    display: flex;
 
-		span {
-			flex: 5;
-		}
+    span {
+      flex: 5;
+    }
 
-		svg {
-			flex: 1;
-		}
-	}
+    svg {
+      flex: 1;
+    }
+  }
 
-	.menu {
-		position: absolute;
-		transform: translateY(7px);
-		width: 100%;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		overflow: auto;
-		max-height: 150px;
-		background-color: #fff;
-		z-index: 50;
-	}
+  .menu {
+    position: absolute;
+    transform: translateY(7px);
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: auto;
+    max-height: 150px;
+    background-color: #fff;
+    z-index: 50;
+  }
 
-	.item {
-		padding: 5px;
-		cursor: pointer;
-		display: flex;
+  .item {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
 
-		&:hover {
-			background-color: #9fc3f870;
-		}
-	}
+    &:hover {
+      background-color: #9fc3f870;
+    }
+  }
 }
 
 .circle {
-	width: 20px;
-	height: 20px;
-	padding: 2px 5px;
-	margin-right: 5px;
-	border-radius: 50px;
-	background-color: black;
+  width: 20px;
+  height: 20px;
+  padding: 2px 5px;
+  margin-right: 5px;
+  border-radius: 50px;
+  background-color: black;
 }
 
 .few_mature div[data-circle] {
-	background: rgba(255, 255, 0, 0.822);
+  // background: rgba(255, 255, 0, 0.822);
+  background: red;
 }
 
 .evolving div[data-circle] {
-	background: orange;
+  background: orange;
 }
 
 .quite_mature div[data-circle] {
-	background: rgb(15, 158, 15);
+  background: rgb(15, 158, 15);
 }

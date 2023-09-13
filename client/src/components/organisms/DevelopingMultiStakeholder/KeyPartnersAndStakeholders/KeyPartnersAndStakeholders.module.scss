@@ -15,7 +15,7 @@
       flex-wrap: wrap;
     }
 
-    @include resolution(xx-desktop) {
+    @include resolution(xxs-desktop) {
         justify-content: space-around;
     }
 

@@ -1,0 +1,82 @@
+@use "../../../../shared/styles/index" as *;
+
+.DropdownCard {
+  background-color: $gray;
+  align-items: flex-start;
+  padding: $small;
+  transition: gap 0.25s ease-in-out;
+  gap: 0;
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: $xs-small;
+    width: 100%;
+    .iconInfo {
+      aspect-ratio: 1/1;
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      path {
+        stroke: $primary;
+        fill: $secondary;
+      }
+    }
+
+    .iconPlus {
+      justify-self: flex-end;
+      stroke: $secondary;
+      aspect-ratio: 1/1;
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+    }
+
+    @include resolution(mobile) {
+      gap: $small;
+    }
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease-in-out;
+    padding: 0;
+    .inner {
+      overflow: hidden;
+      @include flexColumn(flex-start);
+      gap: $medium;
+    }
+  }
+
+  .isOpen {
+    grid-template-rows: 1fr;
+  }
+}
+
+.info {
+  header {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+.DropdownCardActive {
+  gap: $small;
+
+  header {
+    .iconPlus {
+      stroke: $primary;
+      transform: rotate(90deg);
+
+      line {
+        &:last-child {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

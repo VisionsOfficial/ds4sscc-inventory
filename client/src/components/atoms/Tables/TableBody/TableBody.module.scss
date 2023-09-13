@@ -22,7 +22,7 @@
         text-align: start;
         background-color: $primary;
         color: $secondary;
-        padding: $s-small;
+        padding: $xs-small;
         font-weight: 600;
       }
     }
@@ -33,7 +33,7 @@
     }
   }
 
-  @include resolution(s-tablet) {
+  @include resolution(xs-tablet) {
     display: table-row-group;
     tr {
       display: table-row;

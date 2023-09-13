@@ -8,13 +8,13 @@
     margin: 0 10%;
     margin-bottom: $large;
     @include flexColumn();
-    gap: $s-large;
+    gap: $xs-large;
     position: relative;
     z-index: 10;
 
     .nav {
       @include flexColumn(stretch);
-      gap: $s-small;
+      gap: $xs-small;
     }
 
     button {
@@ -28,7 +28,7 @@
 
     .subNav {
       @include flexColumn(stretch);
-      gap: $s-small;
+      gap: $xs-small;
     }
 
     @include resolution(mobile) {
