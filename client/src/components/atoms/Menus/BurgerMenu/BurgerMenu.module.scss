@@ -1,0 +1,41 @@
+@use "../../../../shared/styles/index" as *;
+
+.BurgerMenu {
+  @include flexColumn();
+  position: relative;
+  z-index: 1;
+  flex: none !important;
+
+  .scrollMenu {
+    @include flexColumn();
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $secondary;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    z-index: 50;
+    min-height: 100vh;
+
+    .close {
+      position: absolute;
+      top: $large;
+      right: $large;
+    }
+  }
+
+  @include resolution(mobile) {
+    display: none !important;
+  }
+}
+
+.open {
+  .scrollMenu {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../../../shared/styles/index" as *;
+
+.ImplementStepByStep {
+  @include flexColumn();
+  gap: $large;
+  width: 100%;
+
+  .card {
+    align-items: flex-start;
+    gap: $medium;
+  }
+}

@@ -9,6 +9,8 @@
     margin-bottom: $large;
     @include flexColumn();
     gap: $s-large;
+    position: relative;
+    z-index: 10;
 
     .nav {
       @include flexColumn(stretch);
@@ -33,16 +35,129 @@
       @include flexRow(center, flex-start);
       flex-wrap: wrap;
     }
-
-    @include resolution(xx-desktop) {
-      @include flexRow(space-between, flex-start);
-      flex-wrap: wrap;
-    }
   }
 
   .content {
     margin: 0% 10%;
     @include flexColumn();
     gap: $small;
+  }
+
+  @media screen and (min-width: 961px) {
+    .navContainer {
+      @include flexRow(space-between, flex-start);
+
+      button {
+        transition: all 0.2s ease;
+        max-width: 170px;
+        min-width: 170px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      transition: all 0.2s ease;
+      transform: translateY(-180px);
+      align-items: flex-end;
+      z-index: 1;
+      position: relative;
+
+      > div {
+        transition: all 0.2s ease;
+        width: calc(100% - 190px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    }
+
+    .contentLeft {
+      transform: translateY(-300px);
+      align-items: flex-start;
+    }
+  }
+
+  @media screen and (min-width: 1110px) {
+    .navContainer {
+      button {
+        max-width: 200px;
+        min-width: 200px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 230px);
+      }
+    }
+
+    .contentRight {
+      transform: translateY(-160px);
+    }
+  }
+
+  @media screen and (min-width: 1260px) {
+    .navContainer {
+      button {
+        max-width: 230px;
+        min-width: 230px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 260px);
+      }
+    }
+
+    .contentRight {
+      transform: translateY(-140px);
+    }
+
+    .contentLeft {
+      transform: translateY(-260px);
+    }
+  }
+
+  @include resolution(desktop) {
+    .navContainer {
+      button {
+        max-width: 270px;
+        min-width: 270px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 300px);
+      }
+    }
+
+    .contentRight {
+      transform: translateY(-120px);
+    }
+
+    .contentLeft {
+      transform: translateY(-200px);
+    }
+  }
+
+  @media screen and (min-width: 1650px) {
+    .navContainer {
+      button {
+        max-width: 310px;
+        min-width: 310px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 340px);
+      }
+    }
   }
 }

@@ -9,6 +9,7 @@
   nav {
     flex: 1;
     @include flexRow(flex-end);
+    z-index: 90;
   }
 
   img {
@@ -20,10 +21,6 @@
   div {
     flex: 1;
     @include flexRow(flex-start);
-  }
-
-  @include resolution(mobile, max-width) {
-	padding: 0;
   }
 
   @media (max-width: 600px) {

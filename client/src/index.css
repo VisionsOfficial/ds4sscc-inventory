@@ -49,6 +49,7 @@ button:hover {
 .btn-secondary {
   background-color: #7ed958;
   color: #17214e;
+  font-weight: bold;
 }
 
 h3 {

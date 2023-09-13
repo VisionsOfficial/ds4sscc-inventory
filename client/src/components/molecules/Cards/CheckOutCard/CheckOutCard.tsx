@@ -5,6 +5,7 @@ import { DiscoverCategory } from "../../../../types";
 import { useCategories } from "../../../../hooks/useCategories";
 import { Button } from "../../../atoms/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { APP_LINKS } from "../../../../utils/appLinks";
 
 type CheckOutCardProps = {
   className?: string;
@@ -54,7 +55,11 @@ export const CheckOutCard = ({
       case "priorityDatasets":
         return "Discover the priority datasets, their application domains, and concrete examples of use cases.";
       case "governanceRules":
-        return "Discover the roles and resposibilities of each";
+        return "Discover the roles and resposibilities of each.";
+      case "rolesAndResponsibilities":
+        return "Discover the roles and responsibilities of each.";
+      case "actionPlan":
+        return "Discover the initiatives and resources implemented in our action plan.";
 
       default:
         break;
@@ -71,6 +76,23 @@ export const CheckOutCard = ({
       <Button
         className="btn-secondary"
         onClick={() => {
+          switch (category) {
+            case "governanceRules":
+              navigate(
+                APP_LINKS.multiStakeholderGovernance.codeOfConducts +
+                  "?governanceRules"
+              );
+              return;
+            case "rolesAndResponsibilities":
+              navigate(
+                APP_LINKS.multiStakeholderGovernance.codeOfConducts +
+                  "?rolesAnResponsibilities"
+              );
+              return;
+            default:
+              break;
+          }
+
           if (contentCategory?.link) {
             navigate(contentCategory?.link);
           }
@@ -78,6 +100,8 @@ export const CheckOutCard = ({
       >
         {category === "governanceRules"
           ? "Governance rules"
+          : category === "rolesAndResponsibilities"
+          ? "Roles and responsibilities"
           : contentCategory?.title}
       </Button>
     </Card>

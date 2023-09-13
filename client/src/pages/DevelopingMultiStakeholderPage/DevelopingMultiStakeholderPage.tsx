@@ -7,6 +7,11 @@ import { ObjectivesAndScope } from "../../components/organisms/DevelopingMultiSt
 import { IncentivesAndAddedValue } from "../../components/organisms/DevelopingMultiStakeholder/IncentivesAndAddedValue/IncentivesAndAddedValue";
 import { TypesOfDataAndDataSources } from "../../components/organisms/DevelopingMultiStakeholder/TypesOfDataAndDataSources/TypesOfDataAndDataSources";
 import { SharedDataFlows } from "../../components/organisms/DevelopingMultiStakeholder/SharedDataFlows/SharedDataFlows";
+import { ResourcesNeeded } from "../../components/organisms/DevelopingMultiStakeholder/ResourcesNeeded/ResourcesNeeded";
+import { KeyPartnersAndStakeholders } from "../../components/organisms/DevelopingMultiStakeholder/KeyPartnersAndStakeholders/KeyPartnersAndStakeholders";
+import { BusinessAndGovernanceModel } from "../../components/organisms/DevelopingMultiStakeholder/BusinessAndGovernanceModel/BusinessAndGovernanceModel";
+import { ContractualAgreements } from "../../components/organisms/DevelopingMultiStakeholder/ContractualAgreements/ContractualAgreements";
+import { ImplementStepByStep } from "../../components/organisms/DevelopingMultiStakeholder/ImplementStepByStep/ImplementStepByStep";
 
 type DevelopingMultiStakeholderPageProps = {};
 
@@ -41,9 +46,9 @@ export const DevelopingMultiStakeholderPage =
 
     const setBodyClass = () => {
       if (sectionSelected === "Why") {
-        return Styles.subNavRow;
+        return Styles.contentRight;
       } else if (sectionSelected === "How") {
-        return Styles.subNavRowReverse;
+        return Styles.contentLeft;
       } else {
         return "";
       }
@@ -51,7 +56,9 @@ export const DevelopingMultiStakeholderPage =
 
     const contentSubNav = (mainSection: DevelopingMultiStakeholderNav) => {
       setSectionSelected(mainSection);
-      setSubSectionSelected(null);
+      if (mainSection !== sectionSelected) {
+        setSubSectionSelected(null);
+      }
       switch (mainSection) {
         case "Why":
           setSubNavContent([
@@ -93,6 +100,16 @@ export const DevelopingMultiStakeholderPage =
           return <TypesOfDataAndDataSources />;
         case "Define shared data flows":
           return <SharedDataFlows />;
+        case "Identify resources needed":
+          return <ResourcesNeeded />;
+        case "Identify key partners & stakeholders":
+          return <KeyPartnersAndStakeholders />;
+        case "Choose an appropriate business and governance model":
+          return <BusinessAndGovernanceModel />;
+        case "Choose appropriate contractual agreements":
+          return <ContractualAgreements />;
+        case "Implement step by step":
+          return <ImplementStepByStep />;
 
         default:
           return null;

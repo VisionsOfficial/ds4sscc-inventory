@@ -1,43 +1,47 @@
-@use "../../../shared/styles/mixins";
+@use "../../../shared/styles/index" as *;
 
 .Nav {
-	@include mixins.flexCenter;
-	background-color: white;
-	min-height: 70px;
+  @include flexCenter();
+  background-color: white;
+  min-height: 70px;
 
-	ul {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-		list-style-type: none;
+    list-style-type: none;
 
-		li {
-			font-size: 1.3rem;
+    li {
+      font-size: 1.3rem;
 
-			@media (max-width: 600px) {
-				font-size: .9rem;
-			}
+      @media (max-width: 600px) {
+        font-size: 0.9rem;
+      }
 
-			@media (max-width: 1075px) {
-				font-size: .9rem;
-			}
+      @media (max-width: 1075px) {
+        font-size: 0.9rem;
+      }
 
-			a {
-				padding: 15px;
-				text-decoration: none;
-				color: black;
-				text-transform: uppercase;
-				transition: all 0.2s ease;
-				border: none;
-				border-bottom: 1px solid black;
-				border-color: white;
-				position: relative;
+      a {
+        padding: 15px;
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        border: none;
+        border-bottom: 1px solid black;
+        border-color: white;
+        position: relative;
 
-				&:hover {
-					color: rgb(49, 48, 48);
-				}
-			}
-		}
+        &:hover {
+          color: rgb(49, 48, 48);
+        }
+      }
+    }
+
+	@include resolution(mobile, max-width) {
+		display: none;
 	}
+  }
 }

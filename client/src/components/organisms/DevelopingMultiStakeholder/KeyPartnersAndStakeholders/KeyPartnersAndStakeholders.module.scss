@@ -1,0 +1,26 @@
+@use "../../../../shared/styles/index" as *;
+
+.KeyPartnersAndStakeholders {
+  @include flexColumn();
+  gap: $large;
+  width: 100%;
+
+  .cards {
+    @include flexColumn();
+    gap: $large;
+    width: 100%;
+
+    @include resolution(mobile) {
+      @include flexRow();
+      flex-wrap: wrap;
+    }
+
+    @include resolution(xx-desktop) {
+        justify-content: space-around;
+    }
+
+    @include resolution(desktop) {
+        justify-content: space-between;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import Styles from "./CodeOfConductPage.module.scss";
 import { HeaderPage } from "../../components/molecules/Headers/HeaderPage/HeaderPage";
 import { SubInfoHeaderCard } from "../../components/molecules/Cards/SubInfoHeaderCard/SubInfoHeaderCard";
@@ -7,6 +7,7 @@ import { VisionAndPrinciples } from "../../components/organisms/CodeOfConduct/Vi
 import { RolesAndResponsibilities } from "../../components/organisms/CodeOfConduct/RolesAndResponsibilities/RolesAndResponsibilities";
 import { GovernanceRules } from "../../components/organisms/CodeOfConduct/GovernanceRules/GovernanceRules";
 import { LegalFramework } from "../../components/organisms/CodeOfConduct/LegalFramework/LegalFramework";
+import { useLocation } from "react-router-dom";
 
 type CodeOfConductPageProps = {};
 
@@ -25,6 +26,7 @@ const CONTENT_NAV: CodeOfConductNav[] = [
 
 export const CodeOfConductPage =
   ({}: PropsWithChildren<CodeOfConductPageProps>) => {
+    const { search } = useLocation();
     const [sectionSelected, setSectionSelected] = useState<CodeOfConductNav>();
 
     const contentBody = () => {
@@ -42,6 +44,17 @@ export const CodeOfConductPage =
           return null;
       }
     };
+
+    useEffect(() => {
+      if (!search) return;
+
+      console.log(search === "?rolesAndResponsibilities");
+      if (search === "?rolesAnResponsibilities") {
+        setSectionSelected("Roles & responsibilities");
+      } else if (search === "?governanceRules") {
+        setSectionSelected("Governance rules");
+      } else return;
+    }, []);
 
     return (
       <main className={Styles.CodeOfConductPage}>

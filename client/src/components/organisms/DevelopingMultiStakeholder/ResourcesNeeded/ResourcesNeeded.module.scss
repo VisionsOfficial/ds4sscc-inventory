@@ -1,0 +1,11 @@
+@use "../../../../shared/styles/index" as *;
+
+.ResourcesNeeded {
+  @include flexColumn();
+  gap: $large;
+
+  .card {
+    align-items: flex-start;
+    gap: $small;
+  }
+}
