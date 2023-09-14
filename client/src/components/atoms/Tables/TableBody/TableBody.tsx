@@ -3,7 +3,7 @@ import Styles from "./TableBody.module.scss";
 
 type TableBodyProps = {
   className?: string;
-  variantColor?: "white";
+  variantColor?: "white" | "primary";
 };
 
 export const TableBody = ({
@@ -19,6 +19,8 @@ export const TableBody = ({
       case "white":
         color = Styles.white;
         break;
+      case "primary":
+        color = Styles.primary;
 
       default:
         break;

@@ -14,21 +14,38 @@
       padding-right: $small;
       border: 0px;
       text-align: right;
-      @include flexRow(center, stretch);
+      @include flexRow(space-between);
       gap: $small;
 
       span {
-        text-transform: uppercase;
-        text-align: start;
-        background-color: $primary;
-        color: $secondary;
-        padding: $xs-small;
-        font-weight: 600;
+        &:first-child {
+          text-transform: uppercase;
+          text-align: start;
+          background-color: $primary;
+          color: $secondary;
+          padding: $xs-small;
+          font-weight: 600;
+          max-width: 40%;
+          width: 100%;
+          align-self: stretch;
+        }
       }
     }
     &:is(:not(:last-child)) {
       td {
         border-bottom: 1px solid $secondary;
+      }
+    }
+  }
+
+  @include resolution(xs-mobile, max-width) {
+    tr {
+      td {
+        span {
+          &:first-child {
+            max-width: 42%;
+          }
+        }
       }
     }
   }
@@ -45,7 +62,9 @@
         padding: $medium $small;
         text-align: initial;
         span {
-          display: none;
+          &:first-child {
+            display: none;
+          }
         }
       }
     }
@@ -58,8 +77,41 @@
   tr {
     td {
       span {
-        background-color: $secondary;
-        color: $primary;
+        &:first-child {
+          background-color: $secondary;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.primary {
+  background-color: $primary;
+
+  tr {
+    td {
+      color: $white;
+      span {
+        &:first-child {
+          background-color: white;
+          color: $primary;
+        }
+      }
+    }
+    &:is(:not(:last-child)) {
+      td {
+        border-bottom: 10px solid $white;
+      }
+    }
+  }
+
+  @include resolution(xs-tablet, max-width) {
+    tr {
+      &:is(:not(:last-child)) {
+        td {
+          border-bottom: 0px;
+        }
       }
     }
   }

@@ -1,8 +1,11 @@
 @use "../../../shared/styles/colors";
 
+@use "../../../shared/styles/variables" as *;
+
 .ProjectFilter {
   display: flex;
   flex-direction: column;
+  gap: $small;
   width: 100%;
 
   .Header {

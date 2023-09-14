@@ -48,7 +48,6 @@ export const CodeOfConductPage =
     useEffect(() => {
       if (!search) return;
 
-      console.log(search === "?rolesAndResponsibilities");
       if (search === "?rolesAnResponsibilities") {
         setSectionSelected("Roles & responsibilities");
       } else if (search === "?governanceRules") {

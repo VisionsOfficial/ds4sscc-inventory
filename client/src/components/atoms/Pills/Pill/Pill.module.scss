@@ -1,0 +1,13 @@
+@use "../../../../shared/styles/index" as *;
+
+.Pill {
+  padding: $small;
+  @include flexRow();
+  text-align: center;
+  width: 100%;
+}
+
+.secondary {
+  background-color: $secondary;
+  color: $white;
+}

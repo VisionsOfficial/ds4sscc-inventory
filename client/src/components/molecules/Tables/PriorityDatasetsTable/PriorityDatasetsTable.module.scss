@@ -1,0 +1,30 @@
+@use "../../../../shared/styles/index" as *;
+
+.PriorityDatasetsTable {
+  margin: 0;
+  th {
+    text-align: start;
+    padding: $medium $small;
+  }
+
+  .name {
+    font-weight: 600;
+  }
+
+  .links {
+    div {
+      margin-block: $xs-small;
+    }
+
+    @include resolution(xs-tablet, max-width) {
+      .pills {
+        @include flexRow();
+        gap: $xs-small;
+        flex-wrap: wrap;
+        div {
+          margin-block: 0;
+        }
+      }
+    }
+  }
+}

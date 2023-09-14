@@ -16,6 +16,7 @@ import { MultiStakeholderGovernancePage } from "./pages/MultiStakeholderGovernan
 import { CodeOfConductPage } from "./pages/CodeOfConductPage/CodeOfConductPage";
 import { DevelopingMultiStakeholderPage } from "./pages/DevelopingMultiStakeholderPage/DevelopingMultiStakeholderPage";
 import { CatalogueOfSpecifications } from "./pages/CatalogueOfSpecifications/CatalogueOfSpecifications";
+import { PriorityDatasetsPage } from "./pages/PriorityDatasetsPage/PriorityDatasetsPage";
 
 function App() {
   return (
@@ -42,7 +43,10 @@ function App() {
             element={<CatalogueOfSpecifications />}
           ></Route>
           <Route path="/reference-architecture"></Route>
-          <Route path="/priority-datasets"></Route>
+          <Route
+            path="/priority-datasets"
+            element={<PriorityDatasetsPage />}
+          ></Route>
           <Route path="/collected-use-cases"></Route>
           <Route path="/action-plan"></Route>
 

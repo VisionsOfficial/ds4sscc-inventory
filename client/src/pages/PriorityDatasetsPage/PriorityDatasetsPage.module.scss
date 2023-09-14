@@ -1,0 +1,10 @@
+@use "../../shared/styles/index" as *;
+
+.PriorityDatasetsPage {
+  background-color: $white;
+  padding-bottom: $large;
+  .content {
+    padding: $large 10%;
+    width: 100%;
+  }
+}

@@ -3,7 +3,7 @@ import Styles from "./TableHead.module.scss";
 
 type TableHeadProps = {
   className?: string;
-  variantColor?: "secondary";
+  variantColor?: "secondary" | "white";
 };
 
 export const TableHead = ({
@@ -19,6 +19,8 @@ export const TableHead = ({
       case "secondary":
         color = Styles.secondary;
         break;
+      case "white":
+        color = Styles.white;
 
       default:
         break;
