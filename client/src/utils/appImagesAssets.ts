@@ -26,6 +26,7 @@ import referenceArchitectureVariant from "../assets/imgs/icons/categories/refere
 
 //BASICS
 import checkCircle from "../assets/imgs/icons/basics/check-circle.svg";
+import cornerUpLeft from "../assets/imgs/icons/basics/corner-up-left.svg";
 
 //FLAGS
 import belgium from "../assets/imgs/flags/belgique.svg";
@@ -42,6 +43,7 @@ export const APP_IMAGES_ASSETS = {
   icon: {
     basic: {
       checkCircle,
+      cornerUpLeft,
     },
     categories: {
       actionPlan: {

@@ -40,7 +40,7 @@
       }
     }
 
-	@include resolution(mobile, max-width) {
+	@include resolution(xs-tablet, max-width) {
 		display: none;
 	}
   }

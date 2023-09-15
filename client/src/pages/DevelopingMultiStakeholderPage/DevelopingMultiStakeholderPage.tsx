@@ -12,6 +12,7 @@ import { KeyPartnersAndStakeholders } from "../../components/organisms/Developin
 import { BusinessAndGovernanceModel } from "../../components/organisms/DevelopingMultiStakeholder/BusinessAndGovernanceModel/BusinessAndGovernanceModel";
 import { ContractualAgreements } from "../../components/organisms/DevelopingMultiStakeholder/ContractualAgreements/ContractualAgreements";
 import { ImplementStepByStep } from "../../components/organisms/DevelopingMultiStakeholder/ImplementStepByStep/ImplementStepByStep";
+import { APP_IMAGES_ASSETS } from "../../utils/appImagesAssets";
 
 type DevelopingMultiStakeholderPageProps = {};
 
@@ -38,7 +39,7 @@ const CONTENT_NAV: DevelopingMultiStakeholderNav[] = [
 export const DevelopingMultiStakeholderPage =
   ({}: PropsWithChildren<DevelopingMultiStakeholderPageProps>) => {
     const [sectionSelected, setSectionSelected] =
-      useState<DevelopingMultiStakeholderNav>();
+      useState<DevelopingMultiStakeholderNav | null>();
     const [subNavContent, setSubNavContent] =
       useState<DevelopingMultiStakeholderSubNav[]>();
     const [subSectionSelected, setSubSectionSelected] =
@@ -116,6 +117,62 @@ export const DevelopingMultiStakeholderPage =
       }
     };
 
+    const handleClickBack = () => {
+      if (sectionSelected) {
+        setSectionSelected(null);
+        setSubSectionSelected(null);
+      }
+    };
+
+    const contentNavMobile = () => {
+      return CONTENT_NAV.map((el, index) => (
+        <ul className={Styles.nav} key={el + index}>
+          {sectionSelected === el && (
+            <li>
+              <img
+                src={APP_IMAGES_ASSETS.icon.basic.cornerUpLeft}
+                alt="Icon corner up left"
+                className={Styles.back}
+                onClick={() => {
+                  handleClickBack();
+                }}
+              />
+              <span className={Styles.path}>../{sectionSelected}</span>
+            </li>
+          )}
+          <li>
+            <Button
+              className={sectionSelected === el ? "btn-secondary" : ""}
+              style={sectionSelected ? { display: "none" } : {}}
+              onClick={() => {
+                contentSubNav(el);
+              }}
+            >
+              {el}
+            </Button>
+          </li>
+          {sectionSelected === el && (
+            <ul className={Styles.subNav}>
+              {subNavContent?.map((sub, index) => (
+                <li key={sub + index}>
+                  <Button
+                    className={
+                      subSectionSelected === sub ? "btn-secondary" : ""
+                    }
+                    onClick={() => {
+                      setSubSectionSelected(sub);
+                    }}
+                  >
+                    {sub}
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </ul>
+      ));
+    };
+
     return (
       <main className={Styles.DevelopingMultiStakeholderPage}>
         <HeaderPage category="DevelopingMultiStakeholder" subInfoHeader />
@@ -155,6 +212,14 @@ export const DevelopingMultiStakeholderPage =
               )}
             </ul>
           ))}
+        </section>
+
+        <section
+          className={`${Styles.navContainer} ${Styles.navMobile} ${
+            sectionSelected ? Styles.sectionActive : ""
+          }`}
+        >
+          {contentNavMobile()}
         </section>
 
         <section className={`${Styles.content} ${setBodyClass()}`}>

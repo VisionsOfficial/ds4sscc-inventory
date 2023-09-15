@@ -7,7 +7,8 @@
   .navContainer {
     margin: 0 10%;
     margin-bottom: $large;
-    @include flexColumn();
+    @include flexRow(center, flex-start);
+    flex-wrap: wrap;
     gap: $xs-large;
     position: relative;
     z-index: 10;
@@ -31,9 +32,8 @@
       gap: $xs-small;
     }
 
-    @include resolution(mobile) {
-      @include flexRow(center, flex-start);
-      flex-wrap: wrap;
+    @include resolution(tablet, max-width) {
+      display: none;
     }
   }
 
@@ -159,5 +159,16 @@
         width: calc(100% - 340px);
       }
     }
+  }
+
+  .navMobile {
+    display: none;
+    @include resolution(tablet, max-width) {
+      display: flex;
+    }
+  }
+
+  .sectionActive {
+    gap: 0;
   }
 }

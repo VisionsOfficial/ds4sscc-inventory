@@ -2,6 +2,7 @@ import React, { PropsWithChildren, useEffect, useState } from "react";
 import Styles from "./ScrollingMenu.module.scss";
 import { Link } from "react-router-dom";
 import { Burger } from "../../../atoms/Menus/Burger/Burger";
+import { BurgerMenu } from "../../../atoms/Menus/BurgerMenu/BurgerMenu";
 
 type ScrollingMenuProps = {
   closing: () => void;
@@ -39,13 +40,14 @@ export const ScrollingMenu = ({
           e.stopPropagation();
         }}
       >
-        <Burger
+        <div
           className={Styles.burger}
-          isOpen={closingAnimation ? false : true}
           onClick={() => {
             handleCloseMenu();
           }}
-        />
+        >
+          <Burger isOpen={closingAnimation ? false : true} />
+        </div>
         <ul className={Styles.sideMenu}>
           <li>
             <Link

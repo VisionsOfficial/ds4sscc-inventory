@@ -3,6 +3,7 @@ import Styles from "./ReferenceArchitecturePage.module.scss";
 import { HeaderPage } from "../../components/molecules/Headers/HeaderPage/HeaderPage";
 import { SubInfoHeaderCard } from "../../components/molecules/Cards/SubInfoHeaderCard/SubInfoHeaderCard";
 import { Button } from "../../components/atoms/Button/Button";
+import { APP_IMAGES_ASSETS } from "../../utils/appImagesAssets";
 
 type ReferenceArchitecturePageProps = {};
 
@@ -128,7 +129,6 @@ export const ReferenceArchitecturePage =
     const contentNav = () => {
       return CONTENT_MAIN_NAV.map((el, index) => (
         <ul className={Styles.nav} key={el + index}>
-          <li>ok</li>
           <li>
             <Button
               className={`${
@@ -190,6 +190,114 @@ export const ReferenceArchitecturePage =
       ));
     };
 
+    const handleClickBack = () => {
+      if (navSelections.nether) {
+        setNavSelections((prev) => ({ ...prev, nether: null }));
+        return;
+      }
+      if (navSelections.sub) {
+        setNavSelections((prev) => ({ ...prev, sub: null, nether: null }));
+        return;
+      }
+      if (navSelections.main) {
+        setNavSelections((prev) => ({
+          ...prev,
+          main: null,
+          sub: null,
+          nether: null,
+        }));
+        return;
+      }
+    };
+
+    const contentNavMobile = () => {
+      return CONTENT_MAIN_NAV.map((el, index) => (
+        <ul className={Styles.nav} key={el + index}>
+          {navSelections.main === el && (
+            <li>
+              <img
+                src={APP_IMAGES_ASSETS.icon.basic.cornerUpLeft}
+                alt="Icon corner up left"
+                className={Styles.back}
+                onClick={() => {
+                  handleClickBack();
+                }}
+              />
+              <span className={Styles.path}>
+                ../{navSelections.sub ? navSelections.sub : navSelections.main}
+              </span>
+            </li>
+          )}
+          <li>
+            <Button
+              className={`${
+                navSelections?.main === el ? "btn-secondary" : ""
+              } ${Styles.mainButton}`}
+              style={navSelections.main ? { display: "none" } : {}}
+              onClick={() => {
+                handleMainNavSelected(el);
+              }}
+            >
+              {el}
+            </Button>
+          </li>
+          {navSelections.main === el && (
+            <ul
+              className={Styles.subNav}
+              style={navSelections.sub === "Components" ? { gap: 0 } : {}}
+            >
+              {navContent.sub?.map((sub, index) => (
+                <React.Fragment key={sub + index}>
+                  <li>
+                    <Button
+                      className={
+                        navSelections.sub === sub ? "btn-secondary" : ""
+                      }
+                      style={
+                        navSelections.sub === "Components"
+                          ? { display: "none" }
+                          : {}
+                      }
+                      onClick={() => {
+                        handleSubNavSelected(sub);
+                      }}
+                    >
+                      {sub}
+                    </Button>
+                  </li>
+                  {navContent?.nether.length > 0 &&
+                    navSelections.sub === "Components" &&
+                    sub === "Components" && (
+                      <ul className={Styles.netherNav}>
+                        {navContent.nether?.map((nether, index) => (
+                          <li key={nether + index}>
+                            <Button
+                              className={
+                                navSelections.nether === nether
+                                  ? "btn-secondary"
+                                  : ""
+                              }
+                              onClick={() => {
+                                setNavSelections((prev) => ({
+                                  ...prev,
+                                  nether: nether,
+                                }));
+                              }}
+                            >
+                              {nether}
+                            </Button>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                </React.Fragment>
+              ))}
+            </ul>
+          )}
+        </ul>
+      ));
+    };
+
     return (
       <main className={Styles.ReferenceArchitecturePage}>
         <HeaderPage category="referenceArchitecture" subInfoHeader />
@@ -197,6 +305,13 @@ export const ReferenceArchitecturePage =
         <SubInfoHeaderCard />
 
         <section className={Styles.sectionNav}>{contentNav()}</section>
+        <section
+          className={`${Styles.sectionNav} ${Styles.sectionNavMobile} ${
+            navSelections.main ? Styles.mainActive : ""
+          }`}
+        >
+          {contentNavMobile()}
+        </section>
       </main>
     );
   };

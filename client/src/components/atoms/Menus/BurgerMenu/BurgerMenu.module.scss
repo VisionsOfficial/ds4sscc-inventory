@@ -2,9 +2,12 @@
 
 .BurgerMenu {
   @include flexColumn();
-  position: relative;
   z-index: 1;
-  flex: none !important;
+  flex: initial !important;
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
 
   .scrollMenu {
     @include flexColumn();
@@ -28,7 +31,7 @@
     }
   }
 
-  @include resolution(mobile) {
+  @include resolution(xs-tablet) {
     display: none !important;
   }
 }

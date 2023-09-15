@@ -13,13 +13,13 @@ export const BurgerMenu = ({}: PropsWithChildren<BurgerMenuProps>) => {
   };
 
   return (
-    <div className={`${Styles.BurgerMenu} ${isOpen ? Styles.open : ""}`}>
-      <Burger
-        onClick={() => {
-          setIsOpen((prev) => !prev);
-        }}
-        isOpen={isOpen}
-      />
+    <div
+      className={`${Styles.BurgerMenu} ${isOpen ? Styles.open : ""}`}
+      onClick={() => {
+        setIsOpen((prev) => !prev);
+      }}
+    >
+      <Burger isOpen={isOpen} />
       {isOpen && <ScrollingMenu closing={() => updateOpenMenu()} />}
     </div>
   );

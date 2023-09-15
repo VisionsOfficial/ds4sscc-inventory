@@ -7,7 +7,8 @@
   .sectionNav {
     margin: 0 10%;
     margin-bottom: $large;
-    @include flexColumn();
+    @include flexRow(center, flex-start);
+    flex-wrap: wrap;
     gap: $xs-large;
     position: relative;
     z-index: 10;
@@ -36,21 +37,13 @@
         .netherNav {
           @include flexColumn(stretch);
           gap: $xs-small;
+          padding-left: $medium;
         }
       }
     }
 
-    @include resolution(mobile) {
-      @include flexRow(center, flex-start);
-      flex-wrap: wrap;
-
-      .nav {
-        .subNav {
-          .netherNav {
-            padding-left: $medium;
-          }
-        }
-      }
+    @include resolution(tablet, max-width) {
+      display: none;
     }
 
     @include resolution(desktop) {
@@ -63,9 +56,37 @@
         }
 
         .mainButton {
-            height: auto;
+          height: auto;
         }
       }
     }
+  }
+
+  .sectionNavMobile {
+    display: none;
+    @include resolution(tablet, max-width) {
+      display: flex;
+      .back {
+        cursor: pointer;
+      }
+
+      .path {
+        font-style: italic;
+        margin-left: $xs-small;
+        font-size: small;
+      }
+
+      .nav {
+        .subNav {
+          .netherNav {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .mainActive {
+    gap: 0;
   }
 }
