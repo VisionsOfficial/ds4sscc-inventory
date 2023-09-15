@@ -18,6 +18,8 @@ import { DevelopingMultiStakeholderPage } from "./pages/DevelopingMultiStakehold
 import { CatalogueOfSpecifications } from "./pages/CatalogueOfSpecifications/CatalogueOfSpecifications";
 import { PriorityDatasetsPage } from "./pages/PriorityDatasetsPage/PriorityDatasetsPage";
 import { CollectedUseCasesPage } from "./pages/CollectedUseCasesPage/CollectedUseCasesPage";
+import { ReferenceArchitecturePage } from "./pages/ReferenceArchitecturePage/ReferenceArchitecturePage";
+import { ActionPlanPage } from "./pages/ActionPlanPage/ActionPlanPage";
 
 function App() {
   return (
@@ -43,7 +45,10 @@ function App() {
             path="/catalogue-of-specifications"
             element={<CatalogueOfSpecifications />}
           ></Route>
-          <Route path="/reference-architecture"></Route>
+          <Route
+            path="/reference-architecture"
+            element={<ReferenceArchitecturePage />}
+          ></Route>
           <Route
             path="/priority-datasets"
             element={<PriorityDatasetsPage />}
@@ -52,7 +57,7 @@ function App() {
             path="/collected-use-cases"
             element={<CollectedUseCasesPage />}
           ></Route>
-          <Route path="/action-plan"></Route>
+          <Route path="/action-plan" element={<ActionPlanPage />}></Route>
 
           <Route path="/project/:id" element={<BuildingBlockPage />} />
           <Route path="/suggest/:id" element={<SuggestionSubmitPage />} />

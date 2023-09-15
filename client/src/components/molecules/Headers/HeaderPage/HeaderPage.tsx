@@ -20,7 +20,9 @@ export const HeaderPage = ({
       className={Styles.HeaderPage}
       style={subInfoHeader ? { paddingBottom: 100 } : {}}
     >
-      {contentCategory?.imageVariant}
+      {category === "actionPlan"
+        ? contentCategory?.image
+        : contentCategory?.imageVariant}
       <div className={Styles.content}>
         <Title>{contentCategory?.title}</Title>
         <p>

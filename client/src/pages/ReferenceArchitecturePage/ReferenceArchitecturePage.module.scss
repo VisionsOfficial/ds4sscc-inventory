@@ -1,0 +1,71 @@
+@use "../../shared/styles/index" as *;
+
+.ReferenceArchitecturePage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .sectionNav {
+    margin: 0 10%;
+    margin-bottom: $large;
+    @include flexColumn();
+    gap: $xs-large;
+    position: relative;
+    z-index: 10;
+
+    .nav {
+      @include flexColumn(stretch);
+      gap: $xs-small;
+
+      button {
+        text-transform: uppercase;
+        font-size: 16px;
+        width: 100%;
+        margin: 0;
+        max-width: 230px;
+        min-width: 230px;
+      }
+
+      .mainButton {
+        height: 60px;
+      }
+
+      .subNav {
+        @include flexColumn(stretch);
+        gap: $xs-small;
+
+        .netherNav {
+          @include flexColumn(stretch);
+          gap: $xs-small;
+        }
+      }
+    }
+
+    @include resolution(mobile) {
+      @include flexRow(center, flex-start);
+      flex-wrap: wrap;
+
+      .nav {
+        .subNav {
+          .netherNav {
+            padding-left: $medium;
+          }
+        }
+      }
+    }
+
+    @include resolution(desktop) {
+      justify-content: space-between;
+
+      .nav {
+        button {
+          max-width: 300px;
+          min-width: 300px;
+        }
+
+        .mainButton {
+            height: auto;
+        }
+      }
+    }
+  }
+}

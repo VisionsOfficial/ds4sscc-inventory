@@ -93,7 +93,7 @@ export const useCategories = ({ category }: Props) => {
             />
           ),
           title: "Reference Architecture",
-          link: APP_LINKS.priorityDatasets,
+          link: APP_LINKS.referenceArchitecture,
         }));
         break;
       case "priorityDatasets":
