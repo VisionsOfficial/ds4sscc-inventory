@@ -17,6 +17,7 @@ import { CodeOfConductPage } from "./pages/CodeOfConductPage/CodeOfConductPage";
 import { DevelopingMultiStakeholderPage } from "./pages/DevelopingMultiStakeholderPage/DevelopingMultiStakeholderPage";
 import { CatalogueOfSpecifications } from "./pages/CatalogueOfSpecifications/CatalogueOfSpecifications";
 import { PriorityDatasetsPage } from "./pages/PriorityDatasetsPage/PriorityDatasetsPage";
+import { CollectedUseCasesPage } from "./pages/CollectedUseCasesPage/CollectedUseCasesPage";
 
 function App() {
   return (
@@ -47,7 +48,10 @@ function App() {
             path="/priority-datasets"
             element={<PriorityDatasetsPage />}
           ></Route>
-          <Route path="/collected-use-cases"></Route>
+          <Route
+            path="/collected-use-cases"
+            element={<CollectedUseCasesPage />}
+          ></Route>
           <Route path="/action-plan"></Route>
 
           <Route path="/project/:id" element={<BuildingBlockPage />} />

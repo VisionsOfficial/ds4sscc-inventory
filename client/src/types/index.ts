@@ -61,3 +61,27 @@ export type DiscoverCategory =
   | "DevelopingMultiStakeholder"
   | "governanceRules"
   | "rolesAndResponsibilities";
+
+export type UseCaseCollaborator = {
+  location: string;
+  flag: "be" | "es" | "fi" | "fr" | "it" | "nl" | "pt" | "si" | "se";
+};
+
+export type UseCase = {
+  name: string;
+  collaborators: UseCaseCollaborator[];
+  description: string;
+  standards?: string[];
+  mims?: string[];
+  scope?: string;
+  datasets?: string[];
+  specs?: string[];
+  referenceImplementations?: [
+    {
+      name: string;
+      url: string;
+    }
+  ];
+  maturity?: string[];
+  links?: string[];
+};

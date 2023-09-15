@@ -27,6 +27,17 @@ import referenceArchitectureVariant from "../assets/imgs/icons/categories/refere
 //BASICS
 import checkCircle from "../assets/imgs/icons/basics/check-circle.svg";
 
+//FLAGS
+import belgium from "../assets/imgs/flags/belgique.svg";
+import spain from "../assets/imgs/flags/espagne.svg";
+import finland from "../assets/imgs/flags/finlande.svg";
+import france from "../assets/imgs/flags/france.svg";
+import italy from "../assets/imgs/flags/italie.svg";
+import netherlands from "../assets/imgs/flags/pays_bas.svg";
+import portugal from "../assets/imgs/flags/portugal.svg";
+import slovenia from "../assets/imgs/flags/slovenie.svg";
+import sweden from "../assets/imgs/flags/suede.svg";
+
 export const APP_IMAGES_ASSETS = {
   icon: {
     basic: {
@@ -65,6 +76,17 @@ export const APP_IMAGES_ASSETS = {
         referenceArchitectureVariant,
       },
     },
+  },
+  flag: {
+    belgium,
+    spain,
+    finland,
+    france,
+    italy,
+    netherlands,
+    portugal,
+    slovenia,
+    sweden,
   },
   logo: {},
   image: {},

@@ -1,0 +1,72 @@
+@use "../../../../shared/styles/index" as *;
+
+.UseCaseCard {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $small;
+  cursor: pointer;
+
+  .locations {
+    @include flexColumn(flex-start, flex-start);
+    gap: 1px;
+  }
+
+  @include resolution(tablet) {
+    gap: $xs-small;
+    h3 {
+      min-height: 95px;
+    }
+    .locations {
+      min-height: 95px;
+    }
+  }
+}
+
+.active {
+  gap: $medium;
+  h3,
+  .locations {
+    min-height: fit-content;
+  }
+
+  .locations {
+    @include flexRow(flex-start);
+    gap: $small;
+    flex-wrap: wrap;
+    div {
+      width: auto;
+    }
+  }
+
+  &Content {
+    @include flexColumn(stretch);
+    width: 100%;
+    gap: $medium;
+    .nav {
+      button {
+        margin: 0;
+      }
+    }
+
+    .howSection {
+      @include flexColumn(stretch);
+      gap: $medium;
+    }
+  }
+}
+
+.wrapper {
+  @include flexColumn(stretch);
+  width: 100%;
+  gap: $large;
+
+  .nav {
+    @include flexRow(flex-start);
+    flex-wrap: wrap;
+    gap: $xs-medium;
+
+    button {
+      min-width: 200px;
+    }
+  }
+}

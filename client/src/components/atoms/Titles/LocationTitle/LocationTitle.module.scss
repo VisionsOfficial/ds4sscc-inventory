@@ -1,0 +1,19 @@
+@use "../../../../shared/styles/index" as *;
+
+.LocationTitle {
+  @include flexRow(stretch);
+  gap: $small;
+  width: 100%;
+
+  img {
+    aspect-ratio: 1/1;
+    width: 30px;
+    height: 30px;
+  }
+
+  span {
+    text-transform: uppercase;
+    color: $secondary;
+    font-weight: bold;
+  }
+}
