@@ -7,7 +7,7 @@ type ActionPlanPageProps = {};
 export const ActionPlanPage = ({}: PropsWithChildren<ActionPlanPageProps>) => {
   return (
     <main className={Styles.ActionPlanPage}>
-      <HeaderPage category="actionPlan" subInfoHeader />
+      <HeaderPage category="actionPlan" />
     </main>
   );
 };

@@ -56,8 +56,8 @@ export const CheckOutCard = ({
         return "Discover the priority datasets, their application domains, and concrete examples of use cases.";
       case "governanceRules":
         return "Discover the roles and resposibilities of each.";
-      case "rolesAndResponsibilities":
-        return "Discover the roles and responsibilities of each.";
+      case "responsibilities":
+        return "Discover the responsibilities of each.";
       case "actionPlan":
         return "Discover the initiatives and resources implemented in our action plan.";
 
@@ -80,13 +80,13 @@ export const CheckOutCard = ({
             case "governanceRules":
               navigate(
                 APP_LINKS.multiStakeholderGovernance.codeOfConducts +
-                  "?governanceRules"
+                  "?governanceFramework"
               );
               return;
-            case "rolesAndResponsibilities":
+            case "responsibilities":
               navigate(
                 APP_LINKS.multiStakeholderGovernance.codeOfConducts +
-                  "?rolesAnResponsibilities"
+                  "?responsibilities"
               );
               return;
             default:
@@ -100,8 +100,8 @@ export const CheckOutCard = ({
       >
         {category === "governanceRules"
           ? "Governance rules"
-          : category === "rolesAndResponsibilities"
-          ? "Roles and responsibilities"
+          : category === "responsibilities"
+          ? "Responsibilities"
           : contentCategory?.title}
       </Button>
     </Card>

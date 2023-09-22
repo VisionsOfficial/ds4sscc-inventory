@@ -12,7 +12,7 @@ export const CatalogueOfSpecifications =
   ({}: PropsWithChildren<CatalogueOfSpecificationsProps>) => {
     return (
       <main className={Styles.CatalogueOfSpecifications}>
-        <HeaderPage category="catalogueOfSpecifications" subInfoHeader />
+        <HeaderPage category="catalogueOfSpecifications" />
 
         <section className={Styles.projects}>
           <DropdownCard

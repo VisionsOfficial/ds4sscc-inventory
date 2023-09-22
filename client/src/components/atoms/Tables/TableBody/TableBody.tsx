@@ -4,15 +4,18 @@ import Styles from "./TableBody.module.scss";
 type TableBodyProps = {
   className?: string;
   variantColor?: "white" | "primary";
+  variantColorMobile?: "secondary";
 };
 
 export const TableBody = ({
   className,
   variantColor,
+  variantColorMobile,
   children,
 }: PropsWithChildren<TableBodyProps>) => {
   const setProps = () => {
     let color = "";
+    let colorMobile = "";
     let classProps = className ? className : "";
 
     switch (variantColor) {
@@ -26,7 +29,15 @@ export const TableBody = ({
         break;
     }
 
-    return [Styles.TableBody, classProps, color].join(" ");
+    switch (variantColorMobile) {
+      case "secondary":
+        colorMobile = Styles.secondaryMobile;
+
+      default:
+        break;
+    }
+
+    return [Styles.TableBody, classProps, color, colorMobile].join(" ");
   };
 
   return <tbody className={setProps()}>{children}</tbody>;

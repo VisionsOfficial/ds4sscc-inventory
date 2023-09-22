@@ -11,5 +11,13 @@
 
   p {
     margin: $small 0;
+
+    span {
+      font-weight: bold;
+    }
+  }
+  ul {
+    padding-left: 40px;
+    list-style: outside;
   }
 }

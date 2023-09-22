@@ -1,0 +1,33 @@
+@use "../../../../shared/styles/index" as *;
+
+.ResponsibilitiesTable {
+  margin-inline: 0;
+  thead th {
+    text-align: start;
+  }
+
+  .bodyHeader {
+    text-align: center;
+    background-color: $card-bg;
+  }
+
+  tbody tr td {
+    vertical-align: baseline;
+
+    &:first-child {
+      font-weight: bold;
+    }
+
+    span {
+      &:first-child {
+        min-width: 43%;
+      }
+    }
+
+    @include resolution(xs-tablet, max-width) {
+      p {
+        word-break: break-word;
+      }
+    }
+  }
+}

@@ -300,7 +300,7 @@ export const ReferenceArchitecturePage =
 
     return (
       <main className={Styles.ReferenceArchitecturePage}>
-        <HeaderPage category="referenceArchitecture" subInfoHeader />
+        <HeaderPage category="referenceArchitecture" />
 
         <SubInfoHeaderCard />
 

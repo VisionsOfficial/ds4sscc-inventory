@@ -5,7 +5,7 @@
   padding-bottom: $large;
 
   .nav {
-    margin: 0 10% $large 10%;
+    margin: $large 10%;
     @include flexColumn();
 
     button {

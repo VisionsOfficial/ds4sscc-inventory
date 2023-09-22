@@ -1,0 +1,87 @@
+@use "../../../../shared/styles/index" as *;
+
+.ContractualAgreementsTable {
+  thead {
+    th {
+      word-break: break-word;
+      font-size: small;
+      vertical-align: baseline;
+
+      a {
+        color: $primary;
+      }
+    }
+  }
+
+  tbody {
+    .contractual {
+      background-color: $secondary;
+      border-bottom-color: $white;
+      width: fit-content;
+      padding-inline: $xs-small;
+
+      @include resolution(xs-tablet, max-width) {
+        border: 0px;
+      }
+    }
+
+    td {
+      font-size: small;
+      span {
+        min-width: 45%;
+      }
+    }
+  }
+
+  @include resolution(xs-desktop, max-width) {
+    thead {
+      display: none !important;
+    }
+    tbody {
+      @include flexColumn(stretch, flex-start);
+      width: 100%;
+
+      tr {
+        @include flexColumn(stretch, flex-start);
+        border-bottom: $small solid $white;
+
+        .contractual {
+          width: auto;
+          padding-inline: 0;
+          padding-right: $small;
+        }
+
+        td {
+          padding: 0;
+          padding-right: $small;
+          border: 0px;
+          text-align: right;
+          @include flexRow(space-between);
+          gap: $small;
+          border-bottom: 1px solid $secondary;
+          vertical-align: baseline;
+
+          span {
+            &:first-child {
+              display: block;
+              text-transform: uppercase;
+              padding: $xs-small;
+              font-weight: 600;
+              max-width: 45%;
+              min-width: 45%;
+              width: 100%;
+              align-self: stretch;
+              font-size: small;
+            }
+          }
+
+          &:is(:not(:last-child)) {
+            span {
+              border-bottom: 1px solid $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

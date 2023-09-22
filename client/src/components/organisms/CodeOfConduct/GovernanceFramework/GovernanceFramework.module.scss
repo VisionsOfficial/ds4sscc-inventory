@@ -1,6 +1,6 @@
 @use "../../../../shared/styles/index" as *;
 
-.GovernanceRules {
+.GovernanceFramework {
   @include resolution(mobile, max-width) {
     @include flexColumn();
     img {
@@ -11,5 +11,9 @@
 
   p {
     margin: $small 0;
+  }
+
+  table {
+    margin-inline: 0;
   }
 }

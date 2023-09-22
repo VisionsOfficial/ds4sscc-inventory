@@ -18,9 +18,9 @@ export const MultiStakeholderGovernancePage =
 
     return (
       <main className={Styles.MultiStakeholderGovernancePage}>
-        <HeaderPage category="multiStakeholderGovernanceScheme" subInfoHeader />
+        <HeaderPage category="multiStakeholderGovernanceScheme" />
 
-        <SubInfoHeaderCard />
+        <SubInfoHeaderCard category="multiStakeholderGovernanceScheme" />
 
         <div className={Styles.discover}>
           <CategoryCard

@@ -175,7 +175,7 @@ export const DevelopingMultiStakeholderPage =
 
     return (
       <main className={Styles.DevelopingMultiStakeholderPage}>
-        <HeaderPage category="DevelopingMultiStakeholder" subInfoHeader />
+        <HeaderPage category="DevelopingMultiStakeholder" />
 
         <SubInfoHeaderCard />
 

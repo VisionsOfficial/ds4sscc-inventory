@@ -1,0 +1,36 @@
+@use "../../../../shared/styles/index" as *;
+
+.GovernanceBodiesTable {
+  thead th {
+    text-align: start;
+  }
+
+  tbody {
+    tr {
+      td {
+        vertical-align: baseline;
+        p {
+          margin: 0;
+        }
+
+        &:first-child {
+          background-color: $secondary;
+          font-weight: bold;
+          @include resolution(xs-tablet) {
+            border-bottom: 1px solid $white;
+          }
+        }
+
+        span {
+          &:first-child {
+            min-width: 43%;
+
+            @include resolution(xs-mobile, max-width) {
+              min-width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

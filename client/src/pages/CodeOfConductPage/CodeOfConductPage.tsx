@@ -1,26 +1,28 @@
 import { PropsWithChildren, useEffect, useState } from "react";
 import Styles from "./CodeOfConductPage.module.scss";
 import { HeaderPage } from "../../components/molecules/Headers/HeaderPage/HeaderPage";
-import { SubInfoHeaderCard } from "../../components/molecules/Cards/SubInfoHeaderCard/SubInfoHeaderCard";
 import { Button } from "../../components/atoms/Button/Button";
 import { VisionAndPrinciples } from "../../components/organisms/CodeOfConduct/VisionAndPrinciples/VisionAndPrinciples";
-import { RolesAndResponsibilities } from "../../components/organisms/CodeOfConduct/RolesAndResponsibilities/RolesAndResponsibilities";
-import { GovernanceRules } from "../../components/organisms/CodeOfConduct/GovernanceRules/GovernanceRules";
 import { LegalFramework } from "../../components/organisms/CodeOfConduct/LegalFramework/LegalFramework";
 import { useLocation } from "react-router-dom";
+import { Roles } from "../../components/organisms/CodeOfConduct/Roles/Roles";
+import { Responsibilities } from "../../components/organisms/CodeOfConduct/Responsibilities/Responsibilities";
+import { GovernanceFramework } from "../../components/organisms/CodeOfConduct/GovernanceFramework/GovernanceFramework";
 
 type CodeOfConductPageProps = {};
 
 type CodeOfConductNav =
-  | "Share vision & principles"
-  | "Roles & responsibilities"
-  | "Governance rules"
+  | "Vision & principles"
+  | "Roles"
+  | "Responsibilities"
+  | "Governance framework"
   | "Legal framework";
 
 const CONTENT_NAV: CodeOfConductNav[] = [
-  "Share vision & principles",
-  "Roles & responsibilities",
-  "Governance rules",
+  "Vision & principles",
+  "Roles",
+  "Responsibilities",
+  "Governance framework",
   "Legal framework",
 ];
 
@@ -31,12 +33,14 @@ export const CodeOfConductPage =
 
     const contentBody = () => {
       switch (sectionSelected) {
-        case "Share vision & principles":
+        case "Vision & principles":
           return <VisionAndPrinciples />;
-        case "Roles & responsibilities":
-          return <RolesAndResponsibilities />;
-        case "Governance rules":
-          return <GovernanceRules />;
+        case "Roles":
+          return <Roles />;
+        case "Responsibilities":
+          return <Responsibilities />;
+        case "Governance framework":
+          return <GovernanceFramework />;
         case "Legal framework":
           return <LegalFramework />;
 
@@ -48,18 +52,16 @@ export const CodeOfConductPage =
     useEffect(() => {
       if (!search) return;
 
-      if (search === "?rolesAnResponsibilities") {
-        setSectionSelected("Roles & responsibilities");
-      } else if (search === "?governanceRules") {
-        setSectionSelected("Governance rules");
+      if (search === "?responsibilities") {
+        setSectionSelected("Responsibilities");
+      } else if (search === "?governanceFramework") {
+        setSectionSelected("Governance framework");
       } else return;
     }, []);
 
     return (
       <main className={Styles.CodeOfConductPage}>
-        <HeaderPage category="codeOfConducts" subInfoHeader />
-
-        <SubInfoHeaderCard />
+        <HeaderPage category="codeOfConducts" />
 
         <section className={Styles.nav}>
           {CONTENT_NAV.map((el, index) => (

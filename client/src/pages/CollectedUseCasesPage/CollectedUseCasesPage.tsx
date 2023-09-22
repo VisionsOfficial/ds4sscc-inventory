@@ -22,7 +22,7 @@ export const CollectedUseCasesPage =
 
     return (
       <main className={Styles.CollectedUseCasesPage}>
-        <HeaderPage category="collectedUseCases" subInfoHeader />
+        <HeaderPage category="collectedUseCases" />
 
         <section
           className={Styles.useCaseSelected}

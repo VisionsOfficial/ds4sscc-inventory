@@ -60,7 +60,8 @@ export type DiscoverCategory =
   | "codeOfConducts"
   | "DevelopingMultiStakeholder"
   | "governanceRules"
-  | "rolesAndResponsibilities";
+  | "roles"
+  | "responsibilities";
 
 export type UseCaseCollaborator = {
   location: string;

@@ -9,7 +9,7 @@ export const PriorityDatasetsPage =
   ({}: PropsWithChildren<PriorityDatasetsPageProps>) => {
     return (
       <main className={Styles.PriorityDatasetsPage}>
-        <HeaderPage category="priorityDatasets" subInfoHeader />
+        <HeaderPage category="priorityDatasets" />
 
         <section className={Styles.content}>
           <PriorityDatasetsTable />

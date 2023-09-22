@@ -1,0 +1,27 @@
+@use "../../../../shared/styles/index" as *;
+
+.Responsibilities {
+  @include flexColumn(flex-start);
+  gap: $medium;
+  width: 100%;
+
+  .text {
+    width: 100%;
+  }
+
+  ul {
+    padding-left: 40px;
+    list-style: outside;
+    margin: $xs-small 0;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  @include resolution(mobile) {
+    width: 100%;
+    @include flexRow(space-around, flex-start);
+    flex-wrap: wrap;
+  }
+}

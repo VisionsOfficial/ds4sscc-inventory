@@ -16,6 +16,8 @@
       text-align: right;
       @include flexRow(space-between);
       gap: $small;
+      border-bottom: 1px solid $secondary;
+      vertical-align: baseline;
 
       span {
         &:first-child {
@@ -28,12 +30,14 @@
           max-width: 40%;
           width: 100%;
           align-self: stretch;
+          font-size: small;
         }
       }
-    }
-    &:is(:not(:last-child)) {
-      td {
-        border-bottom: 1px solid $secondary;
+
+      &:is(:not(:last-child)) {
+        span {
+          border-bottom: 1px solid $primary;
+        }
       }
     }
   }
@@ -57,6 +61,7 @@
       width: 100%;
       gap: 0;
       border-bottom: 0;
+      border: 0;
       td {
         display: table-cell;
         padding: $medium $small;
@@ -65,6 +70,11 @@
           &:first-child {
             display: none;
           }
+        }
+      }
+      &:is(:last-child) {
+        td {
+          border-bottom: 0px;
         }
       }
     }
@@ -111,6 +121,19 @@
       &:is(:not(:last-child)) {
         td {
           border-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.secondaryMobile {
+  tr {
+    td {
+      span {
+        &:first-child {
+          background-color: $secondary;
+          color: $primary;
         }
       }
     }

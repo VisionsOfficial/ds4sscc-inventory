@@ -39,6 +39,9 @@ import portugal from "../assets/imgs/flags/portugal.svg";
 import slovenia from "../assets/imgs/flags/slovenie.svg";
 import sweden from "../assets/imgs/flags/suede.svg";
 
+// IMAGES
+import dataCooperationCanvas from "../assets/imgs/data_cooperation_canvas.png";
+
 export const APP_IMAGES_ASSETS = {
   icon: {
     basic: {
@@ -91,5 +94,7 @@ export const APP_IMAGES_ASSETS = {
     sweden,
   },
   logo: {},
-  image: {},
+  image: {
+    dataCooperationCanvas,
+  },
 } as const;
