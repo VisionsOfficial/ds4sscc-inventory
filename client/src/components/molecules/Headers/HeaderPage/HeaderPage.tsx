@@ -110,6 +110,69 @@ export const HeaderPage = ({
           </p>
         );
 
+      case "DevelopingMultiStakeholder":
+        return (
+          <>
+            <p>
+              The <span>Data Cooperation Canvas</span> was co-developed during
+              the preparatory action for DS4SSCC. It was built following up the
+              exchanges in WP2 which provided a range of use-cases with
+              different configurations of stakeholders/partners, data sharing
+              and business models and with different governance practices that
+              were put in place to ensure fair and trustworthy data exchanges.
+            </p>
+            <p>
+              The cooperation canvas focuses on and captures specific use-cases.
+              This is key as it allows partners and stakeholders to clearly
+              identify the needs for data sharing, define its purpose as well as
+              lay out the different components (technical, governance, business
+              models, implementation) that are required to ensure the success of
+              the cooperation. The canvas is divided into{" "}
+              <span>three main parts</span> providing
+            </p>
+
+            <ul>
+              <li>The context of the cooperation (‘Why’)</li>
+              <li>
+                The governance and business models underlining the cooperation
+                (‘Organisational’)
+              </li>
+              <li>
+                The technical aspects of the cooperation (‘Data & Technical’)
+              </li>
+            </ul>
+
+            <p>
+              Each part contains subsections to describe the characteristics of
+              the cooperation alongside guiding questions (see Table 13). <br />
+              <br />
+              The canvas is a tool which can be used in several ways:
+            </p>
+            <ul>
+              <li>
+                to explore and define multi-stakeholder cooperation focusing on
+                a specific use-case;
+              </li>
+              <li>
+                to describe existing multi-stakeholders cooperation and reflect
+                on the enablers and obstacles of data exchange;
+              </li>
+              <li>
+                to understand at one glance the added value of cooperation
+                between different types of stakeholders;
+              </li>
+              <li>
+                to foster trust between stakeholders by clearly setting up the
+                cooperation
+              </li>
+              <li>
+                to capture a body of knowledge on multi-stakeholder cooperations
+                and create a DS4SCCC use-case repository.
+              </li>
+            </ul>
+          </>
+        );
+
       default:
         null;
     }

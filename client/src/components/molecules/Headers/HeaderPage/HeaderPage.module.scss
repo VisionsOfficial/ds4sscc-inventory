@@ -30,6 +30,20 @@
         color: $secondary;
       }
     }
+
+    ul {
+      padding-left: 40px;
+      list-style: outside;
+      margin: $xs-small 0;
+
+      &:last-child {
+        list-style: decimal;
+      }
+    }
+
+    li {
+      color: $white;
+    }
   }
 
   @include resolution(tablet) {

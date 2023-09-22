@@ -4,4 +4,13 @@
   width: 100%;
   @include flexColumn(flex-start);
   gap: $large;
+
+  ul {
+    padding-left: $large;
+    list-style: outside;
+  }
+
+  span {
+    font-weight: bold;
+  }
 }

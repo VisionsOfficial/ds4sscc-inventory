@@ -31,13 +31,13 @@ export const FlipCard = ({ category }: PropsWithChildren<FlipCardProps>) => {
           case "governanceRoles":
             return "Governance Roles";
           case "public":
-            return "Public";
+            return "Public administrations & institutions";
           case "academiaResearchInstitutes":
-            return "Academia / Research Institutes";
+            return "Academia & research institutions";
           case "private":
-            return "Private";
+            return "Private sector";
           case "civilSociety":
-            return "Civil Society";
+            return "Civil society organisations & Citizens";
 
           default:
             return null;
@@ -145,11 +145,23 @@ export const FlipCard = ({ category }: PropsWithChildren<FlipCardProps>) => {
             return (
               <>
                 <TextWithIcon>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur distinctio maiores fuga quia sunt laudantium
-                  consequatur repellendus recusandae nesciunt dignissimos
-                  dolorum et, dolorem deleniti tenetur quas dicta modi optio
-                  odit.
+                  <span>Local authorities:</span> Cities, metropoles, regions,
+                  local government
+                </TextWithIcon>
+                <TextWithIcon>
+                  <span>Other public bodies:</span> Public city service/ utility
+                  operators (e.g., EMEL, CARRIS, STIB) <br /> National public
+                  bodies (e.g., IPMA, national transport authorities, national
+                  statistical offices, etc) National data access points (e.g.
+                  NDW)
+                </TextWithIcon>
+                <TextWithIcon>
+                  <span>National governments</span>
+                </TextWithIcon>
+                <TextWithIcon>
+                  <span>EU institutions & organisations:</span> EU Commission,
+                  European Data Innovation Board, European Data Protection
+                  Board, etc
                 </TextWithIcon>
               </>
             );
@@ -157,11 +169,10 @@ export const FlipCard = ({ category }: PropsWithChildren<FlipCardProps>) => {
             return (
               <>
                 <TextWithIcon>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur distinctio maiores fuga quia sunt laudantium
-                  consequatur repellendus recusandae nesciunt dignissimos
-                  dolorum et, dolorem deleniti tenetur quas dicta modi optio
-                  odit.
+                  Higher education institutions (e.g., University of Barcelona,
+                  Lisbon’s Nova Management Information School, Université de
+                  Rennes, etc) Independent research organisations (e.g., RISE,
+                  computer vision centre, Open Data Institute, etc)
                 </TextWithIcon>
               </>
             );
@@ -169,11 +180,26 @@ export const FlipCard = ({ category }: PropsWithChildren<FlipCardProps>) => {
             return (
               <>
                 <TextWithIcon>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur distinctio maiores fuga quia sunt laudantium
-                  consequatur repellendus recusandae nesciunt dignissimos
-                  dolorum et, dolorem deleniti tenetur quas dicta modi optio
-                  odit.
+                  <span>Semi public or private city service operators:</span>{" "}
+                  Utilities incl. energy, water, waste, transport
+                  infrastructures (e.g., Suez, Veolia, Enedis, Acciona, Mobico
+                  Group)
+                </TextWithIcon>
+                <TextWithIcon>
+                  <span>SMEs:</span> Technology & smart city solutions (e.g.,
+                  ImpactE, Urban Software Institute GmbH, Lattitudo 40 etc.){" "}
+                  <br />
+                  Other local businesses
+                </TextWithIcon>
+                <TextWithIcon>
+                  <span>Large corporations:</span> Technology & smart city
+                  solutions (e.g., Google, BeMobile, TomTon, Microsoft, Cisco,
+                  IBM, Atos, IES Communications, Huawei, etc) <br />{" "}
+                  Telecommunications (e.g., Vodafone, Orange, etc) Finances &
+                  banks (e.g., Mastercard) <br /> Global management consulting
+                  (e.g., Deloitte, McKinsey & Company, etc) <br /> Shared
+                  mobility operators (e.g., Uber, Lyft, Bolt, Lime, Cambio
+                  CarSharing, NextBike, etc.)
                 </TextWithIcon>
               </>
             );
@@ -181,11 +207,10 @@ export const FlipCard = ({ category }: PropsWithChildren<FlipCardProps>) => {
             return (
               <>
                 <TextWithIcon>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur distinctio maiores fuga quia sunt laudantium
-                  consequatur repellendus recusandae nesciunt dignissimos
-                  dolorum et, dolorem deleniti tenetur quas dicta modi optio
-                  odit.
+                  Citizens <br /> Community organisations (e.g., citizens
+                  science organisations, neighbourhood organisations, etc)
+                  Non-governmental & non-for-profit organisations (e.g., World
+                  Data League, FING, etc.)
                 </TextWithIcon>
               </>
             );

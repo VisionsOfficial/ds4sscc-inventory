@@ -86,3 +86,8 @@ export type UseCase = {
   maturity?: string[];
   links?: string[];
 };
+
+export type CategoryTableInCard =
+  | "Monetary/Market-driven"
+  | "Organisational"
+  | "Societal";

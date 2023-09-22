@@ -1,50 +1,33 @@
 import { PropsWithChildren } from "react";
 import Styles from "./TableInCard.module.scss";
 import { Card } from "../../../atoms/Card/Card";
-import { Table } from "../../../atoms/Tables/Table/Table";
-import { TableBody } from "../../../atoms/Tables/TableBody/TableBody";
-import { TableHead } from "../../../atoms/Tables/TableHead/TableHead";
-import { TableRow } from "../../../atoms/Tables/TableRow/TableRow";
+import { CategoryTableInCard } from "../../../../types";
+import { IncentivesTable } from "../../Tables/IncentivesTable/IncentivesTable";
 
 type TableInCardProps = {
-  title?: string;
+  title?: CategoryTableInCard;
 };
 
 export const TableInCard = ({ title }: PropsWithChildren<TableInCardProps>) => {
+  const setTable = () => {
+    switch (title) {
+      case "Monetary/Market-driven":
+        return <IncentivesTable category="Monetary/Market-driven" />;
+      case "Organisational":
+        return <IncentivesTable category="Organisational" />;
+      case "Societal":
+        return <IncentivesTable category="Societal" />;
+
+      default:
+        return null;
+    }
+  };
+
   return (
     <Card className={Styles.TableInCard}>
       <h3>{title}</h3>
 
-      <Table>
-        <TableHead variantColor="secondary">
-          <TableRow>
-            {[...Array(3)].map((_, index) => (
-              <th key={index}>Lorem ipsum dolor sit</th>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody variantColor="white">
-          {[...Array(3)].map((_, index) => (
-            <TableRow key={index}>
-              <td>
-                <span>Lorem ipsum dolor sit</span>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
-                doloremque voluptatum porro maiores
-              </td>
-              <td>
-                <span>Lorem ipsum dolor sit</span>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
-                doloremque voluptatum porro maiores
-              </td>
-              <td>
-                <span>Lorem ipsum dolor sit</span>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
-                doloremque voluptatum porro maiores
-              </td>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      {setTable()}
     </Card>
   );
 };

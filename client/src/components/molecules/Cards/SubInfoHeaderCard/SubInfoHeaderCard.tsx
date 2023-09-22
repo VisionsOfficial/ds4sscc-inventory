@@ -31,6 +31,32 @@ export const SubInfoHeaderCard = ({
           </p>
         );
 
+      case "DevelopingMultiStakeholder":
+        return (
+          <>
+            <p>
+              All the components of the data cooperation canvas will form the
+              business model for the data cooperation (including the value
+              proposition (what), the partners and targeted customers (who) and
+              the resources and mechanisms needed to deliver and sustain value
+              (how).
+            </p>
+            <p>
+              The canvas was first iterated by Ron van der Lans and Jasper
+              Soetendal of Braxwell.com in the role of external experts’
+              strategic data partnerships of the City of Amsterdam’s Directorate
+              Digitalization & Innovation and members of the Governance Group.
+              It was further developed during bilateral exchanges as well as
+              discussions with WP3 and WP4 to ensure alignment with the
+              technical and implementation work which was developed by them. The
+              canvas was revised several times to incorporate feedback. It was
+              then presented, further developed with and validated by the
+              Governance Group during an interactive workshop in June and by the
+              broader stakeholders during the Forum meetings in June and July.
+            </p>
+          </>
+        );
+
       default:
         return null;
     }

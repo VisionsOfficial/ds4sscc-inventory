@@ -16,8 +16,15 @@
   text-align: start;
   @include flexColumn(center, flex-start);
   transition: all 0.2s ease-in-out;
+  > div {
+    width: 100%;
+  }
 
   a {
     color: $primary;
+  }
+
+  span {
+    font-weight: bold;
   }
 }

@@ -177,7 +177,7 @@ export const DevelopingMultiStakeholderPage =
       <main className={Styles.DevelopingMultiStakeholderPage}>
         <HeaderPage category="DevelopingMultiStakeholder" />
 
-        <SubInfoHeaderCard />
+        <SubInfoHeaderCard category="DevelopingMultiStakeholder" />
 
         <section className={Styles.navContainer}>
           {CONTENT_NAV.map((el, index) => (

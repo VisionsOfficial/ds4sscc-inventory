@@ -11,16 +11,27 @@
     width: 100%;
 
     @include resolution(mobile) {
-      @include flexRow();
+      @include flexRow(center, flex-start);
       flex-wrap: wrap;
     }
 
     @include resolution(xxs-desktop) {
-        justify-content: space-around;
+      justify-content: space-around;
     }
 
     @include resolution(desktop) {
-        justify-content: space-between;
+      justify-content: space-between;
     }
+  }
+
+  p {
+    text-align: start;
+    width: 100%;
+  }
+
+  ul {
+    padding-left: 40px;
+    list-style: outside;
+    margin-block: $small;
   }
 }
