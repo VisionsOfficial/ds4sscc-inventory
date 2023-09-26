@@ -45,8 +45,8 @@ export const KeyPartnersAndStakeholders =
           </p>
           <ul>
             <li>
-              Distinguish between partners of the cooperation and broader
-              stakeholders (see Table 16).
+              Distinguish between initial partners of the cooperation and
+              broader stakeholders.
             </li>
             <li>
               Select carefully initial partners for the first phases of the
@@ -57,24 +57,28 @@ export const KeyPartnersAndStakeholders =
               </span>
             </li>
             <li>
-              When it comes to development and service partners; be particularly
-              careful with vendor lock ins and (intellectual) ownership of
-              products developed
+              When it comes to development and service partners;{" "}
+              <span>
+                be particularly careful with vendor lock ins and ownership of
+                products
+              </span>{" "}
+              developed
             </li>
             <li>
               Network with a minimum number of partners while ensuring that all
               required roles for the objectives to be met are fulfilled. Every
               partner should play a very distinctive role in the initial
-              partnership (see roles Table 5 and template Table 17)
+              partnership (see template Table 12)
             </li>
             <li>
               Start with limited collaboration and small steps. New members can
               be added to the team once the proof of concept is validated.
             </li>
             <li>
-              Use independent third party intermediaries to instil trust in the
-              exchange (e.g., universities, personal data stores) and secure the
-              skills needed (e.g. data quality partners, universities)
+              Use <span>independent third party intermediaries</span> to instil
+              trust in the exchange (e.g., universities, personal data stores)
+              and secure the skills needed (e.g. data quality partners,
+              universities)
             </li>
             <li>
               Explore within a municipality where a data intermediary could
@@ -92,6 +96,7 @@ export const KeyPartnersAndStakeholders =
               <a
                 href="http://www.adalovelaceinstitute.org/report/participatory-data-stewardship/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 process
               </a>

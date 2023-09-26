@@ -7,5 +7,15 @@
   .card {
     align-items: flex-start;
     gap: $small;
+
+    ul {
+      list-style: outside;
+      padding-left: 40px;
+      margin-top: $xs-small;
+    }
+
+    table {
+      margin-inline: 0;
+    }
   }
 }

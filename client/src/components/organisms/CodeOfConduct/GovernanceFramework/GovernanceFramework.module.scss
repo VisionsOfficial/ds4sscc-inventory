@@ -1,11 +1,33 @@
 @use "../../../../shared/styles/index" as *;
 
 .GovernanceFramework {
-  @include resolution(mobile, max-width) {
+  figure {
+    .images {
+      @include flexRow(center, flex-end);
+      flex-wrap: wrap-reverse;
+      gap: $small;
+
+      img {
+        &:last-child {
+          width: calc(100% - 250px);
+          min-width: 500px;
+        }
+      }
+    }
+  }
+
+  @include resolution(xs-tablet, max-width) {
     @include flexColumn();
-    img {
-      float: none;
-      margin: auto;
+
+    figure {
+      .images {
+        img {
+          &:last-child {
+            min-width: 200px;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 

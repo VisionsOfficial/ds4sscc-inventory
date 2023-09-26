@@ -8,5 +8,10 @@
   .card {
     align-items: flex-start;
     gap: $medium;
+
+    ul {
+      list-style: outside;
+      padding-left: 40px;
+    }
   }
 }

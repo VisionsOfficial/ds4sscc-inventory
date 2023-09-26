@@ -19,7 +19,7 @@ export const IncentivesAndAddedValue =
             Market-driven incentives (e.g., monetarisation, service provision)
             are important incentives for cooperation. However, it is also
             crucial to explicitly articulate other types of incentives (i.e.,
-            organisational and societal) (see Table 15).{" "}
+            organisational and societal) (see Table 10).{" "}
             <span>Societal incentives</span> are at the heart of the DS4SSCC’s
             shared vision and as such need to inform the data cooperation.
           </li>

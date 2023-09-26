@@ -91,17 +91,19 @@ export const FlipCard = ({ category }: PropsWithChildren<FlipCardProps>) => {
                   <span>Data intermediaries/ enabling services:</span> A DS
                   participant that provides a (technical or non-technical)
                   service enabling or facilitating trustworthy data transactions
-                  for data space members. Examples of data space services
+                  for data space participants. Examples of data space services
                   include identity management, vocabulary providers,
-                  authorisation management, consent management, clearing house.
+                  authorisation management, consent management, clearing house.{" "}
+                  <br />
                   Data intermediaries can be{" "}
                   <span>
                     registered and DGA-compliant as per Article 10 of the Data
                     Governance Act
                   </span>
-                  . In this case they have to be neutral third parties and have
-                  a structural separation between the intermediation services
-                  they provide and other data services (see section 2.5.1.).
+                  . In this case they have to be{" "}
+                  <span>neutral third parties</span> and have a structural
+                  separation between the intermediation services they provide
+                  and other data services.
                 </TextWithIcon>
                 <TextWithIcon>
                   <span>Personal data intermediaries:</span> A DS participant
@@ -129,7 +131,7 @@ export const FlipCard = ({ category }: PropsWithChildren<FlipCardProps>) => {
                 <TextWithIcon>
                   <span>Orchestrator/ coordinating entity:</span> Organisation
                   which coordinates/ orchestrates the data space ecosystem and
-                  ensures its functioning and that members abide by the agreed
+                  ensures its functioning and that participants abide by the agreed
                   common rules and principles.
                 </TextWithIcon>
                 <TextWithIcon>

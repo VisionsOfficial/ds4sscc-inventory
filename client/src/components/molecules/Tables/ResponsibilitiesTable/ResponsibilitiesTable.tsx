@@ -80,9 +80,9 @@ const CONTENT_GOVERNANCE_ROLES: ContentTypeResponsibilitiesTable[] = [
   },
   {
     role: "Orchestrator / coordinating entity",
-    specificResponsibilities: `Take care of onboarding new members <br />
+    specificResponsibilities: `Take care of onboarding new participants <br />
     Inform all actors about the guidelines/rules/negotiations <br />
-    Find new stakeholders & connect members working on similar use-cases <br />
+    Find new stakeholders & connect participants working on similar use-cases <br />
     Maintain a common catalogue <br />
     Manage communication channels <br />
     Organise working group meetings, events, etc to increase awareness in the ecosystem and interactions frequency. <br />
@@ -116,7 +116,7 @@ export const ResponsibilitiesTable =
     return (
       <Table className={Styles.ResponsibilitiesTable}>
         <caption>
-          Table 6: DS4SSCC roles and associated responsibilities
+          Table 3: DS4SSCC roles and associated responsibilities
         </caption>
         <TableHead variantColor="secondary">
           <TableRow>
@@ -169,7 +169,7 @@ export const ResponsibilitiesTable =
               <span>Specific Responsibilities</span>
               <p style={{ wordBreak: "break-word" }}>
                 Maintain technical infrastructure/ services they provide <br />{" "}
-                Provide technical assistance/ support to data space members{" "}
+                Provide technical assistance/ support to data space participants{" "}
                 <br /> Enable connections with other data spaces <br /> Disclose
                 content plugging/processes <br /> Monitor services and inform
                 users if deterioration/discontinuity <br />

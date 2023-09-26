@@ -239,8 +239,9 @@ export const LegalFrameworkTable = ({
   return (
     <Table className={Styles.LegalFrameworkTable}>
       <caption>
-        Table 9: EU cross-sectorial legislation related to non-personal and
-        personal data
+        {category === "crossSectorialLegislation"
+          ? "Table 6: EU cross-sectorial legislation related to non-personal and personal data"
+          : "Table 7: Other relevant EU cross-sectorial regulations"}
       </caption>
       <TableHead variantColor="secondary">
         <TableRow>

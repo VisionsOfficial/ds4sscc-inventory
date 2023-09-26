@@ -3,7 +3,6 @@
 .SubInfoHeaderCard {
   @include flexColumn();
   text-align: center;
-  text-wrap: balance;
   gap: $small;
   padding: $padding-content;
   transform: translateY(-50px);

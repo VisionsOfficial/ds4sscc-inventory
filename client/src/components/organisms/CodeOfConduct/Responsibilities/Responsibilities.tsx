@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react";
 import Styles from "./Responsibilities.module.scss";
 import { ResponsibilitiesTable } from "../../../molecules/Tables/ResponsibilitiesTable/ResponsibilitiesTable";
+import { APP_IMAGES_ASSETS } from "../../../../utils/appImagesAssets";
 
 type ResponsibilitiesProps = {};
 
@@ -9,7 +10,10 @@ export const Responsibilities =
     return (
       <div className={Styles.Responsibilities}>
         <div className={Styles.text}>
-          <p>All data space members must:</p>
+          <p>
+            To be able to join and participate in DS4SSCC, all participants{" "}
+            <span>must</span>:
+          </p>
           <ul>
             <li>Commit to DS4SSCC vision & core principles</li>
             <li>
@@ -27,7 +31,7 @@ export const Responsibilities =
             </li>
             <li>
               Have a DS4SSCC reference person in place (e.g., Data Protection
-              Officer, Data Chief Office, Project Manager)
+              Officer, Data Chief Officer, Project Manager)
             </li>
             <li>Be transparent, and provide data and reporting for audits</li>
           </ul>
@@ -47,15 +51,33 @@ export const Responsibilities =
         </div>
 
         <p>
-          Table 6 provides{" "}
-          <span>a first iteration of the specific responsibilities</span>{" "}
+          Table 3 provides an initial sketch of the specific responsibilities
           associated with each of DS4SSCC role (non-exhaustive) as well as
           recommended provisions and mechanisms to foster accountability and
-          support members to meet these responsibilities. Figure 6 maps the
-          DS4SSCC ecosystem of stakeholders in relation to DS4SSCC roles.
+          support participants to meet these responsibilities. These will be
+          further elaborated on, drawing on the pilots during the deployment of
+          DS4SSCC. Finally, Figure 1 maps the DS4SSCC ecosystem of stakeholders
+          in relation to DS4SSCC roles.
         </p>
 
         <ResponsibilitiesTable />
+
+        <figure>
+          <a
+            href={APP_IMAGES_ASSETS.image.stakeholdersAssociatedRoles}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={APP_IMAGES_ASSETS.image.stakeholdersAssociatedRoles}
+              alt="DS4SSCC Stakeholders and associated roles"
+            />
+          </a>
+
+          <figcaption>
+            Figure 1: DS4SSCC Stakeholders and associated roles
+          </figcaption>
+        </figure>
       </div>
     );
   };

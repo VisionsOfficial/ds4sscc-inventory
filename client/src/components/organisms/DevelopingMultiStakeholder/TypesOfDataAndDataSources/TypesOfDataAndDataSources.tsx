@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 import Styles from "./TypesOfDataAndDataSources.module.scss";
 import { Card } from "../../../atoms/Card/Card";
 import { CheckOutCard } from "../../../molecules/Cards/CheckOutCard/CheckOutCard";
+import { DatatypesAndSourcesTable } from "../../../molecules/Tables/DatatypesAndSourcesTable/DatatypesAndSourcesTable";
 
 type TypesOfDataAndDataSourcesProps = {};
 
@@ -10,22 +11,30 @@ export const TypesOfDataAndDataSources =
     return (
       <div className={Styles.TypesOfDataAndDataSources}>
         <Card className={Styles.card}>
-          <h3>Lorem ipsum</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim modi
-            maiores harum! Cupiditate maxime mollitia commodi autem sunt
-            blanditiis, consectetur voluptatibus natus deleniti aliquam quaerat,
-            quo, doloremque non perspiciatis vel! Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Rerum hic aperiam tenetur! Maxime eius
-            dignissimos possimus dolore repellendus, tenetur harum modi nostrum?
-            Minima quas veritatis dolorum molestias qui, molestiae ullam. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            asperiores pariatur magni eum dicta praesentium laudantium iusto
-            explicabo modi enim alias, culpa, corporis quis, repellat amet
-            aliquam sint quas et? Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Animi, magnam magni in optio odio voluptate sequi
-            qui distinctio quod earum aliquid. Ipsam rem perferendis ducimus
-            maiores unde facilis dolorum aliquam?
+            Creating clear dataset profiles allows partners to understand the
+            opportunities and assess the risks in data sharing as well as the
+            steps needed to share the data as specified (e.g. data
+            cleaning/formatting, set-up of API, etc).
+          </p>
+
+          <DatatypesAndSourcesTable />
+
+          <p>
+            In addition, it is essential to follow the principle of{" "}
+            <span>data minimisation</span> enshrined in GDPR’s article 5(1)(c)
+            which states that personal data shall be:“adequate, relevant and{" "}
+            <span>
+              limited to what is necessary in relation to the purposes for which
+              they are processed
+            </span>
+            ’. While it is key to follow this principle for legal compliance, it
+            is also pragmatic to do so. Indeed, in some cases, stakeholders
+            might be focusing on getting access to as much data as possible
+            (foreseen possible future opportunities) rather than identifying the
+            exact categories of data that are required to address the challenge.
+            This can lead to lengthy and unnecessary discussions with data
+            owners and thus delays in accessing the relevant data.
           </p>
         </Card>
 

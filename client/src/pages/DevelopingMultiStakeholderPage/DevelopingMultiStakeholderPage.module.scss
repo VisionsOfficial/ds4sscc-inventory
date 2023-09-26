@@ -4,6 +4,15 @@
   background-color: $white;
   padding-bottom: $large;
 
+  .guide {
+    margin: 0 10%;
+    margin-bottom: $large;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .navContainer {
     margin: 0 10%;
     margin-bottom: $large;
@@ -25,6 +34,7 @@
       margin: 0;
       max-width: 230px;
       min-width: 230px;
+      text-wrap: balance;
     }
 
     .subNav {
@@ -72,7 +82,7 @@
     }
 
     .contentLeft {
-      transform: translateY(-300px);
+      transform: translateY(-280px);
       align-items: flex-start;
     }
   }
@@ -117,7 +127,7 @@
     }
 
     .contentLeft {
-      transform: translateY(-260px);
+      transform: translateY(-240px);
     }
   }
 
@@ -141,7 +151,7 @@
     }
 
     .contentLeft {
-      transform: translateY(-200px);
+      transform: translateY(-180px);
     }
   }
 

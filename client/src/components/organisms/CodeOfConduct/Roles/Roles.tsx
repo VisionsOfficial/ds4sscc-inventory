@@ -13,6 +13,7 @@ export const Roles = ({}: PropsWithChildren<RolesProps>) => {
           <a
             href="https://confluence.external-share.com/content/80889/dssc_blueprintv05_public_consultation/142606408"
             target="_blank"
+            rel="noopener noreferrer"
           >
             public consultation
           </a>
@@ -22,7 +23,11 @@ export const Roles = ({}: PropsWithChildren<RolesProps>) => {
           <li>
             <span>Data Subject:</span> an identified or identifiable natural
             person (
-            <a href="https://gdpr-info.eu/art-4-gdpr/" target="_blank">
+            <a
+              href="https://gdpr-info.eu/art-4-gdpr/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GDPR
             </a>
             , article 4)
@@ -43,7 +48,7 @@ export const Roles = ({}: PropsWithChildren<RolesProps>) => {
 
       <div>
         <p>
-          We define three categories of roles in the context of
+          We define three categories of roles (see Table 2) in the context of
           DS4SSCC as follow:
         </p>
         <ul>
@@ -63,9 +68,8 @@ export const Roles = ({}: PropsWithChildren<RolesProps>) => {
       </div>
 
       <p>
-        DS members can have more than one role in accordance with the relevant
-        legal frameworks (see section 2.5) and the agreed governance rules (see
-        section 2.4)
+        DS participants can have more than one role in accordance with the
+        relevant legal frameworks and the agreed governance rules.
       </p>
 
       <section className={Styles.cards}>

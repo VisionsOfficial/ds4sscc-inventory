@@ -1,8 +1,9 @@
 import { PropsWithChildren } from "react";
 import Styles from "./SharedDataFlows.module.scss";
 import { Card } from "../../../atoms/Card/Card";
-import { TextWithFloatImage } from "../../../molecules/Texts/TextWithFloatImage/TextWithFloatImage";
 import { CheckOutCard } from "../../../molecules/Cards/CheckOutCard/CheckOutCard";
+import { APP_IMAGES_ASSETS } from "../../../../utils/appImagesAssets";
+import { TextWithFloatImage } from "../../../molecules/Texts/TextWithFloatImage/TextWithFloatImage";
 
 type SharedDataFlowsProps = {};
 
@@ -11,47 +12,44 @@ export const SharedDataFlows =
     return (
       <div className={Styles.SharedDataFlows}>
         <Card className={Styles.card}>
-          <h3>Lorem ipsum</h3>
+          <p>
+            As well as identifying the data types and sources that will be
+            required in the cooperation, it is crucial to determine the steps
+            needed in the transformation of data throughout the lifecycle of
+            data in the cooperation (e.g. data creation, storage, processing,
+            analysis, visualisation and use). It will then support partners to
+            decide which of these processes will be shared or done individually
+            and allocate them.
+          </p>
 
-          <TextWithFloatImage>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum,
-              alias incidunt natus, in libero mollitia numquam commodi
-              voluptatem, sint sunt culpa non fugiat accusamus doloremque dicta
-              optio hic velit quis? Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Sit, iure. Ipsa cum facilis a necessitatibus
-              ullam iste laudantium ex distinctio illo, fugiat eligendi ad
-              cumque, vero saepe, autem quaerat ratione.
-            </p>
+          <TextWithFloatImage
+            src={APP_IMAGES_ASSETS.image.dataFlows}
+            alt="Typical data flows processes"
+            captionImage="Figure 3: Typical data flows processes"
+            className={Styles.floatImg}
+            openImageInNewTab
+          >
+            In Figure 3, we provided an overview of typical data flow processes
+            that often need to be undertaken to exchange and generate value from
+            data safely and ethically. This overview can support partners to map
+            and establish the activities needed to process and reuse the
+            different datasets identified in the previous step. It also enables
+            to clearly identify the type of outputs shared (raw data, aggregated
+            data, information, service).
+          </TextWithFloatImage>
 
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestias recusandae laborum accusamus veritatis tenetur
-              exercitationem odio amet reiciendis nisi consequuntur ab, eligendi
-              laboriosam voluptatibus tempora eveniet? Debitis molestiae optio
-              voluptatem. <br /> Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Blanditiis cupiditate alias, asperiores, et
-              corporis voluptatum quis ratione, voluptas eaque praesentium hic
-              consequuntur! Unde sequi aut tenetur molestiae delectus in esse!
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
-              rerum quae quaerat suscipit nostrum? Cum fuga illum debitis quo
-              necessitatibus aliquam molestiae nam. Eligendi eos asperiores quos
-              repellat natus possimus.
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium ad nam harum, aut eius officia quasi fuga eos expedita
-              ea, soluta deserunt sunt pariatur sequi aperiam, quo cumque
-              consequuntur delectus! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Velit sequi dolorum perspiciatis eius nemo
-              architecto numquam facere facilis ipsam ut laborum nam dolor
-              debitis itaque, dignissimos, minus quaerat ab excepturi. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Ex sint laborum
-              veniam natus nulla atque fugiat officiis, illum laboriosam officia
-              cumque ea perferendis asperiores magnam possimus soluta obcaecati
-              tempore unde.
-            </p>
+          <TextWithFloatImage
+            src={APP_IMAGES_ASSETS.image.sharedProcessesInCooperation}
+            alt="Shared processes in cooperation"
+            floatDirection="left"
+            captionImage="Figure 4: Shared processes in cooperation"
+            openImageInNewTab
+          >
+            Once the specific data-related activities required in the
+            cooperation have been mapped, partners should decide which of these
+            activities should be conducted jointly or individually. This will
+            allow partners to identify shared processes ranging from exchanging
+            data to shared application (see Figure 4)
           </TextWithFloatImage>
         </Card>
 

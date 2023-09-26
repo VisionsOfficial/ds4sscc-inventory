@@ -9,12 +9,6 @@
         &:first-child {
           background-color: $card-bg;
         }
-
-        span {
-          &:first-child {
-            min-width: 43%;
-          }
-        }
       }
     }
   }

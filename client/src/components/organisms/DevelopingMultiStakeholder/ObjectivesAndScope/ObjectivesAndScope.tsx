@@ -14,10 +14,9 @@ export const ObjectivesAndScope =
             it is crucial to understand the <span>local context</span> which
             creates a <span>specific need</span> for data exchange; and clearly
             define and agree on the <span>objectives and the scope</span> of the
-            cooperation (see Table 14 for examples from WP2 use-cases). The
-            ‘Why’ part of the canvas focuses on the context, added value and
-            motivations and objectives of the cooperation. This part should be
-            filled up first.
+            cooperation. The ‘Why’ part of the canvas focuses on the context,
+            added value and motivations and objectives of the cooperation. This
+            part should be filled up first.
           </p>
           <p>
             To do so, it is important to keep the following elements in mind:

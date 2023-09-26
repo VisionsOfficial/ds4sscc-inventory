@@ -80,7 +80,7 @@ export const VisionsAndPrinciplesTable =
   ({}: PropsWithChildren<VisionsAndPrinciplesTableProps>) => {
     return (
       <Table className={Styles.VisionsAndPrinciplesTable}>
-        <caption>Table 4: Principles for DS4SSSCC</caption>
+        <caption>Table 1: Principles for DS4SSSCC</caption>
         <TableHead variantColor="secondary">
           <TableRow>
             <th>Principles for Organisational Processes & Decision Making</th>

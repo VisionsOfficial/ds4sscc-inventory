@@ -41,6 +41,11 @@ import sweden from "../assets/imgs/flags/suede.svg";
 
 // IMAGES
 import dataCooperationCanvas from "../assets/imgs/data_cooperation_canvas.png";
+import dataFlows from "../assets/imgs/data_flows_processes.png";
+import sharedProcessesInCooperation from "../assets/imgs/shared_processes_in_cooperation.png";
+import stakeholdersAssociatedRoles from "../assets/imgs/stakeholders_and_associated_roles.png";
+import structureGovernance from "../assets/imgs/structure_governance_for_ds4sscc.png";
+import legentStructureGovernance from "../assets/imgs/legend_structure_governance.png";
 
 export const APP_IMAGES_ASSETS = {
   icon: {
@@ -96,5 +101,10 @@ export const APP_IMAGES_ASSETS = {
   logo: {},
   image: {
     dataCooperationCanvas,
+    dataFlows,
+    sharedProcessesInCooperation,
+    stakeholdersAssociatedRoles,
+    legentStructureGovernance,
+    structureGovernance,
   },
 } as const;

@@ -51,7 +51,7 @@ export const VisionAndPrinciples =
             (FAIRNESS/ INCLUSIVITY/ SOVEREIGNTY)
           </li>
           <li>
-            As much as possible, the{" "}
+            The{" "}
             <span>added value should be retained in the data ecosystem</span>{" "}
             and surplus either reinvested or returned to the ecosystem in other
             forms. (RECIPROCITY/ FAIRNESS)
@@ -77,7 +77,7 @@ export const VisionAndPrinciples =
             with particular attention to vendor lock-ins (SOVEREIGNTY, SECURITY)
           </li>
           <li>
-            Data space members should{" "}
+            Data space participants should{" "}
             <span>be represented in Governance Bodies</span> and be able to
             contribute to the decision-making processes. This includes
             participation of the main beneficiaries: local governments,
@@ -85,17 +85,19 @@ export const VisionAndPrinciples =
           </li>
         </ul>
 
-        <VisionsAndPrinciplesTable />
-
         <p>
-          In terms of <span>Data Governance</span>, DS4SSCC stakeholders agreed
-          on principles (see Table 4) which aligns with the European Strategy
-          for Data and the{" "}
-          <a href="https://www.go-fair.org/fair-principles/" target="_blank">
-            FAIR principles
-          </a>{" "}
-          (Wilkinson et al. 2016:4, see Figure 5).
+          In terms of Data Governance, DS4SSCC stakeholders agreed on principles
+          (see Table 1) which aligns with the European Strategy for Data and the{" "}
+          <a
+            href="https://www.go-fair.org/fair-principles/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FAIR principles.
+          </a>
         </p>
+
+        <VisionsAndPrinciplesTable />
       </div>
     );
   };

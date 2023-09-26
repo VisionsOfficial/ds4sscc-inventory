@@ -40,6 +40,7 @@ export const TemplateMappingTable =
   ({}: PropsWithChildren<TemplateMappingTableProps>) => {
     return (
       <Table className={Styles.TemplateMappingTable}>
+        <caption>Table 12: Template mapping initial partners & roles</caption>
         <TableHead variantColor="secondary">
           <TableRow>
             <th colSpan={2}>Roles</th>

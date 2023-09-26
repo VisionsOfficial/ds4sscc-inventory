@@ -1,7 +1,11 @@
-@use '../../../../shared/styles/index' as *;
+@use "../../../../shared/styles/index" as *;
 
 .BusinessAndGovernanceModel {
-    @include flexColumn();
-    gap: $large;
-    width: 100%;
+  @include flexColumn();
+  gap: $large;
+  width: 100%;
+
+  table {
+    margin: 0;
+  }
 }

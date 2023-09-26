@@ -1,0 +1,21 @@
+@use "../../../../shared/styles/index" as *;
+
+.DatatypesAndSourcesTable {
+  th {
+    text-align: start;
+  }
+  .datasetProfile {
+    background-color: $secondary;
+    a {
+      color: $primary;
+    }
+  }
+
+  td {
+    p {
+      @include resolution(mobile, max-width) {
+        word-break: break-word;
+      }
+    }
+  }
+}

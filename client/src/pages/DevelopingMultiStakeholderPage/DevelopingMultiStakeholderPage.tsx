@@ -13,6 +13,7 @@ import { BusinessAndGovernanceModel } from "../../components/organisms/Developin
 import { ContractualAgreements } from "../../components/organisms/DevelopingMultiStakeholder/ContractualAgreements/ContractualAgreements";
 import { ImplementStepByStep } from "../../components/organisms/DevelopingMultiStakeholder/ImplementStepByStep/ImplementStepByStep";
 import { APP_IMAGES_ASSETS } from "../../utils/appImagesAssets";
+import { GuidingDataCooperationCanvasTable } from "../../components/molecules/Tables/GuidingDataCooperationCanvasTable/GuidingDataCooperationCanvasTable";
 
 type DevelopingMultiStakeholderPageProps = {};
 
@@ -23,11 +24,11 @@ type DevelopingMultiStakeholderSubNav =
   | "Identify incentives & added value"
   | "Identify types of data & data sources"
   | "Define shared data flows"
-  | "Identify resources needed"
+  | "Identify resources required"
   | "Identify key partners & stakeholders"
-  | "Choose an appropriate business and governance model"
+  | "Choose an appropriate model for the cooperation"
   | "Choose appropriate contractual agreements"
-  | "Implement step by step";
+  | "Sustaining the cooperation over time";
 
 const CONTENT_NAV: DevelopingMultiStakeholderNav[] = [
   "Why",
@@ -71,7 +72,7 @@ export const DevelopingMultiStakeholderPage =
           setSubNavContent([
             "Identify types of data & data sources",
             "Define shared data flows",
-            "Identify resources needed",
+            "Identify resources required",
           ]);
           break;
         case "Who":
@@ -79,9 +80,9 @@ export const DevelopingMultiStakeholderPage =
           break;
         case "How":
           setSubNavContent([
-            "Choose an appropriate business and governance model",
+            "Choose an appropriate model for the cooperation",
             "Choose appropriate contractual agreements",
-            "Implement step by step",
+            "Sustaining the cooperation over time",
           ]);
           break;
 
@@ -101,15 +102,15 @@ export const DevelopingMultiStakeholderPage =
           return <TypesOfDataAndDataSources />;
         case "Define shared data flows":
           return <SharedDataFlows />;
-        case "Identify resources needed":
+        case "Identify resources required":
           return <ResourcesNeeded />;
         case "Identify key partners & stakeholders":
           return <KeyPartnersAndStakeholders />;
-        case "Choose an appropriate business and governance model":
+        case "Choose an appropriate model for the cooperation":
           return <BusinessAndGovernanceModel />;
         case "Choose appropriate contractual agreements":
           return <ContractualAgreements />;
-        case "Implement step by step":
+        case "Sustaining the cooperation over time":
           return <ImplementStepByStep />;
 
         default:
@@ -178,6 +179,17 @@ export const DevelopingMultiStakeholderPage =
         <HeaderPage category="DevelopingMultiStakeholder" />
 
         <SubInfoHeaderCard category="DevelopingMultiStakeholder" />
+
+        <section className={Styles.guide}>
+          <GuidingDataCooperationCanvasTable />
+          <a
+            href={APP_IMAGES_ASSETS.image.dataCooperationCanvas}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={APP_IMAGES_ASSETS.image.dataCooperationCanvas} alt="" />
+          </a>
+        </section>
 
         <section className={Styles.navContainer}>
           {CONTENT_NAV.map((el, index) => (

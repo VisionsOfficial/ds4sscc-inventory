@@ -20,8 +20,7 @@ export const LegalFramework = ({}: PropsWithChildren<LegalFrameworkProps>) => {
         </a>
         ’ and with the publication of the European Data Strategy (2020). In
         practice, the creation and deployment of common European data spaces fit
-        within an existing and emerging cross-sectoral regulatory ecosystem (see
-        Figure 9).
+        within an existing and emerging cross-sectoral regulatory ecosystem.
       </p>
 
       <h3>Regulatory ecosystem</h3>
@@ -31,7 +30,7 @@ export const LegalFramework = ({}: PropsWithChildren<LegalFrameworkProps>) => {
         Governance Act; the Data Act; the Open Data Directive and the
         Implementing Act on High Value Datasets, the Regulation on the Free Flow
         of Non-Personal Data, the General Data Protection Regulation, and
-        ePrivacy Directive (see Table 9).{" "}
+        ePrivacy Directive (see Table 6).
       </p>
 
       <LegalFrameworkTable category="crossSectorialLegislation" />
@@ -66,7 +65,7 @@ export const LegalFramework = ({}: PropsWithChildren<LegalFrameworkProps>) => {
         Other relevant cross-sectorial regulations to consider when it comes to
         data sharing and re(use) include Artificial Intelligence, Digital
         Identity, Cybersecurity, Intellectual Property Rights, Interoperability
-        and Platforms and Digital Services (see Table 11). These regulations
+        and Platforms and Digital Services (see Table 7). These regulations
         intersect with different components of data exchanges.
       </p>
 
@@ -137,10 +136,10 @@ export const LegalFramework = ({}: PropsWithChildren<LegalFrameworkProps>) => {
       <p>
         Following the legal frameworks highlighted in the previous section,
         DS4SSCC should consist of several types of contractual agreements as
-        stated in Table 12.
+        stated in Table 8.
       </p>
-      
-        <ContractualAgreementsTable />
+
+      <ContractualAgreementsTable />
     </div>
   );
 };

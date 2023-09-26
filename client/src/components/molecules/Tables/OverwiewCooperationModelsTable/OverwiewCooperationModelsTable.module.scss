@@ -1,0 +1,17 @@
+@use "../../../../shared/styles/index" as *;
+
+.OverwiewCooperationModelsTable {
+  th {
+    text-align: start;
+  }
+
+  .type {
+    background-color: $secondary;
+    font-weight: bold;
+    border-bottom-color: $white;
+
+    @include resolution(xs-tablet, max-width) {
+      border: 0;
+    }
+  }
+}

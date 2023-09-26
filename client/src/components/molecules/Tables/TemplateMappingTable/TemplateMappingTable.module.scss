@@ -21,6 +21,7 @@
           height: 100%;
           p {
             font-size: medium;
+            padding-inline: $xs-small;
             border-bottom: 1px solid $secondary;
             width: 100%;
             &:last-child {

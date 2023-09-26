@@ -23,8 +23,6 @@
 
         span {
           &:first-child {
-            min-width: 43%;
-
             @include resolution(xs-mobile, max-width) {
               min-width: 50%;
             }

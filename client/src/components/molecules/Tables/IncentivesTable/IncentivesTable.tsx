@@ -126,6 +126,7 @@ export const IncentivesTable = ({
 
   return (
     <Table className={Styles.IncentivesTable}>
+      <caption>Table 10: Incentives per type of stakeholders</caption>
       <TableHead variantColor="secondary">
         <TableRow>
           {HEADER_TABLE.map((el, index) => (

@@ -1,0 +1,20 @@
+@use "../../../../shared/styles/index" as *;
+
+.AdvantagesAndRisksCooperationModelsTable {
+  .types {
+    background-color: $secondary;
+    border-bottom-color: $white;
+    font-weight: bold;
+  }
+
+  th {
+    text-align: start;
+  }
+
+  td,
+  th,
+  p {
+    word-break: break-word;
+    font-size: 14px;
+  }
+}

@@ -9,31 +9,53 @@ export const ContractualAgreements =
     return (
       <div className={Styles.ContractualAgreements}>
         <Card className={Styles.card}>
-          <h3>Lorem ipsum</h3>
-
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-            asperiores maiores minus deserunt adipisci porro, itaque perferendis
-            totam tempora nemo mollitia omnis beatae, rerum nesciunt? Ut
-            voluptate eaque in totam! Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Veniam, maiores esse dolorum numquam, non quaerat
-            quod magni eveniet natus delectus voluptates accusamus sint
-            veritatis similique hic ut aspernatur quis culpa! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Ipsam delectus fugiat
-            exercitationem fugit a aliquid hic, quibusdam saepe repudiandae
-            optio, cupiditate mollitia ea voluptate, impedit possimus nobis odit
-            quasi. Nisi. Lorem ipsum, dolor sit amet consectetur adipisicing
-            elit. Nobis blanditiis saepe quidem adipisci reprehenderit
-            distinctio illo voluptate, harum explicabo nisi quos beatae omnis
-            recusandae expedita quisquam facere voluptates minima molestiae.
+            The DSSC is currently working on a building block dedicated to
+            contractual agreement. The aim is to provide a catalogue of
+            contractual templates and modules to support data transactions
+            within data spaces, whether they are bilateral or multi-party
+            agreements and thus ensuring consistency across DS. These will
+            include reference license agreements and contractual modules with
+            standardised clauses.
           </p>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-            mollitia! Recusandae accusamus, enim, distinctio modi libero non
-            vero consectetur atque velit sequi sit fuga mollitia ea? Tenetur
-            eaque quas mollitia.
-          </p>
+          <div>
+            <p>Here it is important to:</p>
+            <ul>
+              <li>
+                Ensure technological sovereignty by using specific licensing
+                requirements including{" "}
+                <span>
+                  clauses to release products built on data in public domains
+                </span>{" "}
+                or to ensure outcomes of data comes for free to community users
+                that pooled their data with a restricted license for commercial
+                use.
+              </li>
+              <li>
+                Include data sharing{" "}
+                <span>clauses in tender/procurement processes and SLA</span>.
+                Data sharing clauses can cover data but also
+                aggregation/analytical methods that are deployed so the data is
+                not locked in specific products or platforms and legacy and
+                continuity is ensured over time.
+              </li>
+              <li>
+                Customise contracts with{" "}
+                <span>detailed data specifications</span> (e.g., format,
+                granularity, etc.)
+              </li>
+              <li>Use open source/ standard protocols</li>
+              <li>
+                Use SLA provides a legal set of requirements for the service
+                offering and ensures quality and accountability.
+              </li>
+              <li>
+                Consider using initial NDA before final sharing agreement to be
+                able to see if data is useful or not
+              </li>
+            </ul>
+          </div>
         </Card>
       </div>
     );

@@ -91,3 +91,13 @@ export type CategoryTableInCard =
   | "Monetary/Market-driven"
   | "Organisational"
   | "Societal";
+
+export type CooperationModelsTypes =
+  | "Commercial data"
+  | "Data Marketplace"
+  | "As-A-Service model"
+  | "Open Data / Data Donation"
+  | "Pragmatic / Ad-hoc data sharing"
+  | "Trusted Third Party Intermediary"
+  | "Personal Data Intermediary"
+  | "Data Common / Cooperative";

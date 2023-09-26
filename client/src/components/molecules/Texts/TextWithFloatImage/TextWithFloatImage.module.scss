@@ -1,12 +1,40 @@
 @use "../../../../shared/styles/index" as *;
 
 .TextWithFloatImage {
-  @include resolution(mobile, max-width) {
+  figure {
+    float: right;
+    max-width: 50%;
+    width: 100%;
     @include flexColumn();
+    margin: 0 0 $small $small;
+
+    img,
+    a {
+      width: 100%;
+    }
+
     img {
-      float: none;
-      margin: $small auto;
+      object-fit: cover;
+    }
+
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      font-size: small;
     }
   }
 
+  @include resolution(xs-tablet, max-width) {
+    @include flexColumn();
+    figure {
+      float: none;
+      margin: $small auto;
+      max-width: fit-content;
+    }
+  }
+
+  .floatLeft {
+    float: left;
+    margin: 0 $small $small 0;
+  }
 }

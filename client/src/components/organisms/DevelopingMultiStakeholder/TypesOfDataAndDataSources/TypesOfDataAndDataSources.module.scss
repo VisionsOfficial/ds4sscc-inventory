@@ -8,5 +8,15 @@
   .card {
     align-items: flex-start;
     gap: $medium;
+
+    table {
+      margin: 0;
+    }
+
+    p {
+      span {
+        font-weight: bold;
+      }
+    }
   }
 }

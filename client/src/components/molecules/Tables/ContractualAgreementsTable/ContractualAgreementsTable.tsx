@@ -93,6 +93,9 @@ export const ContractualAgreementsTable =
   ({}: PropsWithChildren<ContractualAgreementsTableProps>) => {
     return (
       <Table className={Styles.ContractualAgreementsTable}>
+        <caption>
+          Table 8: Possible contractual relationships in DS4SSCC
+        </caption>
         <TableHead variantColor="secondary">
           <TableRow>
             <th className={Styles.contractual}>

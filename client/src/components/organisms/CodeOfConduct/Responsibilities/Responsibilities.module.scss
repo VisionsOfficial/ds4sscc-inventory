@@ -24,4 +24,10 @@
     @include flexRow(space-around, flex-start);
     flex-wrap: wrap;
   }
+
+  figure {
+    img {
+      width: 100%;
+    }
+  }
 }
