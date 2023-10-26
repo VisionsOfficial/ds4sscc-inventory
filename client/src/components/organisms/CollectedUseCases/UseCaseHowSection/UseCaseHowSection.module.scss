@@ -3,14 +3,14 @@
 .UseCaseHowSection {
   ul {
     @include flexColumn(stretch);
-    gap: $xs-small;
+    gap: $xx-small;
 
     @include resolution(mobile) {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
 
-    @include resolution(xs-desktop) {
+    @include resolution(x-desktop) {
       @include fluidGrid(200px);
     }
   }
@@ -21,7 +21,7 @@
   }
 
   .textAndIcon {
-    gap: $xs-small;
+    gap: $xx-small;
     align-items: center;
     svg {
       width: 25px;

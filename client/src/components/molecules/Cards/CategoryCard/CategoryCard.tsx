@@ -5,6 +5,7 @@ import { DiscoverCategory } from "../../../../types";
 import { Button } from "../../../atoms/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { useCategories } from "../../../../hooks/useCategories";
+import { openNewWindow } from "../../../../utils/openUrl";
 
 type CategoryCardProps = {
   className?: string;
@@ -46,6 +47,11 @@ export const CategoryCard = ({
       <Button
         className={Styles.btn}
         onClick={() => {
+          if (contentCategory?.url) {
+            openNewWindow(contentCategory.url);
+            return;
+          }
+
           if (contentCategory?.link) {
             navigate(contentCategory?.link);
           }

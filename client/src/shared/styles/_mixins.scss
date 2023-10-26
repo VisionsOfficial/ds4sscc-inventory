@@ -3,11 +3,11 @@
     @media screen and ($query: 450px) {
       @content;
     }
-  } @else if $device == xs-mobile {
+  } @else if $device == x-mobile {
     @media screen and ($query: 340px) {
       @content;
     }
-  } @else if $device == xs-tablet {
+  } @else if $device == x-tablet {
     @media screen and ($query: 650px) {
       @content;
     }
@@ -15,11 +15,11 @@
     @media screen and ($query: 770px) {
       @content;
     }
-  } @else if $device == xxs-desktop {
+  } @else if $device == xx-desktop {
     @media screen and ($query: 1020px) {
       @content;
     }
-  } @else if $device == xs-desktop {
+  } @else if $device == x-desktop {
     @media screen and ($query: 1024px) {
       @content;
     }

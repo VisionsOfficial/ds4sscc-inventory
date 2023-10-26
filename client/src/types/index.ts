@@ -61,7 +61,9 @@ export type DiscoverCategory =
   | "DevelopingMultiStakeholder"
   | "governanceRules"
   | "roles"
-  | "responsibilities";
+  | "responsibilities"
+  | "GAIA-X"
+  | "iShare";
 
 export type UseCaseCollaborator = {
   location: string;

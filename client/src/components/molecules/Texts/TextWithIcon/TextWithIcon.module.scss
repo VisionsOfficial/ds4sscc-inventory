@@ -1,10 +1,20 @@
-@use '../../../../shared/styles/index' as *;
+@use "../../../../shared/styles/index" as *;
 
 .TextWithIcon {
-    @include flexRow(flex-start, flex-start);
-    gap: $small;
+  @include flexRow(flex-start, flex-start);
+  gap: $small;
 
-    svg {
-        min-width: 30px;
-    }
+  svg {
+    min-width: 30px;
+  }
+
+  .roundArrow {
+    background-color: $primary;
+    border-radius: 50%;
+    stroke: $secondary;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    padding: 2px;
+  }
 }

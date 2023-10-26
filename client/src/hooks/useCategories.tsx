@@ -12,6 +12,7 @@ type ContentCategory = {
   imageVariant?: JSX.Element;
   title?: string;
   link?: string;
+  url?: string;
 };
 
 export const useCategories = ({ category }: Props) => {
@@ -206,6 +207,34 @@ export const useCategories = ({ category }: Props) => {
           ),
           title: "Developing a mutli-stakeholder data cooperation for DS4SSCC",
           link: APP_LINKS.multiStakeholderGovernance.developing,
+        }));
+        break;
+      case "GAIA-X":
+        setContentCategory((prev) => ({
+          ...prev,
+          image: (
+            <img
+              src={APP_IMAGES_ASSETS.logo.gaiaX}
+              alt="Logo GAIA-X"
+              style={{ objectFit: "cover", aspectRatio: "2/1", width: 160 }}
+            />
+          ),
+          title: "GAIA-X Trust Framework",
+          url: "https://gaia-x.eu/wp-content/uploads/2022/05/Gaia-X-Trust-Framework-22.04.pdf",
+        }));
+        break;
+      case "iShare":
+        setContentCategory((prev) => ({
+          ...prev,
+          image: (
+            <img
+              src={APP_IMAGES_ASSETS.logo.iShare}
+              alt="Logo iShare"
+              style={{ objectFit: "cover", aspectRatio: "2/1", width: 160 }}
+            />
+          ),
+          title: "iShare Trust Framework",
+          url: "https://ishareworks.atlassian.net/wiki/spaces/IS/overview",
         }));
         break;
 

@@ -24,7 +24,7 @@
           text-align: start;
           background-color: $primary;
           color: $secondary;
-          padding: $xs-small;
+          padding: $xx-small;
           font-weight: 600;
           max-width: 45%;
           min-width: 45%;
@@ -42,7 +42,7 @@
     }
   }
 
-  @include resolution(xs-mobile, max-width) {
+  @include resolution(x-mobile, max-width) {
     tr {
       td {
         span {
@@ -54,7 +54,7 @@
     }
   }
 
-  @include resolution(xs-tablet) {
+  @include resolution(x-tablet) {
     display: table-row-group;
     tr {
       display: table-row;
@@ -116,7 +116,7 @@
     }
   }
 
-  @include resolution(xs-tablet, max-width) {
+  @include resolution(x-tablet, max-width) {
     tr {
       &:is(:not(:last-child)) {
         td {

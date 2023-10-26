@@ -7,36 +7,36 @@
   .sectionNav {
     margin: 0 10%;
     margin-bottom: $large;
-    @include flexRow(center, flex-start);
-    flex-wrap: wrap;
-    gap: $xs-large;
+    gap: $medium;
     position: relative;
-    z-index: 10;
+    @include flexRow(space-between, flex-start);
+    flex-wrap: wrap;
 
     .nav {
       @include flexColumn(stretch);
-      gap: $xs-small;
+      gap: $xx-small;
+      z-index: 10;
 
       button {
         text-transform: uppercase;
         font-size: 16px;
         width: 100%;
         margin: 0;
-        max-width: 230px;
-        min-width: 230px;
+        max-width: 260px;
+        min-width: 260px;
       }
 
       .mainButton {
-        height: 60px;
+        height: 50px;
       }
 
       .subNav {
         @include flexColumn(stretch);
-        gap: $xs-small;
+        gap: $xx-small;
 
         .netherNav {
           @include flexColumn(stretch);
-          gap: $xs-small;
+          gap: $xx-small;
           padding-left: $medium;
         }
       }
@@ -66,13 +66,14 @@
     display: none;
     @include resolution(tablet, max-width) {
       display: flex;
+      justify-content: center;
       .back {
         cursor: pointer;
       }
 
       .path {
         font-style: italic;
-        margin-left: $xs-small;
+        margin-left: $xx-small;
         font-size: small;
       }
 
@@ -88,5 +89,44 @@
 
   .mainActive {
     gap: 0;
+  }
+
+  .content {
+    margin: 0% 10%;
+    @include flexColumn();
+    gap: $small;
+  }
+
+  @include resolution(x-desktop) {
+    .contentRight,
+    .contentLeft {
+      transition: all 0.2s ease;
+      transform: translateY(-140px);
+      align-items: flex-end;
+      z-index: 1;
+      position: relative;
+
+      > div {
+        transition: all 0.2s ease;
+        display: flex;
+        width: calc(100% - 280px) !important;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    }
+
+    .contentLeft {
+      transform: translateY(-140px);
+      align-items: flex-start;
+    }
+  }
+
+  @include resolution(desktop) {
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 330px) !important;
+      }
+    }
   }
 }

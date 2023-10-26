@@ -16,14 +16,14 @@
         &:first-child {
           background-color: $secondary;
           font-weight: bold;
-          @include resolution(xs-tablet) {
+          @include resolution(x-tablet) {
             border-bottom: 1px solid $white;
           }
         }
 
         span {
           &:first-child {
-            @include resolution(xs-mobile, max-width) {
+            @include resolution(x-mobile, max-width) {
               min-width: 50%;
             }
           }

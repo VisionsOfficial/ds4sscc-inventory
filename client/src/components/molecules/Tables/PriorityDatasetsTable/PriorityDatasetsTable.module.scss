@@ -13,13 +13,13 @@
 
   .links {
     div {
-      margin-block: $xs-small;
+      margin-block: $xx-small;
     }
 
-    @include resolution(xs-tablet, max-width) {
+    @include resolution(x-tablet, max-width) {
       .pills {
         @include flexRow();
-        gap: $xs-small;
+        gap: $xx-small;
         flex-wrap: wrap;
         div {
           margin-block: 0;

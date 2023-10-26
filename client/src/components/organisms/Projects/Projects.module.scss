@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: $medium;
 
-    @include resolution(xs-tablet, max-width) {
+    @include resolution(x-tablet, max-width) {
       grid-template-columns: 1fr;
     }
   }

@@ -7,7 +7,7 @@
         background-color: $secondary;
         font-weight: bold;
         padding: $large $small;
-        @include resolution(xs-tablet, max-width) {
+        @include resolution(x-tablet, max-width) {
           padding: 0;
         }
       }
@@ -21,7 +21,7 @@
           height: 100%;
           p {
             font-size: medium;
-            padding-inline: $xs-small;
+            padding-inline: $xx-small;
             border-bottom: 1px solid $secondary;
             width: 100%;
             &:last-child {

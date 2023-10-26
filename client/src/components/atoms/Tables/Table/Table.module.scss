@@ -14,7 +14,7 @@
     display: none;
   }
 
-  @include resolution(xs-tablet) {
+  @include resolution(x-tablet) {
     thead {
       display: table-header-group;
     }

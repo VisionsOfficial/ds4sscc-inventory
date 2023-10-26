@@ -13,7 +13,7 @@
     ul {
       @include flexColumn(stretch, stretch);
       width: 100%;
-      gap: $xs-small;
+      gap: $xx-small;
       li {
         span {
           min-width: max-content;

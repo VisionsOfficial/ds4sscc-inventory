@@ -1,0 +1,130 @@
+@use "../../../../shared/styles/index" as *;
+
+.UniversalTrustDataRegistry {
+  @include flexColumn(stretch);
+  gap: $large;
+
+  .utdrComponentCard {
+    width: 100%;
+    @include flexColumn(stretch);
+    gap: $medium;
+
+    .componentCards {
+      @include flexColumn(stretch);
+      gap: $medium;
+      &Content {
+        @include fluidGrid(150px);
+        gap: $medium;
+        width: 100%;
+
+        .card {
+          background-color: $primary;
+          @include flexColumn(center, flex-start);
+          gap: $medium;
+
+          .checkbox {
+            width: 25px;
+            height: 25px;
+            border: 2px solid $secondary;
+            position: relative;
+            border-radius: 5px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 7px;
+              top: -5px;
+              width: 10px;
+              height: 16px;
+              border: solid #ffffff;
+              border-width: 0px 6px 5px 0;
+              transform: rotate(45deg);
+            }
+          }
+
+          p {
+            color: $secondary;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .framework {
+    width: 100%;
+    @include flexColumn(stretch);
+    gap: $medium;
+
+    &Cards {
+      @include fluidGrid(150px);
+      gap: $medium;
+      width: 100%;
+
+      .card {
+        background-color: $secondary;
+        color: $primary;
+        @include flexColumn(center, space-between);
+        gap: $medium;
+
+        .title {
+          font-weight: bold;
+          text-align: center;
+          font-size: 1.3rem;
+        }
+
+        ul {
+          width: 100%;
+          @include flexColumn(stretch, flex-start);
+          gap: $small;
+
+          .listContainer {
+            @include flexRow(flex-start, flex-start);
+            width: 100%;
+          }
+
+          a {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .examples {
+    @include flexColumn(stretch);
+    width: 100%;
+    gap: $large;
+    margin-top: $medium;
+
+    h3 {
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    .cards {
+      @include flexColumn();
+      gap: $large;
+      padding-block: 0;
+
+      .card {
+        width: 100% !important;
+        max-width: none;
+        aspect-ratio: 3/1;
+        gap: $small;
+      }
+
+      @include resolution(tablet) {
+        @include fluidGrid(260px);
+        justify-items: center;
+
+        .card {
+          max-height: 280px;
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+  }
+}

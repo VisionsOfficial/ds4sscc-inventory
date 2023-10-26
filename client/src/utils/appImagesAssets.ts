@@ -24,6 +24,10 @@ import priorityDatasetsVariant from "../assets/imgs/icons/categories/priorityDat
 import referenceArchitecture from "../assets/imgs/icons/categories/referenceArchitecture/Reference_Architecture_1.svg";
 import referenceArchitectureVariant from "../assets/imgs/icons/categories/referenceArchitecture/Reference_Architecture_2.svg";
 
+//LOGOS
+import gaiaX from "../assets/imgs/icons/categories/examples/gaia-x_logo.jpg";
+import iShare from "../assets/imgs/icons/categories/examples/ishare_logo.png";
+
 //BASICS
 import checkCircle from "../assets/imgs/icons/basics/check-circle.svg";
 import cornerUpLeft from "../assets/imgs/icons/basics/corner-up-left.svg";
@@ -46,6 +50,10 @@ import sharedProcessesInCooperation from "../assets/imgs/shared_processes_in_coo
 import stakeholdersAssociatedRoles from "../assets/imgs/stakeholders_and_associated_roles.png";
 import structureGovernance from "../assets/imgs/structure_governance_for_ds4sscc.png";
 import legentStructureGovernance from "../assets/imgs/legend_structure_governance.png";
+import mimsLiaison from "../assets/imgs/mims_liaison.png";
+import typicalDataPlatforms from "../assets/imgs/typical_data_platforms.png";
+import evolveArchitecture from "../assets/imgs/evolve_architecture.png";
+import dsscBBTaxonomy from "../assets/imgs/dssc_bb_taxonomy.png";
 
 export const APP_IMAGES_ASSETS = {
   icon: {
@@ -98,7 +106,10 @@ export const APP_IMAGES_ASSETS = {
     slovenia,
     sweden,
   },
-  logo: {},
+  logo: {
+    gaiaX,
+    iShare,
+  },
   image: {
     dataCooperationCanvas,
     dataFlows,
@@ -106,5 +117,9 @@ export const APP_IMAGES_ASSETS = {
     stakeholdersAssociatedRoles,
     legentStructureGovernance,
     structureGovernance,
+    mimsLiaison,
+    typicalDataPlatforms,
+    evolveArchitecture,
+    dsscBBTaxonomy,
   },
 } as const;

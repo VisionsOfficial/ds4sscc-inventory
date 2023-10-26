@@ -7,12 +7,18 @@ type DropdownCardProps = {
   variantColor?: "secondary";
   iconInfo?: boolean;
   content?: "catalogue";
+  className?: string;
+  guideStep?: string | number;
+  classNameActive?: string;
 };
 
 export const DropdownCard = ({
   title,
   variantColor,
   iconInfo,
+  className = "",
+  classNameActive = "",
+  guideStep,
   children,
 }: PropsWithChildren<DropdownCardProps>) => {
   const [active, setActive] = useState(false);
@@ -25,6 +31,9 @@ export const DropdownCard = ({
     let color;
     let info = iconInfo ? Styles.info : "";
     let activeCard = active ? Styles.DropdownCardActive : "";
+    let guide = guideStep ? Styles.guideStep : "";
+    let classActive = classNameActive && active ? classNameActive : "";
+
     switch (variantColor) {
       case "secondary":
         color = Styles.secondary;
@@ -34,12 +43,25 @@ export const DropdownCard = ({
         break;
     }
 
-    return [Styles.DropdownCard, color, info, activeCard].join(" ");
+    return [
+      Styles.DropdownCard,
+      color,
+      info,
+      activeCard,
+      className,
+      guide,
+      classActive,
+    ].join(" ");
   };
 
   return (
     <Card className={setProps()}>
-      <header>
+      <header
+        onClick={() => {
+          handleActive();
+        }}
+      >
+        {guideStep && <span className={Styles.guide}>{guideStep}</span>}
         {iconInfo && (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,9 +91,6 @@ export const DropdownCard = ({
           strokeLinecap="round"
           strokeLinejoin="round"
           className={Styles.iconPlus}
-          onClick={() => {
-            handleActive();
-          }}
         >
           <line x1="12" y1="5" x2="12" y2="19"></line>
           <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -79,6 +98,7 @@ export const DropdownCard = ({
       </header>
 
       <div className={`${Styles.wrapper} ${active ? Styles.isOpen : ""}`}>
+        {guideStep && <div></div>}
         <div className={Styles.inner}>{children}</div>
       </div>
     </Card>

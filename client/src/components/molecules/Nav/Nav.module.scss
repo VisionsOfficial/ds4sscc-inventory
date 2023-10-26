@@ -40,7 +40,7 @@
       }
     }
 
-	@include resolution(xs-tablet, max-width) {
+	@include resolution(x-tablet, max-width) {
 		display: none;
 	}
   }

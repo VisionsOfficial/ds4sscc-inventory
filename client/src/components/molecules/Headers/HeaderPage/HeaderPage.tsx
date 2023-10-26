@@ -133,6 +133,25 @@ export const HeaderPage = ({
           </>
         );
 
+      case "referenceArchitecture":
+        return (
+          <p>
+            After the publication of the{" "}
+            <a
+              href="https://www.ds4sscc.eu/catalogueofspecifications"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Catalogue of Specifications for the Building Blocks
+            </a>{" "}
+            (BBs) to be used in the design and deployment of a data space in
+            cities and communities domain, now the corresponding Reference
+            Architecture which explains how to use those BBs in a coherent and
+            consistent manner to develop the functionality which is expected to
+            be provided by a data space.
+          </p>
+        );
+
       default:
         null;
     }

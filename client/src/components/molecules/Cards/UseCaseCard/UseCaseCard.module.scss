@@ -12,7 +12,7 @@
   }
 
   @include resolution(tablet) {
-    gap: $xs-small;
+    gap: $xx-small;
     h3 {
       min-height: 95px;
     }
@@ -63,7 +63,7 @@
   .nav {
     @include flexRow(flex-start);
     flex-wrap: wrap;
-    gap: $xs-medium;
+    gap: $xx-medium;
 
     button {
       min-width: 200px;

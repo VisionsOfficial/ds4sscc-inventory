@@ -11,8 +11,9 @@
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    gap: $xs-small;
+    gap: $xx-small;
     width: 100%;
+    cursor: pointer;
     .iconInfo {
       aspect-ratio: 1/1;
       width: 30px;
@@ -77,6 +78,67 @@
           opacity: 0;
         }
       }
+    }
+  }
+}
+
+.guideStep {
+  overflow: hidden;
+  header {
+    grid-template-columns: 60px 1fr auto;
+
+    .guide {
+      background-color: $primary;
+      color: $secondary;
+      @include flexColumn();
+      height: 50px;
+      width: 50px;
+      font-size: 1.6rem;
+      font-style: italic;
+      position: relative;
+      z-index: 2;
+
+      &::before {
+        content: "";
+        background-color: $primary;
+        height: 999px;
+        width: 2px;
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+      }
+
+      &::after {
+        content: "";
+        background-color: $primary;
+        height: 999px;
+        width: 2px;
+        position: absolute;
+        z-index: 1;
+        bottom: 50px;
+      }
+    }
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: 0fr 0fr;
+    transition: grid-template-rows 0.25s ease-in-out grid-template-columns 0.25s
+      ease-in-out;
+    padding: 0;
+    .inner {
+      overflow: hidden;
+      @include flexColumn(flex-start);
+      gap: $medium;
+    }
+  }
+
+  .isOpen {
+    grid-template-rows: 1fr;
+    grid-template-columns: 65px 1fr;
+
+    @include resolution(mobile) {
+      grid-template-columns: 70px 1fr;
     }
   }
 }

@@ -19,4 +19,10 @@
       font-weight: bold;
     }
   }
+
+  .referenceArchitecture {
+    @include flexColumn(center, flex-start);
+    gap: $medium;
+    text-align: start;
+  }
 }

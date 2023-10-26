@@ -15,12 +15,12 @@
       width: 100%;
     }
 
-    @include resolution(xs-tablet) {
+    @include resolution(x-tablet) {
       @include flexRow(center, stretch);
       flex-wrap: wrap;
     }
 
-    @include resolution(xxs-desktop) {
+    @include resolution(xx-desktop) {
       justify-content: space-between;
     }
   }

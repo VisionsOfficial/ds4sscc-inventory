@@ -31,7 +31,7 @@
         color: white;
       }
 
-      @include resolution(xs-tablet, max-width) {
+      @include resolution(x-tablet, max-width) {
         img {
           height: 100px;
           padding: 15px;

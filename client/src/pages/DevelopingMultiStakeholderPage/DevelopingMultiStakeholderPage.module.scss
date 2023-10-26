@@ -18,13 +18,13 @@
     margin-bottom: $large;
     @include flexRow(center, flex-start);
     flex-wrap: wrap;
-    gap: $xs-large;
+    gap: $x-large;
     position: relative;
-    z-index: 10;
 
     .nav {
       @include flexColumn(stretch);
-      gap: $xs-small;
+      gap: $xx-small;
+      z-index: 10;
     }
 
     button {
@@ -39,7 +39,7 @@
 
     .subNav {
       @include flexColumn(stretch);
-      gap: $xs-small;
+      gap: $xx-small;
     }
 
     @include resolution(tablet, max-width) {

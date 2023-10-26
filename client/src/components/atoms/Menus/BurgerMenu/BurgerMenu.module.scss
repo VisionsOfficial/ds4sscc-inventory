@@ -31,7 +31,7 @@
     }
   }
 
-  @include resolution(xs-tablet) {
+  @include resolution(x-tablet) {
     display: none !important;
   }
 }

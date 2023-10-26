@@ -4,6 +4,16 @@ import { HeaderPage } from "../../components/molecules/Headers/HeaderPage/Header
 import { SubInfoHeaderCard } from "../../components/molecules/Cards/SubInfoHeaderCard/SubInfoHeaderCard";
 import { Button } from "../../components/atoms/Button/Button";
 import { APP_IMAGES_ASSETS } from "../../utils/appImagesAssets";
+import { ScopeAndGoals } from "../../components/organisms/ReferenceArchitecture/ScopeAndGoals/ScopeAndGoals";
+import { MIMsLiaison } from "../../components/organisms/ReferenceArchitecture/MIMsLiaison/MIMsLiaison";
+import { ExistingScenarios } from "../../components/organisms/ReferenceArchitecture/ExistingScenarios/ExistingScenarios";
+import { OverviewHL } from "../../components/organisms/ReferenceArchitecture/OverviewHL/OverviewHL";
+import { UniversalTrustDataRegistry } from "../../components/organisms/ReferenceArchitecture/UniversalTrustDataRegistry/UniversalTrustDataRegistry";
+import { AuthorizationPoliciesStore } from "../../components/organisms/ReferenceArchitecture/AuthorizationPoliciesStore/AuthorizationPoliciesStore";
+import { FederationLayer } from "../../components/organisms/ReferenceArchitecture/FederationLayer/FederationLayer";
+import { ShortGuide } from "../../components/organisms/ReferenceArchitecture/ShortGuide/ShortGuide";
+import { RecipesForScenarios } from "../../components/organisms/ReferenceArchitecture/RecipesForScenarios/RecipesForScenarios";
+import { FAQs } from "../../components/organisms/ReferenceArchitecture/FAQs/FAQs";
 
 type ReferenceArchitecturePageProps = {};
 
@@ -29,7 +39,6 @@ type SubReferenceNav =
   | "MIMs liaison"
   | "Existing scenarios"
   | "Overview"
-  | "Systems view"
   | "Components"
   | "Case 1: Helsinki"
   | "Case 2: Flanders"
@@ -39,15 +48,14 @@ type SubReferenceNav =
   | "Recipes for scenarios"
   | "FAQs";
 
-type netherReferenceNav =
-  | "Universal Registry"
-  | "Authorization Store"
-  | "Federation layer";
+export type netherReferenceNav =
+  | "Universal Trust Data Registry"
+  | "Authorization Policies Store"
+  | "Federation Layer";
 
 const CONTENT_MAIN_NAV: MainReferenceNav[] = [
   "Context",
   "High-level Architecture",
-  "Customized Architectures",
   "Cookbook",
 ];
 
@@ -79,7 +87,7 @@ export const ReferenceArchitecturePage =
         case "High-level Architecture":
           setNavContent((prev) => ({
             ...prev,
-            sub: ["Overview", "Systems view", "Components"],
+            sub: ["Overview", "Components"],
           }));
           break;
         case "Customized Architectures":
@@ -113,9 +121,9 @@ export const ReferenceArchitecturePage =
           setNavContent((prev) => ({
             ...prev,
             nether: [
-              "Universal Registry",
-              "Authorization Store",
-              "Federation layer",
+              "Universal Trust Data Registry",
+              "Authorization Policies Store",
+              "Federation Layer",
             ],
           }));
           break;
@@ -124,6 +132,14 @@ export const ReferenceArchitecturePage =
           setNavContent((prev) => ({ ...prev, nether: [] }));
           break;
       }
+    };
+
+    const handleNetherSelected = (nether: netherReferenceNav) => {
+      handleSubNavSelected("Components");
+      setNavSelections((prev) => ({
+        ...prev,
+        nether: nether,
+      }));
     };
 
     const contentNav = () => {
@@ -188,6 +204,52 @@ export const ReferenceArchitecturePage =
           )}
         </ul>
       ));
+    };
+
+    const setBodyClass = () => {
+      if (navSelections.main === "Context") {
+        return Styles.contentRight;
+      } else if (navSelections.main === "Cookbook") {
+        return Styles.contentLeft;
+      } else {
+        return "";
+      }
+    };
+
+    const contentBody = () => {
+      if (navSelections.nether) {
+        switch (navSelections.nether) {
+          case "Universal Trust Data Registry":
+            return <UniversalTrustDataRegistry />;
+          case "Authorization Policies Store":
+            return <AuthorizationPoliciesStore />;
+          case "Federation Layer":
+            return <FederationLayer />;
+
+          default:
+            return null;
+        }
+      }
+
+      switch (navSelections.sub) {
+        case "Scope & Goals":
+          return <ScopeAndGoals />;
+        case "MIMs liaison":
+          return <MIMsLiaison />;
+        case "Existing scenarios":
+          return <ExistingScenarios />;
+        case "Overview":
+          return <OverviewHL updateNavSelected={handleNetherSelected} />;
+        case "Short guide":
+          return <ShortGuide />;
+        case "Recipes for scenarios":
+          return <RecipesForScenarios />;
+        case "FAQs":
+          return <FAQs />;
+
+        default:
+          return null;
+      }
     };
 
     const handleClickBack = () => {
@@ -302,7 +364,7 @@ export const ReferenceArchitecturePage =
       <main className={Styles.ReferenceArchitecturePage}>
         <HeaderPage category="referenceArchitecture" />
 
-        <SubInfoHeaderCard />
+        <SubInfoHeaderCard category="referenceArchitecture" />
 
         <section className={Styles.sectionNav}>{contentNav()}</section>
         <section
@@ -311,6 +373,10 @@ export const ReferenceArchitecturePage =
           }`}
         >
           {contentNavMobile()}
+        </section>
+
+        <section className={`${Styles.content} ${setBodyClass()}`}>
+          {contentBody()}
         </section>
       </main>
     );

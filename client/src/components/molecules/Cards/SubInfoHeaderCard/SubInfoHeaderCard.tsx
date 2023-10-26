@@ -83,6 +83,60 @@ export const SubInfoHeaderCard = ({
           </>
         );
 
+      case "referenceArchitecture":
+        return (
+          <div className={Styles.referenceArchitecture}>
+            <h2>How to get started</h2>
+            <p>
+              We have analysed the most relevant reference architectures for
+              data spaces and smart cities to gather the best insights for the
+              architecture and the existing European regulation and legislative
+              frameworks to determine their impact on the DS4SSCC architecture,
+              like for example the{" "}
+              <a
+                href="https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/european-green-deal/delivering-european-green-deal_en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Green Deal objectives
+              </a>
+              .
+            </p>
+            <p>
+              The designed architecture takes into account the basic design
+              principles for a data space (interoperability, sovereignty,
+              ecosystem, security and decentralisation), the specific
+              considerations of the smart cities domain and the existing{" "}
+              <a
+                href="https://living-in.eu/news/mims-plus-version-60-approved"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Minimal Interoperability Mechanisms Plus
+              </a>{" "}
+              (MIMs Plus) already adopted in the field.
+            </p>
+            <p>
+              The proposed architecture is fully aligned with the
+              recommendations given by the{" "}
+              <a
+                href="https://dssc.eu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Data Spaces Support Centre
+              </a>{" "}
+              (DSSC), so it follows the spirit, concepts and taxonomy of
+              building blocks provided by the DSSC as common technical grounds
+              for all the data spaces.
+              <br />
+              Navigating through this section, you will find a contextualization
+              of the architecture, the high-level architecture itself and a set
+              of guidelines and recipes under what we call, the CookBook.
+            </p>
+          </div>
+        );
+
       default:
         return null;
     }
