@@ -137,6 +137,19 @@ export const SubInfoHeaderCard = ({
           </div>
         );
 
+      case "roadmapForImplementing":
+        return (
+          <>
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              voluptas quae eos, odit voluptatum sunt explicabo! Nostrum
+              provident ducimus et reprehenderit, saepe explicabo error, odit
+              numquam facere asperiores illum minima.
+            </p>
+          </>
+        );
+
       default:
         return null;
     }

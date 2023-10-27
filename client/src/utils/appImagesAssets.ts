@@ -2,6 +2,7 @@
 // CATEGORIES
 // ACTION PLAN
 import actionPlan from "../assets/imgs/icons/categories/actionPlan/Action_Plan_1.svg";
+import actionPlanVariant from "../assets/imgs/icons/categories/actionPlan/Action_plan_2.svg";
 //  CATALOG OF SPECIFICATIONS
 import catalogOfSpecifications from "../assets/imgs/icons/categories/catalogOfSpecifications/Catalogue_of_Specifications_1.svg";
 import catalogOfSpecificationsVariant from "../assets/imgs/icons/categories/catalogOfSpecifications/Catalogue_of_Specifications_2.svg";
@@ -23,6 +24,18 @@ import priorityDatasetsVariant from "../assets/imgs/icons/categories/priorityDat
 // REFERENCE ARCHITECTURE
 import referenceArchitecture from "../assets/imgs/icons/categories/referenceArchitecture/Reference_Architecture_1.svg";
 import referenceArchitectureVariant from "../assets/imgs/icons/categories/referenceArchitecture/Reference_Architecture_2.svg";
+// ROADMAP
+import roadmap from "../assets/imgs/icons/categories/roadmap/Roadmap_for_implementing_DS4SSCC_1.svg";
+import roadmapVariant from "../assets/imgs/icons/categories/roadmap/Roadmap_for_implementing_DS4SSCC_2.svg";
+// CAPACITY BUILDING
+import capacityBuilding from "../assets/imgs/icons/categories/capacityBuilding/Capacity_Building_1.svg";
+import capacityBuildingVariant from "../assets/imgs/icons/categories/capacityBuilding/Capacity_Building_2.svg";
+// RECOMMENDED ACTION FOR STANDARDISATION
+import recommendedAction from "../assets/imgs/icons/categories/recommendedActionForStandardisation/Recommended_Action_for_Standardisation_1.svg";
+import recommendedActionVariant from "../assets/imgs/icons/categories/recommendedActionForStandardisation/Recommended_Action_for_Standardisation_2.svg";
+// VISION FOR THE FEDERATION OF DATA SPACES
+import visionFederation from "../assets/imgs/icons/categories/visionForTheFederationOfDataSpaces/Vision_for_the_Federation_of_Data_Spaces_1.svg";
+import visionFederationVariant from "../assets/imgs/icons/categories/visionForTheFederationOfDataSpaces/Vision_for_the_Federation_of_Data_Spaces_2.svg";
 
 //LOGOS
 import gaiaX from "../assets/imgs/icons/categories/examples/gaia-x_logo.jpg";
@@ -64,6 +77,7 @@ export const APP_IMAGES_ASSETS = {
     categories: {
       actionPlan: {
         actionPlan,
+        actionPlanVariant,
       },
       catalogOfSpecifications: {
         catalogOfSpecifications,
@@ -92,6 +106,22 @@ export const APP_IMAGES_ASSETS = {
       referenceArchitecture: {
         referenceArchitecture,
         referenceArchitectureVariant,
+      },
+      roadmap: {
+        roadmap,
+        roadmapVariant,
+      },
+      capacityBuilding: {
+        capacityBuilding,
+        capacityBuildingVariant,
+      },
+      visionFederation: {
+        visionFederation,
+        visionFederationVariant,
+      },
+      recommendedAction: {
+        recommendedAction,
+        recommendedActionVariant,
       },
     },
   },

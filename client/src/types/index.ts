@@ -63,7 +63,12 @@ export type DiscoverCategory =
   | "roles"
   | "responsibilities"
   | "GAIA-X"
-  | "iShare";
+  | "iShare"
+  | "roadmapForImplementing"
+  | "capacityBuilding"
+  | "recommendedAction"
+  | "visionsFederation"
+  | "actionPlanCheatsheet";
 
 export type UseCaseCollaborator = {
   location: string;

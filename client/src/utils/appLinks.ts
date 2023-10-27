@@ -8,5 +8,12 @@ export const APP_LINKS = {
   referenceArchitecture: "/reference-architecture",
   priorityDatasets: "/priority-datasets",
   collectedUseCases: "/collected-use-cases",
-  actionPlan: "/action-plan",
+  roadmap: {
+    index: "/roadmap",
+    actionPlan: "/roadmap/action-plan",
+    capacityBuilding: "/roadmap/capacity-building",
+    recommendedAction: "/roadmap/recommended-action-for-standardisation",
+    visionFederation: "/roadmap/vision-for-the-federation-of-sata-spaces",
+  },
+  actionPlanCheatsheet: "/action-plan-cheatsheet",
 } as const;

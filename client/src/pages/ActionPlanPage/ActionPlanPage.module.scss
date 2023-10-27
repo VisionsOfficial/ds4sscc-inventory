@@ -1,3 +1,106 @@
+@use "../../shared/styles/index" as *;
+
 .ActionPlanPage {
-    
+  background-color: $white;
+  padding-bottom: $large;
+
+  .sectionNav {
+    margin: $large 10%;
+    margin-bottom: $large;
+    gap: $medium;
+    position: relative;
+    @include flexRow(space-between, flex-start);
+    flex-wrap: wrap;
+
+    .nav {
+      @include flexColumn(stretch);
+      gap: $xx-small;
+      z-index: 10;
+
+      button {
+        text-transform: uppercase;
+        font-size: 15px;
+        width: 100%;
+        margin: 0;
+        max-width: 155px;
+        min-width: 155px;
+      }
+
+      .mainButton {
+        height: 115px;
+      }
+
+      .subNav {
+        @include flexColumn(stretch);
+        gap: $xx-small;
+
+        .netherNav {
+          @include flexColumn(stretch);
+          gap: $xx-small;
+          padding-left: $medium;
+        }
+      }
+    }
+
+    @include resolution(tablet, max-width) {
+      display: none;
+    }
+
+    @include resolution(desktop) {
+      justify-content: space-between;
+    }
+  }
+
+  .sectionNavMobile {
+    display: none;
+    @include resolution(tablet, max-width) {
+      display: flex;
+      justify-content: center;
+      .back {
+        cursor: pointer;
+      }
+
+      .path {
+        font-style: italic;
+        margin-left: $xx-small;
+        font-size: small;
+      }
+
+      .nav {
+        align-items: center;
+      }
+    }
+  }
+
+  .mainActive {
+    gap: 0;
+  }
+
+  .content {
+    margin: 0% 10%;
+    @include flexColumn();
+    gap: $small;
+  }
+
+  @media screen and (min-width: 1310px) {
+    .contentRight,
+    .contentLeft {
+      transition: all 0.2s ease;
+      transform: translateY(-140px);
+      align-items: flex-end;
+      z-index: 1;
+      position: relative;
+
+      > div {
+        transition: all 0.2s ease;
+        display: flex;
+        width: calc(100% - 180px) !important;
+      }
+    }
+
+    .contentLeft {
+      transform: translateY(-140px);
+      align-items: flex-start;
+    }
+  }
 }

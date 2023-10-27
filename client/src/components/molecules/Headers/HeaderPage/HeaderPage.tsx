@@ -3,7 +3,7 @@ import Styles from "./HeaderPage.module.scss";
 import { DiscoverCategory } from "../../../../types";
 import { Title } from "../../../atoms/Title/Title";
 import { useCategories } from "../../../../hooks/useCategories";
-import { APP_IMAGES_ASSETS } from "../../../../utils/appImagesAssets";
+import { Button } from "../../../atoms/Button/Button";
 
 type HeaderPageProps = {
   category: DiscoverCategory;
@@ -152,6 +152,65 @@ export const HeaderPage = ({
           </p>
         );
 
+      case "roadmapForImplementing":
+        return (
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+            alias repellat dignissimos aliquid eos repellendus a molestias
+            inventore velit obcaecati. Labore quos exercitationem nesciunt
+            aliquam blanditiis voluptate incidunt neque quasi.
+          </p>
+        );
+
+      case "capacityBuilding":
+        return (
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+            alias repellat dignissimos aliquid eos repellendus a molestias
+            inventore velit obcaecati. Labore quos exercitationem nesciunt
+            aliquam blanditiis voluptate incidunt neque quasi.
+          </p>
+        );
+      case "actionPlan":
+        return (
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+            alias repellat dignissimos aliquid eos repellendus a molestias
+            inventore velit obcaecati. Labore quos exercitationem nesciunt
+            aliquam blanditiis voluptate incidunt neque quasi.
+          </p>
+        );
+      case "recommendedAction":
+        return (
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+            alias repellat dignissimos aliquid eos repellendus a molestias
+            inventore velit obcaecati. Labore quos exercitationem nesciunt
+            aliquam blanditiis voluptate incidunt neque quasi.
+          </p>
+        );
+      case "visionsFederation":
+        return (
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+            alias repellat dignissimos aliquid eos repellendus a molestias
+            inventore velit obcaecati. Labore quos exercitationem nesciunt
+            aliquam blanditiis voluptate incidunt neque quasi.
+          </p>
+        );
+      case "actionPlanCheatsheet":
+        return (
+          <>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+              alias repellat dignissimos aliquid eos repellendus a molestias
+              inventore velit obcaecati. Labore quos exercitationem nesciunt
+              aliquam blanditiis voluptate incidunt neque quasi.
+            </p>
+            <Button className={Styles.btnDl}>Download</Button>
+          </>
+        );
+
       default:
         null;
     }
@@ -159,9 +218,7 @@ export const HeaderPage = ({
 
   return (
     <header className={Styles.HeaderPage}>
-      {category === "actionPlan"
-        ? contentCategory?.image
-        : contentCategory?.imageVariant}
+      {contentCategory?.imageVariant}
       <div className={Styles.content}>
         <Title>{contentCategory?.title}</Title>
         {contentText()}

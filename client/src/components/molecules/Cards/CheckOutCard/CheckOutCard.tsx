@@ -60,6 +60,8 @@ export const CheckOutCard = ({
         return "Discover the responsibilities of each.";
       case "actionPlan":
         return "Discover the initiatives and resources implemented in our action plan.";
+      case "actionPlanCheatsheet":
+        return "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.";
 
       default:
         break;

@@ -1,0 +1,12 @@
+@use "../../shared/styles/index" as *;
+
+.ActionPlanCheatsheetPage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .content {
+    padding: $padding-content;
+    @include flexColumn();
+    gap: $medium;
+  }
+}

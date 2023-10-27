@@ -12,7 +12,7 @@ const setCategoryCard: DiscoverCategory[] = [
   "referenceArchitecture",
   "priorityDatasets",
   "collectedUseCases",
-  "actionPlan",
+  "roadmapForImplementing",
 ];
 
 export const HomePage = ({}: PropsWithChildren<HomePageProps>) => {

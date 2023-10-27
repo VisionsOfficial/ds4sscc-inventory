@@ -156,8 +156,14 @@ export const useCategories = ({ category }: Props) => {
               alt="Icon action plan"
             />
           ),
+          imageVariant: (
+            <img
+              src={APP_IMAGES_ASSETS.icon.categories.actionPlan.actionPlanVariant}
+              alt="Icon action plan"
+            />
+          ),
           title: "Action Plan",
-          link: APP_LINKS.actionPlan,
+          link: APP_LINKS.roadmap.actionPlan,
         }));
         break;
       case "codeOfConducts":
@@ -235,6 +241,107 @@ export const useCategories = ({ category }: Props) => {
           ),
           title: "iShare Trust Framework",
           url: "https://ishareworks.atlassian.net/wiki/spaces/IS/overview",
+        }));
+        break;
+      case "roadmapForImplementing":
+        setContentCategory((prev) => ({
+          ...prev,
+          image: (
+            <img
+              src={APP_IMAGES_ASSETS.icon.categories.roadmap.roadmap}
+              alt="Icon roadmap"
+            />
+          ),
+          imageVariant: (
+            <img
+              src={APP_IMAGES_ASSETS.icon.categories.roadmap.roadmapVariant}
+              alt="Icon roadmap"
+            />
+          ),
+          title: "Roadmap for implementing DS4SSCC",
+          link: APP_LINKS.roadmap.index,
+        }));
+        break;
+      case "capacityBuilding":
+        setContentCategory((prev) => ({
+          ...prev,
+          image: (
+            <img
+              src={
+                APP_IMAGES_ASSETS.icon.categories.capacityBuilding
+                  .capacityBuilding
+              }
+              alt="Icon capacity building"
+            />
+          ),
+          imageVariant: (
+            <img
+              src={
+                APP_IMAGES_ASSETS.icon.categories.capacityBuilding
+                  .capacityBuildingVariant
+              }
+              alt="Icon capacity building"
+            />
+          ),
+          title: "Capacity Building",
+          link: APP_LINKS.roadmap.capacityBuilding,
+        }));
+        break;
+      case "recommendedAction":
+        setContentCategory((prev) => ({
+          ...prev,
+          image: (
+            <img
+              src={
+                APP_IMAGES_ASSETS.icon.categories.recommendedAction
+                  .recommendedAction
+              }
+              alt="Icon recommended action for standardisation"
+            />
+          ),
+          imageVariant: (
+            <img
+              src={
+                APP_IMAGES_ASSETS.icon.categories.recommendedAction
+                  .recommendedActionVariant
+              }
+              alt="Icon recommended action for standardisation"
+            />
+          ),
+          title: "Recommended Action for Standardisation",
+          link: APP_LINKS.roadmap.recommendedAction,
+        }));
+        break;
+      case "visionsFederation":
+        setContentCategory((prev) => ({
+          ...prev,
+          image: (
+            <img
+              src={
+                APP_IMAGES_ASSETS.icon.categories.visionFederation
+                  .visionFederation
+              }
+              alt="Icon vision for the federation of data spaces"
+            />
+          ),
+          imageVariant: (
+            <img
+              src={
+                APP_IMAGES_ASSETS.icon.categories.visionFederation
+                  .visionFederationVariant
+              }
+              alt="Icon vision for the federation of data spaces"
+            />
+          ),
+          title: "Vision for the Federation of Data Spaces",
+          link: APP_LINKS.roadmap.visionFederation,
+        }));
+        break;
+      case "actionPlanCheatsheet":
+        setContentCategory((prev) => ({
+          ...prev,
+          title: "Action Plan Cheatsheet",
+          link: APP_LINKS.actionPlanCheatsheet,
         }));
         break;
 

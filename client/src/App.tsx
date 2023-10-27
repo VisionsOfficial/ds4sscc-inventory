@@ -20,6 +20,11 @@ import { PriorityDatasetsPage } from "./pages/PriorityDatasetsPage/PriorityDatas
 import { CollectedUseCasesPage } from "./pages/CollectedUseCasesPage/CollectedUseCasesPage";
 import { ReferenceArchitecturePage } from "./pages/ReferenceArchitecturePage/ReferenceArchitecturePage";
 import { ActionPlanPage } from "./pages/ActionPlanPage/ActionPlanPage";
+import { RoadmapPage } from "./pages/RoadmapPage/RoadmapPage";
+import { CapacityBuildingPage } from "./pages/CapacityBuildingPage/CapacityBuildingPage";
+import { RecommendedActionStandardisationPage } from "./pages/RecommendedActionStandardisationPage/RecommendedActionStandardisationPage";
+import { VisionFederationDataSpacesPage } from "./pages/VisionFederationDataSpacesPage/VisionFederationDataSpacesPage";
+import { ActionPlanCheatsheetPage } from "./pages/ActionPlanCheatsheetPage/ActionPlanCheatsheetPage";
 
 function App() {
   return (
@@ -57,7 +62,6 @@ function App() {
             path="/collected-use-cases"
             element={<CollectedUseCasesPage />}
           ></Route>
-          <Route path="/action-plan" element={<ActionPlanPage />}></Route>
 
           <Route path="/project/:id" element={<BuildingBlockPage />} />
           <Route path="/suggest/:id" element={<SuggestionSubmitPage />} />
@@ -77,6 +81,27 @@ function App() {
             path="/admin/portal/edit/:resource/:id"
             element={<EditResourcePage />}
           />
+
+          <Route path="roadmap" element={<RoadmapPage />}>
+            <Route path="action-plan" element={<ActionPlanPage />}></Route>
+            <Route
+              path="capacity-building"
+              element={<CapacityBuildingPage />}
+            ></Route>
+            <Route
+              path="recommended-action-for-standardisation"
+              element={<RecommendedActionStandardisationPage />}
+            ></Route>
+            <Route
+              path="vision-for-the-federation-of-sata-spaces"
+              element={<VisionFederationDataSpacesPage />}
+            ></Route>
+          </Route>
+
+          <Route
+            path="action-plan-cheatsheet"
+            element={<ActionPlanCheatsheetPage />}
+          ></Route>
         </Routes>
         <Footer />
       </ScrollTop>
