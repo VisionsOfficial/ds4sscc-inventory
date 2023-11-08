@@ -162,15 +162,6 @@ export const HeaderPage = ({
           </p>
         );
 
-      case "capacityBuilding":
-        return (
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-            alias repellat dignissimos aliquid eos repellendus a molestias
-            inventore velit obcaecati. Labore quos exercitationem nesciunt
-            aliquam blanditiis voluptate incidunt neque quasi.
-          </p>
-        );
       case "actionPlan":
         return (
           <p>
@@ -182,22 +173,15 @@ export const HeaderPage = ({
             architecture.
           </p>
         );
-      case "recommendedAction":
-        return (
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-            alias repellat dignissimos aliquid eos repellendus a molestias
-            inventore velit obcaecati. Labore quos exercitationem nesciunt
-            aliquam blanditiis voluptate incidunt neque quasi.
-          </p>
-        );
       case "visionsFederation":
         return (
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-            alias repellat dignissimos aliquid eos repellendus a molestias
-            inventore velit obcaecati. Labore quos exercitationem nesciunt
-            aliquam blanditiis voluptate incidunt neque quasi.
+            A Federation of Data Spaces is a concept that envisions an
+            interconnected network of data spaces, where data is shared and
+            exchanged seamlessly, while respecting privacy, security, data
+            sovereignty and governance requirements. It transcends traditional
+            boundaries, allowing data to flow across organisations, sectors, and
+            borders.
           </p>
         );
       case "actionPlanCheatsheet":

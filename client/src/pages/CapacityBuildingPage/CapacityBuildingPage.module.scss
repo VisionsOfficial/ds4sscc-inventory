@@ -6,7 +6,15 @@
 
   .content {
     padding: $padding-content;
-    @include flexColumn();
+    @include flexColumn(flex-start);
+    text-align: start;
     gap: $medium;
+    ol {
+      padding-left: 1.25rem;
+    }
+
+    ul {
+      list-style: inside;
+    }
   }
 }

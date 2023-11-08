@@ -10,50 +10,77 @@ export const CapacityBuildingPage =
       <main className={Styles.CapacityBuildingPage}>
         <HeaderPage category="capacityBuilding" />
 
-        <div className={Styles.content}>
+        <section className={Styles.content}>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-            laudantium quibusdam, voluptates veritatis rerum aspernatur quis!
-            Quidem nulla consectetur, vitae aliquid itaque consequatur
-            aspernatur voluptatum! Dolorum ex consectetur voluptas mollitia.
+            The DS4SSCC initiative places a strong emphasis on Capacity Building
+            activities to foster mutual learning and knowledge-sharing within
+            European data ecosystems. This report provides an overview of these
+            activities, their scope, and structure.
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-            veritatis necessitatibus fugit repudiandae iusto laudantium dolores
-            quae earum, exercitationem blanditiis nulla sapiente incidunt
-            corrupti suscipit quis possimus alias commodi voluptas!
-            <br />
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-            sapiente fugiat doloribus fugit placeat ut aliquam distinctio omnis
-            ipsam magni provident nulla obcaecati, corporis optio molestias
-            laboriosam labore, repudiandae reprehenderit. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Fugit id soluta ab, temporibus
-            unde deserunt iure est reprehenderit impedit recusandae facere
-            tempore in suscipit debitis eligendi expedita, facilis obcaecati
-            amet.
+            Background: The European Union is transitioning towards smarter and
+            more connected communities, making it crucial to promote mutual
+            learning and capacity building among local data ecosystems. DS4SSCC
+            aims to achieve this by leveraging insights from various EU
+            initiatives like Living-in.EU, DT4REGIONS, LEAD, and DUET to promote
+            AI-enabled data services and digital transformation.
           </p>
-
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-            esse, numquam quasi cupiditate doloribus reprehenderit accusamus,
-            suscipit eos velit quibusdam eaque neque nesciunt ratione. Culpa
-            assumenda ducimus adipisci eum velit? Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Perspiciatis, similique expedita
-            delectus exercitationem ea consequatur deserunt optio quod cumque
-            adipisci qui omnis possimus dolor placeat eveniet, nesciunt tenetur
-            ex sint! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quia voluptas impedit aliquam magni illo libero iure obcaecati!
-            Placeat minus at ab ullam, corrupti necessitatibus recusandae
-            libero, dolorum ea accusantium velit. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Quisquam voluptate iste vel
-            exercitationem cum! Libero necessitatibus modi molestias ullam
-            reprehenderit non delectus dicta, sunt, eaque sit, adipisci nisi
-            tempora? Illum. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Eius delectus eos maiores corporis, aperiam dicta, laborum
-            temporibus ipsam sapiente mollitia vitae modi fugit, quidem nisi
-            atque aspernatur! At, pariatur nam?
+            Scope: DS4SSCC's Capacity Building activities revolve around
+            creating an interactive training program tailored to data space
+            ecosystems. It offers online short-term training opportunities for
+            public managers and practitioners while serving as a knowledge hub
+            for EU initiatives. The process involves three key steps:
           </p>
-        </div>
+          <ol>
+            <li>
+              Collection of Capacity Building needs and main interests:
+              Collaborative assessment involving stakeholder communities and
+              partners to understand specific needs and interests.
+            </li>
+            <li>
+              Co-design of learning contents and materials: Collaborative
+              development with external initiatives and project partners to
+              customise content for data space communities.
+            </li>
+            <li>
+              Engagement of participants and promotion: Organising webinars,
+              workshops, and open debates to facilitate mutual learning and
+              skills development, with a focus on cross-sector and
+              cross-community data services.
+            </li>
+          </ol>
+          <p>
+            Structure: DS4SSCC's Capacity Building activities consist of two
+            main components:
+          </p>
+          <ul>
+            <li>
+              The Training Programme: Offers short video lessons and supporting
+              materials accessible through the DS4SSCC Training Hub. It targets
+              public managers, practitioners, and stakeholders, addressing the
+              specific needs of data space communities.
+            </li>
+            <li>
+              Mutual Learning Initiatives: Facilitate collaboration and
+              knowledge exchange among stakeholders. This includes Stakeholder
+              Forum meetings, webinars, workshops, and open debates, with all
+              resources hosted on the DS4SSCC Training Hub. These initiatives
+              complement the Training Programme by promoting active
+              participation and community engagement.
+            </li>
+          </ul>
+          <p>
+            Training Hub: The DS4SSCC Training Hub is an online platform
+            centralising access to various training resources and materials. It
+            acts as a repository for video lessons, presentations, reports, and
+            supporting materials related to capacity building activities. The
+            Training Hub is easily accessible through the DS4SSCC project's
+            website, serving as a convenient resource for enhancing knowledge
+            and skills in data spaces for smart and sustainable cities and
+            communities.
+          </p>
+        </section>
       </main>
     );
   };
