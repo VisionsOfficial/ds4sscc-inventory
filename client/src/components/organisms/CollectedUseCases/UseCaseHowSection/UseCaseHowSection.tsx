@@ -73,15 +73,22 @@ export const UseCaseHowSection = ({
           </ul>
         );
       case "scope":
-        return <p>{useCase.scope}</p>;
+        return (
+          <ul>
+            {useCase?.scope?.map((scope, index) => (
+              <li key={scope + index}>{scope}</li>
+            ))}
+          </ul>
+        );
       case "datasets":
         return (
           <ul>
             {useCase?.datasets?.map((dataset, index) => (
               <li key={dataset + index}>
-                <TextWithIcon className={Styles.textAndIcon}>
-                  {dataset}
-                </TextWithIcon>
+                <TextWithIcon
+                  className={Styles.textAndIcon}
+                  innerHtml={dataset}
+                ></TextWithIcon>
               </li>
             ))}
           </ul>
@@ -91,9 +98,10 @@ export const UseCaseHowSection = ({
           <ul>
             {useCase?.specs?.map((spec, index) => (
               <li key={spec + index}>
-                <TextWithIcon className={Styles.textAndIcon}>
-                  {spec}
-                </TextWithIcon>
+                <TextWithIcon
+                  className={Styles.textAndIcon}
+                  innerHtml={spec}
+                ></TextWithIcon>
               </li>
             ))}
           </ul>
@@ -123,13 +131,13 @@ export const UseCaseHowSection = ({
           <ul>
             {useCase?.links?.map((link, index) => (
               <TextWithIcon
-                key={link + index}
+                key={"link" + index}
                 className={`${Styles.textAndIcon} ${Styles.link}`}
                 onclick={() => {
-                  window.open(link);
+                  window.open(link.url);
                 }}
               >
-                {link}
+                {link?.name ? link.name : link.url}
               </TextWithIcon>
             ))}
           </ul>

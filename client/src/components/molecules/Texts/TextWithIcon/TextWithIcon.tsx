@@ -5,12 +5,14 @@ type TextWithIconProps = {
   variantIcon?: "check" | "arrow";
   className?: string;
   onclick?: () => void;
+  innerHtml?: string;
 };
 
 export const TextWithIcon = ({
   variantIcon = "check",
   className,
   onclick,
+  innerHtml,
   children,
 }: PropsWithChildren<TextWithIconProps>) => {
   const setIcon = () => {
@@ -52,6 +54,14 @@ export const TextWithIcon = ({
     }
   };
 
+  const setContent = () => {
+    if (innerHtml) {
+      return <p dangerouslySetInnerHTML={{ __html: innerHtml }}></p>;
+    } else {
+      return <p>{children}</p>;
+    }
+  };
+
   return (
     <div
       className={`${Styles.TextWithIcon} ${className ? className : ""}`}
@@ -60,7 +70,7 @@ export const TextWithIcon = ({
       }}
     >
       {setIcon()}
-      <p>{children}</p>
+      {setContent()}
     </div>
   );
 };

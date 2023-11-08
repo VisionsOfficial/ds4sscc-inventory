@@ -48,6 +48,13 @@
       }
     }
 
+    .what {
+      ul {
+        list-style: inside;
+        padding-left: 1.25rem;
+      }
+    }
+
     .howSection {
       @include flexColumn(stretch);
       gap: $medium;

@@ -4,9 +4,6 @@ import { Card } from "../../../atoms/Card/Card";
 import { UseCase } from "../../../../types";
 import { LocationTitle } from "../../../atoms/Titles/LocationTitle/LocationTitle";
 import { Button } from "../../../atoms/Button/Button";
-import { SectionTitleContainer } from "../../Containers/SectionTitleContainer/SectionTitleContainer";
-import { TextWithIcon } from "../../Texts/TextWithIcon/TextWithIcon";
-import { Pill } from "../../../atoms/Pills/Pill/Pill";
 import { UseCaseHowSection } from "../../../organisms/CollectedUseCases/UseCaseHowSection/UseCaseHowSection";
 
 type UseCaseCardProps = {
@@ -45,7 +42,10 @@ export const UseCaseCard = ({
     switch (navSelected) {
       case "What":
         return (
-          <p dangerouslySetInnerHTML={{ __html: useCase?.description }}></p>
+          <p
+            dangerouslySetInnerHTML={{ __html: useCase?.description }}
+            className={Styles.what}
+          ></p>
         );
 
       case "How":

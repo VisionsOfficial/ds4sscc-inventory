@@ -81,17 +81,18 @@ export type UseCase = {
   description: string;
   standards?: string[];
   mims?: string[];
-  scope?: string;
+  scope?: string[];
   datasets?: string[];
   specs?: string[];
-  referenceImplementations?: [
-    {
-      name: string;
-      url: string;
-    }
-  ];
+  referenceImplementations?: {
+    name: string;
+    url: string;
+  }[];
   maturity?: string[];
-  links?: string[];
+  links?: {
+    name?: string;
+    url: string;
+  }[];
 };
 
 export type CategoryTableInCard =
