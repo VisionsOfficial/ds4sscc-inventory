@@ -193,7 +193,7 @@ export const HeaderPage = ({
               inventore velit obcaecati. Labore quos exercitationem nesciunt
               aliquam blanditiis voluptate incidunt neque quasi.
             </p>
-            <Button className={Styles.btnDl}>Download</Button>
+            {/* <Button className={Styles.btnDl}>Download</Button> */}
           </>
         );
 

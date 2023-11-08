@@ -6,7 +6,13 @@
 
   .content {
     padding: $padding-content;
-    @include flexColumn();
+    @include flexColumn(flex-start);
     gap: $medium;
+    overflow: auto;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
   }
 }
