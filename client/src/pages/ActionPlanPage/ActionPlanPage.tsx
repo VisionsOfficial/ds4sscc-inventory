@@ -9,25 +9,9 @@ import { ProvingConcept } from "../../components/organisms/ActionPlan/ProvingCon
 import { OrganizingPlayingField } from "../../components/organisms/ActionPlan/OrganizingPlayingField/OrganizingPlayingField";
 import { IncreasingImpactPreparingImplementation } from "../../components/organisms/ActionPlan/IncreasingImpactPreparingImplementation/IncreasingImpactPreparingImplementation";
 import { CompleteImplementation } from "../../components/organisms/ActionPlan/CompleteImplementation/CompleteImplementation";
-import { GoalPhaseOne } from "../../components/organisms/ActionPlan/Goals/GoalPhaseOne/GoalPhaseOne";
-import { GoalPhaseTwo } from "../../components/organisms/ActionPlan/Goals/GoalPhaseTwo/GoalPhaseTwo";
-import { GoalPhaseThree } from "../../components/organisms/ActionPlan/Goals/GoalPhaseThree/GoalPhaseThree";
-import { GoalPhaseFour } from "../../components/organisms/ActionPlan/Goals/GoalPhaseFour/GoalPhaseFour";
-import { GoalPhaseFive } from "../../components/organisms/ActionPlan/Goals/GoalPhaseFive/GoalPhaseFive";
-import { GoalPhaseSix } from "../../components/organisms/ActionPlan/Goals/GoalPhaseSix/GoalPhaseSix";
-import { ProcessPhaseOne } from "../../components/organisms/ActionPlan/Process/ProcessPhaseOne/ProcessPhaseOne";
-import { ProcessPhaseTwo } from "../../components/organisms/ActionPlan/Process/ProcessPhaseTwo/ProcessPhaseTwo";
-import { ProcessPhaseThree } from "../../components/organisms/ActionPlan/Process/ProcessPhaseThree/ProcessPhaseThree";
-import { ProcessPhaseFour } from "../../components/organisms/ActionPlan/Process/ProcessPhaseFour/ProcessPhaseFour";
-import { ProcessPhaseFive } from "../../components/organisms/ActionPlan/Process/ProcessPhaseFive/ProcessPhaseFive";
-import { ProcessPhaseSix } from "../../components/organisms/ActionPlan/Process/ProcessPhaseSix/ProcessPhaseSix";
-import { SuggestedActionsTwo } from "../../components/organisms/ActionPlan/SuggestedActions/SuggestedActionsTwo/SuggestedActionsTwo";
-import { SuggestedActionsSix } from "../../components/organisms/ActionPlan/SuggestedActions/SuggestedActionsSix/SuggestedActionsSix";
-import { SuggestedActionsOne } from "../../components/organisms/ActionPlan/SuggestedActions/SuggestedActionsOne/SuggestedActionsOne";
-import { SuggestedActionsThree } from "../../components/organisms/ActionPlan/SuggestedActions/SuggestedActionsThree/SuggestedActionsThree";
-import { SuggestedActionsFive } from "../../components/organisms/ActionPlan/SuggestedActions/SuggestedActionsFive/SuggestedActionsFive";
-import { SuggestedActionsFour } from "../../components/organisms/ActionPlan/SuggestedActions/SuggestedActionsFour/SuggestedActionsFour";
-import { CheckOutCard } from "../../components/molecules/Cards/CheckOutCard/CheckOutCard";
+import { Card } from "../../components/atoms/Card/Card";
+import { Link } from "react-router-dom";
+import { PhaseContent } from "../../components/organisms/ActionPlan/PhaseContent/PhaseContent";
 
 type ActionPlanPageProps = {};
 
@@ -36,21 +20,21 @@ type NavSelections = {
   sub: SubReferenceNav | null;
 };
 
-type MainReferenceNav =
+export type MainReferenceNav =
   | "Phase 1: Preliminary phase"
   | "Phase 2: Development phase"
-  | "Phase 3: Proving concept"
-  | "Phase 4: Organizing playing field"
+  | "Phase 3: Providing Concept"
+  | "Phase 4: Organising Playing Field"
   | "Phase 5: Increasing impact & preparing implementation"
   | "Phase 6: Complete implementation";
 
-type SubReferenceNav = "Goal" | "Process" | "Suggested Actions";
+export type SubReferenceNav = "Governance" | "Datasets" | "Architecture";
 
 const CONTENT_MAIN_NAV: MainReferenceNav[] = [
   "Phase 1: Preliminary phase",
   "Phase 2: Development phase",
-  "Phase 3: Proving concept",
-  "Phase 4: Organizing playing field",
+  "Phase 3: Providing Concept",
+  "Phase 4: Organising Playing Field",
   "Phase 5: Increasing impact & preparing implementation",
   "Phase 6: Complete implementation",
 ];
@@ -65,7 +49,7 @@ export const ActionPlanPage = ({}: PropsWithChildren<ActionPlanPageProps>) => {
   const handleMainNavSelected = (main: MainReferenceNav) => {
     setNavSelections((prev) => ({ ...prev, main: main, sub: null }));
 
-    setNavContent(["Goal", "Process", "Suggested Actions"]);
+    setNavContent(["Governance", "Datasets", "Architecture"]);
   };
 
   const handleClickBack = () => {
@@ -190,54 +174,144 @@ export const ActionPlanPage = ({}: PropsWithChildren<ActionPlanPageProps>) => {
   const contentBody = () => {
     if (navSelections.sub) {
       switch (navSelections.sub) {
-        case "Goal":
+        case "Governance":
           switch (navSelections.main) {
             case "Phase 1: Preliminary phase":
-              return <GoalPhaseOne />;
+              return (
+                <PhaseContent
+                  phase="Phase 1: Preliminary phase"
+                  category="Governance"
+                />
+              );
             case "Phase 2: Development phase":
-              return <GoalPhaseTwo />;
-            case "Phase 3: Proving concept":
-              return <GoalPhaseThree />;
-            case "Phase 4: Organizing playing field":
-              return <GoalPhaseFour />;
+              return (
+                <PhaseContent
+                  phase="Phase 2: Development phase"
+                  category="Governance"
+                />
+              );
+            case "Phase 3: Providing Concept":
+              return (
+                <PhaseContent
+                  phase="Phase 3: Providing Concept"
+                  category="Governance"
+                />
+              );
+            case "Phase 4: Organising Playing Field":
+              return (
+                <PhaseContent
+                  phase="Phase 4: Organising Playing Field"
+                  category="Governance"
+                />
+              );
             case "Phase 5: Increasing impact & preparing implementation":
-              return <GoalPhaseFive />;
+              return (
+                <PhaseContent
+                  phase="Phase 5: Increasing impact & preparing implementation"
+                  category="Governance"
+                />
+              );
             case "Phase 6: Complete implementation":
-              return <GoalPhaseSix />;
+              return (
+                <PhaseContent
+                  phase="Phase 6: Complete implementation"
+                  category="Governance"
+                />
+              );
             default:
               return null;
           }
-        case "Process":
+        case "Datasets":
           switch (navSelections.main) {
             case "Phase 1: Preliminary phase":
-              return <ProcessPhaseOne />;
+              return (
+                <PhaseContent
+                  phase="Phase 1: Preliminary phase"
+                  category="Datasets"
+                />
+              );
             case "Phase 2: Development phase":
-              return <ProcessPhaseTwo />;
-            case "Phase 3: Proving concept":
-              return <ProcessPhaseThree />;
-            case "Phase 4: Organizing playing field":
-              return <ProcessPhaseFour />;
+              return (
+                <PhaseContent
+                  phase="Phase 2: Development phase"
+                  category="Datasets"
+                />
+              );
+            case "Phase 3: Providing Concept":
+              return (
+                <PhaseContent
+                  phase="Phase 3: Providing Concept"
+                  category="Datasets"
+                />
+              );
+            case "Phase 4: Organising Playing Field":
+              return (
+                <PhaseContent
+                  phase="Phase 4: Organising Playing Field"
+                  category="Datasets"
+                />
+              );
             case "Phase 5: Increasing impact & preparing implementation":
-              return <ProcessPhaseFive />;
+              return (
+                <PhaseContent
+                  phase="Phase 5: Increasing impact & preparing implementation"
+                  category="Datasets"
+                />
+              );
             case "Phase 6: Complete implementation":
-              return <ProcessPhaseSix />;
+              return (
+                <PhaseContent
+                  phase="Phase 6: Complete implementation"
+                  category="Datasets"
+                />
+              );
             default:
               return null;
           }
-        case "Suggested Actions":
+        case "Architecture":
           switch (navSelections.main) {
             case "Phase 1: Preliminary phase":
-              return <SuggestedActionsOne />;
+              return (
+                <PhaseContent
+                  phase="Phase 1: Preliminary phase"
+                  category="Architecture"
+                />
+              );
             case "Phase 2: Development phase":
-              return <SuggestedActionsTwo />;
-            case "Phase 3: Proving concept":
-              return <SuggestedActionsThree />;
-            case "Phase 4: Organizing playing field":
-              return <SuggestedActionsFour />;
+              return (
+                <PhaseContent
+                  phase="Phase 2: Development phase"
+                  category="Architecture"
+                />
+              );
+            case "Phase 3: Providing Concept":
+              return (
+                <PhaseContent
+                  phase="Phase 3: Providing Concept"
+                  category="Architecture"
+                />
+              );
+            case "Phase 4: Organising Playing Field":
+              return (
+                <PhaseContent
+                  phase="Phase 4: Organising Playing Field"
+                  category="Architecture"
+                />
+              );
             case "Phase 5: Increasing impact & preparing implementation":
-              return <SuggestedActionsFive />;
+              return (
+                <PhaseContent
+                  phase="Phase 5: Increasing impact & preparing implementation"
+                  category="Architecture"
+                />
+              );
             case "Phase 6: Complete implementation":
-              return <SuggestedActionsSix />;
+              return (
+                <PhaseContent
+                  phase="Phase 6: Complete implementation"
+                  category="Architecture"
+                />
+              );
             default:
               return null;
           }
@@ -252,9 +326,9 @@ export const ActionPlanPage = ({}: PropsWithChildren<ActionPlanPageProps>) => {
         return <PreliminaryPhase />;
       case "Phase 2: Development phase":
         return <DevelopmentPhase />;
-      case "Phase 3: Proving concept":
+      case "Phase 3: Providing Concept":
         return <ProvingConcept />;
-      case "Phase 4: Organizing playing field":
+      case "Phase 4: Organising Playing Field":
         return <OrganizingPlayingField />;
       case "Phase 5: Increasing impact & preparing implementation":
         return <IncreasingImpactPreparingImplementation />;
@@ -283,7 +357,35 @@ export const ActionPlanPage = ({}: PropsWithChildren<ActionPlanPageProps>) => {
         {contentBody()}
       </section>
 
-      <CheckOutCard category="actionPlanCheatsheet" sizing="mainContent" />
+      <Card className={Styles.card}>
+        <p>
+          Those intending to implement a data space on a intercommunal, regional
+          and national level should follow the instructions across the 6
+          maturity phases and adapt them to their use case and their
+          specifications, and map its respective complexities. The following
+          environments can help you in your digital transformation journey
+        </p>
+        <div className={Styles.images}>
+          <Link to={"https://living-in.eu/"} target="_blank">
+            <img
+              src={APP_IMAGES_ASSETS.logo.livingInEu}
+              alt="Logo Living-in.eu"
+            />
+          </Link>
+          <Link to={"https://dssc.eu/"} target="_blank">
+            <img
+              src={APP_IMAGES_ASSETS.logo.dataSpacesSupportCentre}
+              alt="Logo data spaces support centre"
+            />
+          </Link>
+          <Link
+            to={"https://oascities.org/minimal-interoperability-mechanisms/"}
+            target="_blank"
+          >
+            <img src={APP_IMAGES_ASSETS.logo.mims} alt="Logo MIMs" />
+          </Link>
+        </div>
+      </Card>
     </main>
   );
 };

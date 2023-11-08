@@ -68,6 +68,11 @@ import typicalDataPlatforms from "../assets/imgs/typical_data_platforms.png";
 import evolveArchitecture from "../assets/imgs/evolve_architecture.png";
 import dsscBBTaxonomy from "../assets/imgs/dssc_bb_taxonomy.png";
 
+// LOGOS
+import dataSpacesSupportCentre from "../assets/imgs/logos/data_space_support_centre.png";
+import livingInEu from "../assets/imgs/logos/living_in_eu.png";
+import mims from "../assets/imgs/logos/mims.png";
+
 export const APP_IMAGES_ASSETS = {
   icon: {
     basic: {
@@ -139,6 +144,9 @@ export const APP_IMAGES_ASSETS = {
   logo: {
     gaiaX,
     iShare,
+    dataSpacesSupportCentre,
+    livingInEu,
+    mims,
   },
   image: {
     dataCooperationCanvas,

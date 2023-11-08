@@ -174,10 +174,12 @@ export const HeaderPage = ({
       case "actionPlan":
         return (
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-            alias repellat dignissimos aliquid eos repellendus a molestias
-            inventore velit obcaecati. Labore quos exercitationem nesciunt
-            aliquam blanditiis voluptate incidunt neque quasi.
+            As the development status of use cases across communities can
+            differ, the DS4SSCC action plan suggests to locate use cases within
+            a maturity level scheme of 6 phases based on completed key
+            performance indicators (KPIs) ensuring right guidance for the next
+            actions to be taken in the context of governance, datasets and
+            architecture.
           </p>
         );
       case "recommendedAction":

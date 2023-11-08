@@ -91,6 +91,7 @@
       z-index: 1;
       position: relative;
 
+      > section,
       > div {
         transition: all 0.2s ease;
         display: flex;
@@ -101,6 +102,25 @@
     .contentLeft {
       transform: translateY(-140px);
       align-items: flex-start;
+    }
+  }
+
+  .card {
+    margin: $medium 10%;
+    width: auto;
+    @include flexColumn();
+    gap: $large;
+
+    .images {
+      @include flexRow();
+      flex-wrap: wrap;
+      gap: $large;
+
+      img {
+        width: 100%;
+        max-width: 300px;
+        max-height: 150px;
+      }
     }
   }
 }
