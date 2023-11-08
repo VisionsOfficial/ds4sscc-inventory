@@ -6,6 +6,7 @@ import { TableRow } from "../../../atoms/Tables/TableRow/TableRow";
 import { TableBody } from "../../../atoms/Tables/TableBody/TableBody";
 import { PRIORRITY_DATASETS_DATA } from "../../../../data/priorityDatasetsData";
 import { Pill } from "../../../atoms/Pills/Pill/Pill";
+import { APP_LINKS } from "../../../../utils/appLinks";
 
 type PriorityDatasetsTableProps = {};
 
@@ -43,7 +44,9 @@ export const PriorityDatasetsTable =
                     <Pill
                       key={link?.linkName + index}
                       variantColor="secondary"
-                      navigate={link.url}
+                      navigate={
+                        APP_LINKS.collectedUseCases + `?${link.linkName}`
+                      }
                     >
                       {link?.linkName}
                     </Pill>
