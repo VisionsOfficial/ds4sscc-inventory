@@ -25,13 +25,18 @@ export const HomePage = ({}: PropsWithChildren<HomePageProps>) => {
             Smart and Sustainable Cities and Communities
           </Title>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            veritatis numquam, corporis quisquam quae voluptate sunt neque
-            repudiandae nostrum, animi sequi? Exercitationem modi ab ad,
-            deleniti enim aut similique iusto? Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Quasi nostrum at similique dolore
-            officia, fugiat aliquam odit dolor voluptate expedita explicabo
-            labore impedit harum quas sint, nisi blanditiis! Earum, nihil?
+            This interactive Catalogue of Specifications aims at providing an
+            overview of the identified building blocks (technical and
+            non-technical) required to set up and operate the data space for
+            smart and sustainable cities and communities. The listed eleven BBs
+            describe functionality required by data spaces in regard to data
+            interoperability, data trust and sovereignty, data value creation
+            and data spaces governance. For each BB, this Catalogue shows the
+            related and commonly used standards, industry body specifications
+            and reference implementations. The Catalogue is open for
+            contributions, so interested people may provide suggestions about
+            additional inputs. For general comments about the Catalogue, please
+            write us in our Contact form.
           </p>
         </div>
       </header>

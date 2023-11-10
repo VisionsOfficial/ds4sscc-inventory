@@ -2,9 +2,6 @@
 
 .CategoryCard {
   background-color: $card-bg;
-  aspect-ratio: 1/1;
-  width: 260px !important;
-  max-width: 260px;
 
   &Header {
     @include flexColumn();
