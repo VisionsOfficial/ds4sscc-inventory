@@ -33,9 +33,6 @@ export const CollectedUseCasesPage =
         case "Helsinki":
           setUseCaseSelected("Energy & Climate Atlas");
           break;
-        case "Helsinki":
-          setUseCaseSelected("Energy & Climate Atlas");
-          break;
         case "UrbanPlanning%20Eindhoven":
           setUseCaseSelected("Smart Urban Planning");
           break;

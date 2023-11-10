@@ -35,41 +35,6 @@ export const USE_CASES_DATA: UseCase[] = [
     ],
   },
   {
-    name: "Datalocation Lab",
-    collaborators: [
-      {
-        location: "Barcelona",
-        flag: "es",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eveniet deserunt quis sunt? Illum, rerum quidem dicta animi delectus, veniam odit praesentium nemo inventore aliquam architecto distinctio excepturi eius. Libero!",
-    standards: ["DATEX2", "NAPCORE"],
-    mims: ["MIM1", "MIM2", "MIM7", "MIM8"],
-    scope: ["Mobility"],
-    datasets: [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-    ],
-    specs: [
-      "NDW (National Data Warehouse for Traffic Information data platform)",
-    ],
-    referenceImplementations: [
-      {
-        name: "IDEA",
-        url: "http://example.com",
-      },
-    ],
-    maturity: ["TRL 8"],
-    links: [
-      {
-        url: "https://www.ndw.nu/onderwerpen/idea",
-      },
-    ],
-  },
-  {
     name: "SCOREwater",
     collaborators: [
       {
@@ -284,41 +249,6 @@ export const USE_CASES_DATA: UseCase[] = [
     ],
   },
   {
-    name: "Goal Green App",
-    collaborators: [
-      {
-        location: "Florence",
-        flag: "it",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eveniet deserunt quis sunt? Illum, rerum quidem dicta animi delectus, veniam odit praesentium nemo inventore aliquam architecto distinctio excepturi eius. Libero!",
-    standards: ["DATEX2", "NAPCORE"],
-    mims: ["MIM1", "MIM2", "MIM7", "MIM8"],
-    scope: ["Mobility"],
-    datasets: [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-    ],
-    specs: [
-      "NDW (National Data Warehouse for Traffic Information data platform)",
-    ],
-    referenceImplementations: [
-      {
-        name: "IDEA",
-        url: "http://example.com",
-      },
-    ],
-    maturity: ["TRL 8"],
-    links: [
-      {
-        url: "https://www.ndw.nu/onderwerpen/idea",
-      },
-    ],
-  },
-  {
     name: "Energy & Climate Atlas",
     collaborators: [
       {
@@ -351,111 +281,6 @@ export const USE_CASES_DATA: UseCase[] = [
     links: [
       {
         url: "https://kartta.hel.fi/3d/atlas/#/",
-      },
-    ],
-  },
-  {
-    name: "LxData Lab",
-    collaborators: [
-      {
-        location: "Lisbon",
-        flag: "pt",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eveniet deserunt quis sunt? Illum, rerum quidem dicta animi delectus, veniam odit praesentium nemo inventore aliquam architecto distinctio excepturi eius. Libero!",
-    standards: ["DATEX2", "NAPCORE"],
-    mims: ["MIM1", "MIM2", "MIM7", "MIM8"],
-    scope: ["Mobility"],
-    datasets: [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-    ],
-    specs: [
-      "NDW (National Data Warehouse for Traffic Information data platform)",
-    ],
-    referenceImplementations: [
-      {
-        name: "IDEA",
-        url: "http://example.com",
-      },
-    ],
-    maturity: ["TRL 8"],
-    links: [
-      {
-        url: "https://www.ndw.nu/onderwerpen/idea",
-      },
-    ],
-  },
-  {
-    name: "Rennes Urban Data Interface",
-    collaborators: [
-      {
-        location: "Rennes Metropole",
-        flag: "fr",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eveniet deserunt quis sunt? Illum, rerum quidem dicta animi delectus, veniam odit praesentium nemo inventore aliquam architecto distinctio excepturi eius. Libero!",
-    standards: ["DATEX2", "NAPCORE"],
-    mims: ["MIM1", "MIM2", "MIM7", "MIM8"],
-    scope: ["Mobility"],
-    datasets: [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-    ],
-    specs: [
-      "NDW (National Data Warehouse for Traffic Information data platform)",
-    ],
-    referenceImplementations: [
-      {
-        name: "IDEA",
-        url: "http://example.com",
-      },
-    ],
-    maturity: ["TRL 8"],
-    links: [
-      {
-        url: "https://www.ndw.nu/onderwerpen/idea",
-      },
-    ],
-  },
-  {
-    name: "Brilla",
-    collaborators: [
-      {
-        location: "Rubi",
-        flag: "es",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eveniet deserunt quis sunt? Illum, rerum quidem dicta animi delectus, veniam odit praesentium nemo inventore aliquam architecto distinctio excepturi eius. Libero!",
-    standards: ["DATEX2", "NAPCORE"],
-    mims: ["MIM1", "MIM2", "MIM7", "MIM8"],
-    scope: ["Mobility"],
-    datasets: [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-    ],
-    specs: [
-      "NDW (National Data Warehouse for Traffic Information data platform)",
-    ],
-    referenceImplementations: [
-      {
-        name: "IDEA",
-        url: "http://example.com",
-      },
-    ],
-    maturity: ["TRL 8"],
-    links: [
-      {
-        url: "https://www.ndw.nu/onderwerpen/idea",
       },
     ],
   },
