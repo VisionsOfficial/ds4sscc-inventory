@@ -1,33 +1,35 @@
 {
-  "name": "ds4sscc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "cd server && pnpx nodemon",
-    "dev:client": "cd client && pnpm dev",
-    "build": "npm run build:server && npm run build:client",
-    "build:local": "pnpm build:server && pnpm build:client && cp .env server/dist",
-    "build:server": "cd server && tsc",
-    "build:client": "cd client && pnpm build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "validator": "^13.7.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.8.3"
-  },
-  "devDependencies": {
-    "@types/jsonwebtoken": "^9.0.1",
-    "@types/validator": "^13.7.10",
-    "@types/express": "^4.17.15",
-    "nodemon": "^2.0.20",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.4"
-  }
+	"name": "ds4sscc",
+	"version": "2.0.0",
+	"description": "Inventory for Data Space for Smart & Sustainable Cities",
+	"main": "index.js",
+	"scripts": {
+		"start": "node dist/index.js",
+		"dev": "cd server && pnpx nodemon",
+		"dev:client": "cd client && pnpm dev",
+		"build": "npm run build:server && npm run build:client && cp .env dist/",
+		"build:local": "pnpm build:server && pnpm build:client && cp .env dist",
+		"build:server": "cd server && tsc",
+		"build:client": "cd client && pnpm build",
+		"build:client:npm": "cd client && npm run build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"validator": "^13.7.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"jsonwebtoken": "^9.0.0",
+		"mongoose": "^6.8.3"
+	},
+	"devDependencies": {
+		"@types/jsonwebtoken": "^9.0.1",
+		"@types/validator": "^13.7.10",
+		"@types/express": "^4.17.15",
+		"nodemon": "^2.0.20",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.9.4"
+	}
 }
