@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "node dist/index.js",
 		"dev": "cd server && pnpx nodemon",
+		"postinsall": "cd client && npm install",
 		"dev:client": "cd client && pnpm dev",
 		"build": "npm run build:server && npm run build:client && cp .env dist/",
 		"build:local": "pnpm build:server && pnpm build:client && cp .env dist",
