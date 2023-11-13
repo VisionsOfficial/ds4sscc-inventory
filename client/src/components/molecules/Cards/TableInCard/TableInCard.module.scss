@@ -1,0 +1,9 @@
+@use "../../../../shared/styles/index" as *;
+
+.TableInCard {
+  align-items: flex-start;
+  gap: $medium;
+  table {
+    margin: 0;
+  }
+}

@@ -1,0 +1,40 @@
+@use "../../../../shared/styles/index" as *;
+
+.UseCaseHowSection {
+  ul {
+    @include flexColumn(stretch);
+    gap: $xx-small;
+
+    @include resolution(mobile) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include resolution(x-desktop) {
+      @include fluidGrid(200px);
+    }
+  }
+
+  .pill {
+    width: auto;
+    max-width: 200px;
+  }
+
+  .textAndIcon {
+    gap: $xx-small;
+    align-items: center;
+    svg {
+      width: 25px;
+      min-width: 25px;
+      height: 25px;
+    }
+  }
+
+  .link {
+    cursor: pointer;
+    width: fit-content;
+    p {
+      word-break: break-all;
+    }
+  }
+}

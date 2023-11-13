@@ -1,0 +1,13 @@
+@use "../../../../shared/styles/index" as *;
+
+.PhaseContent {
+  @include flexColumn(stretch);
+  gap: $large;
+  width: 100%;
+
+  .card {
+    align-items: flex-start;
+    gap: $medium;
+    text-align: start;
+  }
+}

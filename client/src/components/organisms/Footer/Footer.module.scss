@@ -1,73 +1,72 @@
-@use "../../../shared/styles/colors";
+@use "../../../shared/styles/index" as *;
 
 .Footer {
-	min-height: 250px;
-	background-color: colors.$secondary;
-	display: flex;
-	color: white;
-	padding: 25px;
+  min-height: 250px;
+  background-color: $secondary;
+  display: flex;
+  color: white;
+  padding: 25px 10%;
 
-	.left {
-		flex: 3;
+  .left {
+    flex: 3;
 
-		&Header {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			padding-bottom: 25px;
+    &Header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 25px;
 
-			img {
-				padding: 10px 15px;
-			}
-		}
-	}
+      img {
+        padding: 10px 15px;
+      }
+    }
+  }
 
-	.mid {
-		flex: 1;
-	}
+  .mid {
+    flex: 1;
+  }
 
-	.right {
-		flex: 1;
+  .right {
+    flex: 1;
 
-		
-		ul {
-			li {
-				list-style-type: none;
-				text-align: right;
-				padding: 5px 0;
-				
-				a {
-					font-size: 1.5rem;
-					text-decoration: none;
-					text-transform: uppercase;
-					color: colors.$primary;
-					font-weight: bold;
-				}
-			}
-		}
-	}
+    ul {
+      li {
+        list-style-type: none;
+        text-align: right;
+        padding: 5px 0;
 
-	@media (max-width: 700px) {
-		flex-direction: column;
-		max-height: 1000px;
+        a {
+          font-size: 1.5rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $primary;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 
-		.leftHeader {
-			flex-direction: column;
-		}
+  @include resolution(tablet, max-width) {
+    flex-direction: column;
+    max-height: 1000px;
 
-		.right {
-			ul {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				li {
-					padding: 10px;
+    .leftHeader {
+      flex-direction: column;
+    }
 
-					a {
-						font-size: 12px;
-					}
-				}
-			}
-		}
-	}
+    .right {
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+          padding: 10px;
+
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
 }

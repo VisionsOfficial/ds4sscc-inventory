@@ -1,0 +1,29 @@
+@use "../../shared/styles/index" as *;
+
+.CatalogueOfSpecifications {
+  background-color: $white;
+
+  .projects {
+    background-color: white;
+    @include flexColumn();
+    gap: 40px;
+    padding: $large 10%;
+    min-height: 400px;
+
+    ul {
+      @include flexColumn(stretch, stretch);
+      width: 100%;
+      gap: $xx-small;
+      li {
+        span {
+          min-width: max-content;
+          font-weight: 600;
+        }
+      }
+    }
+
+    @media (max-width: 700px) {
+      flex-wrap: wrap;
+    }
+  }
+}

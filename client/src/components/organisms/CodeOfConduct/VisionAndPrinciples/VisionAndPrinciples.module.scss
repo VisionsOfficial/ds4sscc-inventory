@@ -1,0 +1,23 @@
+@use "../../../../shared/styles/index" as *;
+
+.VisionAndPrinciples {
+  @include resolution(mobile, max-width) {
+    @include flexColumn();
+    img {
+      float: none;
+      margin: auto;
+    }
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  p {
+    margin: $small 0;
+  }
+  ul {
+    padding-left: 40px;
+    list-style: outside;
+  }
+}

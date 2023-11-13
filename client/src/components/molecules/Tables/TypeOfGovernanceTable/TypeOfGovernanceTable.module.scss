@@ -1,0 +1,15 @@
+@use "../../../../shared/styles/index" as *;
+
+.TypeOfGovernanceTable {
+  tbody {
+    tr {
+      td {
+        vertical-align: baseline;
+
+        &:first-child {
+          background-color: $card-bg;
+        }
+      }
+    }
+  }
+}

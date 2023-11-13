@@ -1,0 +1,22 @@
+@use "../../../../shared/styles/index" as *;
+
+.Table {
+  width: 100%;
+  table-layout: fixed;
+
+  caption {
+    font-style: italic;
+    margin-bottom: $small;
+    font-size: small;
+  }
+
+  thead {
+    display: none;
+  }
+
+  @include resolution(x-tablet) {
+    thead {
+      display: table-header-group;
+    }
+  }
+}

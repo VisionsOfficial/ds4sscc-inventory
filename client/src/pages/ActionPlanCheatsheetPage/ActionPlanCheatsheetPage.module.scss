@@ -1,0 +1,18 @@
+@use "../../shared/styles/index" as *;
+
+.ActionPlanCheatsheetPage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .content {
+    padding: $padding-content;
+    @include flexColumn(flex-start);
+    gap: $medium;
+    overflow: auto;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}

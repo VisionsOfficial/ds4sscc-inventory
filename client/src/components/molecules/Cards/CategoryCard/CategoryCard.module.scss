@@ -1,0 +1,22 @@
+@use "../../../../shared/styles/index" as *;
+
+.CategoryCard {
+  background-color: $card-bg;
+
+  &Header {
+    @include flexColumn();
+    gap: $medium;
+    text-align: center;
+
+    img {
+      aspect-ratio: 1/1;
+      width: 80px;
+      min-width: 80px;
+    }
+  }
+
+  .btn {
+    width: auto;
+    min-width: 200px;
+  }
+}

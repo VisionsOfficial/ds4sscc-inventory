@@ -1,0 +1,18 @@
+@use "../../../../shared/styles/index" as *;
+
+.ObjectivesAndScope {
+  .card {
+    text-align: start;
+    align-items: flex-start;
+    gap: $medium;
+
+    span {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: $large;
+      list-style: outside;
+    }
+  }
+}

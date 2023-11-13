@@ -1,0 +1,32 @@
+@use "../../../../shared/styles/index" as *;
+
+.CheckOutCard {
+  width: 100%;
+  @include flexColumn();
+  gap: $medium;
+
+  .header {
+    @include flexColumn();
+    gap: $small;
+    text-align: center;
+  }
+
+  button {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+.bgGray {
+  background-color: $gray;
+
+  button {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.mainContent {
+  margin: $medium 10%;
+  width: auto;
+}

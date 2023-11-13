@@ -1,0 +1,41 @@
+@use "../../../../shared/styles/index" as *;
+
+.KeyPartnersAndStakeholders {
+  @include flexColumn();
+  gap: $large;
+  width: 100%;
+
+  .cards {
+    @include flexColumn();
+    gap: $large;
+    width: 100%;
+
+    @include resolution(mobile) {
+      @include flexRow(center, flex-start);
+      flex-wrap: wrap;
+    }
+
+    @include resolution(xx-desktop) {
+      justify-content: space-around;
+    }
+
+    @include resolution(desktop) {
+      justify-content: space-between;
+    }
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  p {
+    text-align: start;
+    width: 100%;
+  }
+
+  ul {
+    padding-left: 40px;
+    list-style: outside;
+    margin-block: $small;
+  }
+}

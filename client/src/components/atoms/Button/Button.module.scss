@@ -1,3 +1,9 @@
-.Button {
-    
+@use "../../../shared/styles/index" as *;
+
+// .Button {
+// }
+
+.secondary {
+  background-color: $secondary;
+  color: $primary;
 }

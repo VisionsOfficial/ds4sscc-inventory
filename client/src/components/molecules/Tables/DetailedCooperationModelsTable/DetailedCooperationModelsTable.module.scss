@@ -1,0 +1,29 @@
+@use "../../../../shared/styles/index" as *;
+
+.DetailedCooperationModelsTable {
+  .types {
+    background-color: $secondary;
+    border-bottom-color: $white;
+    font-weight: bold;
+  }
+
+  th {
+    text-align: start;
+  }
+
+  td,
+  th,
+  p {
+    word-break: break-word;
+    font-size: 14px;
+  }
+
+  p {
+    span {
+        display: initial !important;
+        padding: 0 !important;
+        background-color: initial !important;
+        border-bottom: 0 !important;
+    }
+  }
+}

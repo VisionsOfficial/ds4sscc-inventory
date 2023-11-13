@@ -1,0 +1,8 @@
+@use '../../../../shared/styles/index' as *;
+
+.SectionTitle {
+    color: $secondary;
+    border-bottom: 1px solid $secondary;
+    width: 100%;
+    padding-bottom: $xx-small;
+}

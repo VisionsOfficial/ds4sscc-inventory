@@ -1,0 +1,184 @@
+@use "../../shared/styles/index" as *;
+
+.DevelopingMultiStakeholderPage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .guide {
+    margin: 0 10%;
+    margin-bottom: $large;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .navContainer {
+    margin: 0 10%;
+    margin-bottom: $large;
+    @include flexRow(center, flex-start);
+    flex-wrap: wrap;
+    gap: $x-large;
+    position: relative;
+
+    .nav {
+      @include flexColumn(stretch);
+      gap: $xx-small;
+      z-index: 10;
+    }
+
+    button {
+      text-transform: uppercase;
+      font-size: 16px;
+      width: 100%;
+      margin: 0;
+      max-width: 230px;
+      min-width: 230px;
+      text-wrap: balance;
+    }
+
+    .subNav {
+      @include flexColumn(stretch);
+      gap: $xx-small;
+    }
+
+    @include resolution(tablet, max-width) {
+      display: none;
+    }
+  }
+
+  .content {
+    margin: 0% 10%;
+    @include flexColumn();
+    gap: $small;
+  }
+
+  @media screen and (min-width: 961px) {
+    .navContainer {
+      @include flexRow(space-between, flex-start);
+
+      button {
+        transition: all 0.2s ease;
+        max-width: 170px;
+        min-width: 170px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      transition: all 0.2s ease;
+      transform: translateY(-180px);
+      align-items: flex-end;
+      z-index: 1;
+      position: relative;
+
+      > div {
+        transition: all 0.2s ease;
+        width: calc(100% - 190px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    }
+
+    .contentLeft {
+      transform: translateY(-280px);
+      align-items: flex-start;
+    }
+  }
+
+  @media screen and (min-width: 1110px) {
+    .navContainer {
+      button {
+        max-width: 200px;
+        min-width: 200px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 230px);
+      }
+    }
+
+    .contentRight {
+      transform: translateY(-160px);
+    }
+  }
+
+  @media screen and (min-width: 1260px) {
+    .navContainer {
+      button {
+        max-width: 230px;
+        min-width: 230px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 260px);
+      }
+    }
+
+    .contentRight {
+      transform: translateY(-140px);
+    }
+
+    .contentLeft {
+      transform: translateY(-240px);
+    }
+  }
+
+  @include resolution(desktop) {
+    .navContainer {
+      button {
+        max-width: 270px;
+        min-width: 270px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 300px);
+      }
+    }
+
+    .contentRight {
+      transform: translateY(-120px);
+    }
+
+    .contentLeft {
+      transform: translateY(-180px);
+    }
+  }
+
+  @media screen and (min-width: 1650px) {
+    .navContainer {
+      button {
+        max-width: 310px;
+        min-width: 310px;
+      }
+    }
+
+    .contentRight,
+    .contentLeft {
+      > div {
+        width: calc(100% - 340px);
+      }
+    }
+  }
+
+  .navMobile {
+    display: none;
+    @include resolution(tablet, max-width) {
+      display: flex;
+    }
+  }
+
+  .sectionActive {
+    gap: 0;
+  }
+}
