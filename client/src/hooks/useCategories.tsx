@@ -158,7 +158,9 @@ export const useCategories = ({ category }: Props) => {
           ),
           imageVariant: (
             <img
-              src={APP_IMAGES_ASSETS.icon.categories.actionPlan.actionPlanVariant}
+              src={
+                APP_IMAGES_ASSETS.icon.categories.actionPlan.actionPlanVariant
+              }
               alt="Icon action plan"
             />
           ),
@@ -166,7 +168,7 @@ export const useCategories = ({ category }: Props) => {
           link: APP_LINKS.roadmap.actionPlan,
         }));
         break;
-      case "codeOfConducts":
+      case "codeOfConduct":
         setContentCategory((prev) => ({
           ...prev,
           image: (
@@ -186,7 +188,7 @@ export const useCategories = ({ category }: Props) => {
               alt="Icon code of conducts"
             />
           ),
-          title: "DS4SSCC Code of Conducts",
+          title: "DS4SSCC Code of Conduct",
           link: APP_LINKS.multiStakeholderGovernance.codeOfConducts,
         }));
         break;

@@ -57,7 +57,7 @@ export type DiscoverCategory =
   | "priorityDatasets"
   | "collectedUseCases"
   | "actionPlan"
-  | "codeOfConducts"
+  | "codeOfConduct"
   | "DevelopingMultiStakeholder"
   | "governanceRules"
   | "roles"

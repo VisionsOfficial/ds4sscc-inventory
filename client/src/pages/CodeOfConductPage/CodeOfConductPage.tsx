@@ -61,7 +61,7 @@ export const CodeOfConductPage =
 
     return (
       <main className={Styles.CodeOfConductPage}>
-        <HeaderPage category="codeOfConducts" />
+        <HeaderPage category="codeOfConduct" />
 
         <section className={Styles.nav}>
           {CONTENT_NAV.map((el, index) => (

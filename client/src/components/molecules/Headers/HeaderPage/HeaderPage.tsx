@@ -3,7 +3,7 @@ import Styles from "./HeaderPage.module.scss";
 import { DiscoverCategory } from "../../../../types";
 import { Title } from "../../../atoms/Title/Title";
 import { useCategories } from "../../../../hooks/useCategories";
-import { Button } from "../../../atoms/Button/Button";
+import { Link } from "react-router-dom";
 
 type HeaderPageProps = {
   category: DiscoverCategory;
@@ -21,11 +21,19 @@ export const HeaderPage = ({
           <>
             <p>
               This section sets out the{" "}
-              <span>multi-stakeholder governance scheme</span> for the data
-              space for smart and sustainable cities and communities developed
-              in collaboration with local authorities’ representatives and
-              broader stakeholders (i.e. private sector, academia, civil society
-              organisations) as part of work package 2 led by Eurocities.
+              <Link
+                to={
+                  "https://static1.squarespace.com/static/63718ba2d90d0263d7fc1857/t/651ea670a884c256d84f4864/1696507511589/DS4SSCC_D2.2+Multi-stakeholder+governance+scheme.docx.pdf"
+                }
+                target="_blank"
+              >
+                <span>multi-stakeholder governance scheme</span>
+              </Link>{" "}
+              for the data space for smart and sustainable cities and
+              communities developed in collaboration with local authorities’
+              representatives and broader stakeholders (i.e. private sector,
+              academia, civil society organisations) as part of work package 2
+              led by Eurocities.
             </p>
             <p>
               The multi-stakeholder governance scheme aims to provide a baseline
@@ -45,7 +53,7 @@ export const HeaderPage = ({
           </>
         );
 
-      case "codeOfConducts":
+      case "codeOfConduct":
         return (
           <p>
             The DS4SSCC Code of Conduct below provides the foundational{" "}
@@ -195,6 +203,20 @@ export const HeaderPage = ({
             </p>
             {/* <Button className={Styles.btnDl}>Download</Button> */}
           </>
+        );
+
+      case "catalogueOfSpecifications":
+        return (
+          <p>
+            This Catalogue of Specifications collects all the potential
+            standards, specifications and reference implementations that are
+            recommended to build and deploy a data space in Smart Communities
+            domain. The current collection is consolidating contributions from
+            various stakeholders and experts in providing digital solutions to
+            cities, data spaces implementers, local governments and data
+            management providers. The Catalogue is open for contributions in any
+            of the building blocks.
+          </p>
         );
 
       default:

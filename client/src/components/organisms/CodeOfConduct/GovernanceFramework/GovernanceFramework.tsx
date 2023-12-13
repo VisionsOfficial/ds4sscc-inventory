@@ -11,18 +11,17 @@ export const GovernanceFramework =
     return (
       <div className={Styles.GovernanceFramework}>
         <p>
-          The governance framework is understood by the DSSC as the ‘set of
-          principles, standards, policies (rules/regulations) and practices that
-          apply to the governance, management, and operations within a
-          particular scope as well as to the enforcement thereof, and the
-          resolution of any{" "}
+          The governance framework is understood by the{" "}
           <a
             href="https://dssc.eu/space/Glossary/55443460/DSSC+Glossary+%7C+Version+1.0+%7C+March+2023"
             target="_blank"
           >
-            conflicts’
-          </a>
-          .
+            DSSC
+          </a>{" "}
+          as the ‘set of principles, standards, policies (rules/regulations) and
+          practices that apply to the governance, management, and operations
+          within a particular scope as well as to the enforcement thereof, and
+          the resolution of any conflicts’ .
         </p>
         <p>
           In this session, we lay out the governance structures and rules at the

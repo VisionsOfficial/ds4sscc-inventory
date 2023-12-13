@@ -14,6 +14,7 @@ import { ContractualAgreements } from "../../components/organisms/DevelopingMult
 import { ImplementStepByStep } from "../../components/organisms/DevelopingMultiStakeholder/ImplementStepByStep/ImplementStepByStep";
 import { APP_IMAGES_ASSETS } from "../../utils/appImagesAssets";
 import { GuidingDataCooperationCanvasTable } from "../../components/molecules/Tables/GuidingDataCooperationCanvasTable/GuidingDataCooperationCanvasTable";
+import { Card } from "../../components/atoms/Card/Card";
 
 type DevelopingMultiStakeholderPageProps = {};
 
@@ -32,8 +33,8 @@ type DevelopingMultiStakeholderSubNav =
 
 const CONTENT_NAV: DevelopingMultiStakeholderNav[] = [
   "Why",
-  "What",
   "Who",
+  "What",
   "How",
 ];
 
@@ -178,19 +179,6 @@ export const DevelopingMultiStakeholderPage =
       <main className={Styles.DevelopingMultiStakeholderPage}>
         <HeaderPage category="DevelopingMultiStakeholder" />
 
-        <SubInfoHeaderCard category="DevelopingMultiStakeholder" />
-
-        <section className={Styles.guide}>
-          <GuidingDataCooperationCanvasTable />
-          <a
-            href={APP_IMAGES_ASSETS.image.dataCooperationCanvas}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={APP_IMAGES_ASSETS.image.dataCooperationCanvas} alt="" />
-          </a>
-        </section>
-
         <section className={Styles.navContainer}>
           {CONTENT_NAV.map((el, index) => (
             <ul className={Styles.nav} key={el + index}>
@@ -236,6 +224,41 @@ export const DevelopingMultiStakeholderPage =
 
         <section className={`${Styles.content} ${setBodyClass()}`}>
           {contentBody()}
+        </section>
+
+        <section className={Styles.guide}>
+          <a
+            href={APP_IMAGES_ASSETS.image.dataCooperationCanvas}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={APP_IMAGES_ASSETS.image.dataCooperationCanvas} alt="" />
+          </a>
+
+          <GuidingDataCooperationCanvasTable />
+
+          <Card style={{ textAlign: "center" }}>
+            <p>
+              All the components of the canvas will form the{" "}
+              <span>business model for the data cooperation</span> (including
+              the value proposition (why), the partners and targeted customers
+              (who), the types of data exchanged (what) and the resources and
+              mechanisms needed to deliver and sustain value (how)).
+            </p>
+            <p>
+              The canvas was first iterated by Braxwell.com in the role of
+              external experts’ strategic data partnerships of the City of
+              Amsterdam’s Directorate Digitalization & Innovation and members of
+              the Governance Group. It was further developed during bilateral
+              exchanges as well as discussions with WP3 and WP4 to ensure
+              alignment with the technical and implementation work which was
+              developed by them. The canvas was revised several times to
+              incorporate feedback. It was then presented, further developed
+              with and validated by the Governance Group during an interactive
+              workshop in June and by the broader stakeholders during the Forum
+              meetings in June and July.
+            </p>
+          </Card>
         </section>
       </main>
     );

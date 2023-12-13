@@ -5,17 +5,21 @@
   padding-bottom: $large;
 
   .guide {
-    margin: 0 10%;
-    margin-bottom: $large;
+    margin: $large 10%;
+    @include flexColumn(stretch, flex-start);
+    gap: $large;
 
     img {
       width: 100%;
     }
+
+    span {
+      font-weight: bold;
+    }
   }
 
   .navContainer {
-    margin: 0 10%;
-    margin-bottom: $large;
+    margin: $large 10%;
     @include flexRow(center, flex-start);
     flex-wrap: wrap;
     gap: $x-large;
