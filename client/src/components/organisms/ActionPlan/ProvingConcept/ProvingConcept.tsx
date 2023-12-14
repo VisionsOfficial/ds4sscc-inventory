@@ -7,29 +7,16 @@ type ProvingConceptProps = {};
 export const ProvingConcept = ({}: PropsWithChildren<ProvingConceptProps>) => {
   return (
     <Card className={Styles.ProvingConcept}>
-      <h3>Lorem ipsum Proving</h3>
+      <h3>Phase 3: Proving Concept</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sint
-        dolore delectus doloremque veniam blanditiis sunt, reprehenderit
-        necessitatibus. Exercitationem aperiam rerum animi eveniet soluta natus
-        ducimus! Earum iste voluptatem obcaecati. Lorem ipsum dolor, sit amet
-        consectetur adipisicing elit. Ab neque dolor quisquam eum ad minima.
-        Accusamus exercitationem veritatis facilis fugit numquam accusantium
-        earum, est iure ex soluta incidunt molestiae dolorem.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eius,
-        molestiae sequi omnis suscipit quam voluptatem, amet et eos ipsam odit
-        dignissimos praesentium ea accusantium eveniet molestias, totam
-        consequatur quo!
-        <br />
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus
-        inventore non ratione enim accusamus in exercitationem, dolore
-        cupiditate earum. Temporibus similique eos modi hic harum perspiciatis
-        nemo corrupti error maxime. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quam quas culpa quos dicta facilis consectetur dolorum
-        incidunt exercitationem! Aperiam maiores similique cumque molestias,
-        dolores sapiente. Ab dolor vel quia ipsa.
+        This phase allows initial partners to test the concept and the added
+        value of the data cooperation identified in the previous stages. If the
+        concept is proven to work and requires only minimal realistic
+        adjustments within scope, then the cooperation can be scaled up with
+        more participants and more use cases. There has been formal agreement
+        for data sharing between partners, API’s for data sharing are
+        established and all DS4SSCC components (governance, technological and
+        datasets) are in place.
       </p>
     </Card>
   );
