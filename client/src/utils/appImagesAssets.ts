@@ -74,6 +74,12 @@ import dataSpacesSupportCentre from "../assets/imgs/logos/data_space_support_cen
 import livingInEu from "../assets/imgs/logos/living_in_eu.png";
 import mims from "../assets/imgs/logos/mims.png";
 
+import useCaseLxData from "../assets/imgs/useCases/Collected_use-cases_LxData.png";
+import useCaseIDEA from "../assets/imgs/useCases/Collected_use-cases_IDEA.png";
+import useCaseDatCityLab from "../assets/imgs/useCases/Collected_use-cases_DatCityLab.png";
+import useCaseRudiBrilla from "../assets/imgs/useCases/Collected_use-cases_RudiBrilla.png";
+import useCaseRUDI from "../assets/imgs/useCases/Collected_use-cases_RUDI.png";
+
 export const APP_IMAGES_ASSETS = {
   icon: {
     basic: {
@@ -161,5 +167,12 @@ export const APP_IMAGES_ASSETS = {
     evolveArchitecture,
     dsscBBTaxonomy,
     schemaRecommandedAction,
+  },
+  useCase: {
+    useCaseLxData,
+    useCaseIDEA,
+    useCaseDatCityLab,
+    useCaseRudiBrilla,
+    useCaseRUDI,
   },
 } as const;

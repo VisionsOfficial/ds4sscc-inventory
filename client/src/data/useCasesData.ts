@@ -1,4 +1,5 @@
 import { UseCase } from "../types";
+import { APP_IMAGES_ASSETS } from "../utils/appImagesAssets";
 
 export const USE_CASES_DATA: UseCase[] = [
   {
@@ -33,6 +34,84 @@ export const USE_CASES_DATA: UseCase[] = [
         url: "https://www.ndw.nu/onderwerpen/idea",
       },
     ],
+    image: APP_IMAGES_ASSETS.useCase.useCaseIDEA,
+  },
+  {
+    name: "LxDataLab",
+    collaborators: [
+      {
+        location: "Lisbon",
+        flag: "pt",
+      },
+    ],
+    description: `Lisbon city council provides, acquires, and uses mobility related data to develop real time applications and foster better policy and decision making. The Lx Data Lab brings the municipality, universities, and higher education institutions together in a cooperation protocol. The Lx Data Lab aims to reuse and generate data collected and/or acquired by the municipality through analytical and forecast challenges including in the domain of mobility.
+    `,
+    standards: [],
+    mims: [],
+    scope: [],
+    specs: [],
+    referenceImplementations: [],
+    maturity: [],
+    links: [],
+    image: APP_IMAGES_ASSETS.useCase.useCaseLxData,
+  },
+  {
+    name: "DatCity Lab",
+    collaborators: [
+      {
+        location: "Barcelona",
+        flag: "es",
+      },
+    ],
+    description: `The project aimed to assess the impacts of Energy Communities in three Social Superblocks of the city within three neighbourhoods of Barcelona: Poblenou, La Marina and Vila de Gràcia. The challenge consisted in using data to identify the potential of energy production using photovoltaic panels on public spaces, in these three neighbourhoods, to distribute it among citizens/families under an energy poverty situation and city halls premises. The tool developed, developed by ImpactE allows to assess the maximum surplus of solar energy - generated from municipal buildings and public spaces – in relation to the maximum impact on the spending of households in a situation of energy poverty.
+    `,
+    standards: [],
+    mims: [],
+    scope: [],
+    specs: [],
+    referenceImplementations: [],
+    maturity: [],
+    links: [],
+    image: APP_IMAGES_ASSETS.useCase.useCaseDatCityLab,
+  },
+  {
+    name: "Rubi Brilla - Rubi City Council",
+    collaborators: [
+      {
+        location: "Barcelona",
+        flag: "es",
+      },
+    ],
+    description: `Rubi Brilla aims to reduce city energy consumption, accelerate the transition to renewable energy and empower citizens and companies to make meaningful changes. The city collaborated with a SME to develop a geoportal tool which allows better decision making and informs local policy on energy and planning. The city developed a consent mechanism to obtain individual smart meter data which enables them to provide personalised energy advice to individuals.
+    `,
+    standards: [],
+    mims: [],
+    scope: [],
+    specs: [],
+    referenceImplementations: [],
+    maturity: [],
+    links: [],
+    image: APP_IMAGES_ASSETS.useCase.useCaseRudiBrilla,
+  },
+  {
+    name: "RUDI - Rennes Metropole",
+    collaborators: [
+      {
+        location: "Rennes",
+        flag: "fr",
+      },
+    ],
+    description: `RUDI is a local data sharing platform enabling stakeholders (e.g., service operators, researchers, public and private bodies) to share their data while retaining control over it. RUDI effectively provides a one-stop shop enabling the safe and ethical sharing of a wide range of regional data that can be used to develop and improve services. The interface was launched by Rennes Metropole in February 2023 after three-years of co-production and collaboration with citizens, local stakeholders, and partners.<br />
+    In practice, RUDI’s interface presents a catalogue of datasets made available by a wide range of producers (e.g., service operators, researchers, public and private bodies). Each entry contains a brief description of the datasets, associated metadata, access rights, conditions of use, and information about the data producer. To make data available, data producers must register with the platform and use a ‘producer node’, a protocol developed by Irisa which allows them to filter access to their data and share it directly from their servers or information systems. The producer node is an open-source application.
+    `,
+    standards: [],
+    mims: [],
+    scope: [],
+    specs: [],
+    referenceImplementations: [],
+    maturity: [],
+    links: [],
+    image: APP_IMAGES_ASSETS.useCase.useCaseRUDI,
   },
   {
     name: "SCOREwater",

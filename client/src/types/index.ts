@@ -93,6 +93,7 @@ export type UseCase = {
     name?: string;
     url: string;
   }[];
+  image?: string;
 };
 
 export type CategoryTableInCard =
