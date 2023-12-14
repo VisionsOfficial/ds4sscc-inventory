@@ -24,7 +24,7 @@ export const MultiStakeholderGovernancePage =
 
         <div className={Styles.discover}>
           <CategoryCard
-            category="codeOfConducts"
+            category="codeOfConduct"
             variantColor="bgGray"
             className={Styles.card}
           />

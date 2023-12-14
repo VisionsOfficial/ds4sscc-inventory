@@ -11,12 +11,12 @@ export const LegalFramework = ({}: PropsWithChildren<LegalFrameworkProps>) => {
       <p>
         Digital sovereignty and fair and trustworthy data sharing have been
         identified as policy priorities of the European Commission under the
-        agenda of ‘A Europe fit for the{" "}
+        agenda of ‘
         <a
           href="https://ec.europa.eu/commission/presscorner/detail/en/ip_20_273"
           target="_blank"
         >
-          digital age
+          A Europe fit for the digital age
         </a>
         ’ and with the publication of the European Data Strategy (2020). In
         practice, the creation and deployment of common European data spaces fit
@@ -134,9 +134,9 @@ export const LegalFramework = ({}: PropsWithChildren<LegalFrameworkProps>) => {
 
       <h3>Contractual agreements</h3>
       <p>
-        Following the legal frameworks highlighted in the previous section,
-        DS4SSCC should consist of several types of contractual agreements as
-        stated in Table 8.
+        Following the legal frameworks highlighted in the previous section, we
+        identified possible types of relevant contractual relationships within
+        DS4SSCC as shown in Table 8
       </p>
 
       <ContractualAgreementsTable />

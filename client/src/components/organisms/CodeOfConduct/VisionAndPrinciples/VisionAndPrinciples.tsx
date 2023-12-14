@@ -9,7 +9,7 @@ export const VisionAndPrinciples =
     return (
       <div className={Styles.VisionAndPrinciples}>
         <p>
-          LThe vision and principles are at the foundation of DS4SSCC and will
+          The vision and principles are at the foundation of DS4SSCC and will
           inform the governance processes of the DS and of the different
           use-cases that will be part of it. Indeed, governance processes build
           ‘on the basis established through core principles to enshrine
@@ -43,18 +43,17 @@ export const VisionAndPrinciples =
             The purpose of data sharing and reuse should align with the{" "}
             <span>European Green Deal objectives</span> and with the{" "}
             <span>European data strategy</span>, including on data and
-            technological sovereignty. (PUBLIC GOOD, SOVEREIGNTY)
+            technological sovereignty.
           </li>
           <li>
             The data space should <span>level the playing field</span> in terms
             of data sharing and reuse between different types of stakeholders.
-            (FAIRNESS/ INCLUSIVITY/ SOVEREIGNTY)
           </li>
           <li>
             The{" "}
             <span>added value should be retained in the data ecosystem</span>{" "}
             and surplus either reinvested or returned to the ecosystem in other
-            forms. (RECIPROCITY/ FAIRNESS)
+            forms.
           </li>
           <li>
             The{" "}
@@ -74,14 +73,14 @@ export const VisionAndPrinciples =
                 principles of technological and data sovereignty
               </a>
             </span>{" "}
-            with particular attention to vendor lock-ins (SOVEREIGNTY, SECURITY)
+            with particular attention to vendor lock-ins
           </li>
           <li>
             Data space participants should{" "}
             <span>be represented in Governance Bodies</span> and be able to
             contribute to the decision-making processes. This includes
             participation of the main beneficiaries: local governments,
-            communities and citizens (REPRESENTATIVITY/ PARTICIPATION)
+            communities and citizens
           </li>
         </ul>
 

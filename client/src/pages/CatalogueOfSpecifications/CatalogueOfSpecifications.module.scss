@@ -15,6 +15,14 @@
       width: 100%;
       gap: $xx-small;
       li {
+        a {
+          color: $primary;
+          text-decoration: none;
+
+          &:hover {
+            color: $secondary;
+          }
+        }
         span {
           min-width: max-content;
           font-weight: 600;

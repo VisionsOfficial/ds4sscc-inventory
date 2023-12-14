@@ -12,7 +12,7 @@ export const ResourcesNeeded =
         <Card className={Styles.card}>
           <div>
             <p>
-              he template below (Table 14) helps you to identify resources
+              The template below (Table 14) helps you to identify resources
               required and associated organisational roles for the cooperation
               to be successful. It might be useful to consider the following
               questions:

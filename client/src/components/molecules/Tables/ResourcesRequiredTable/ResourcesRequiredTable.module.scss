@@ -8,6 +8,7 @@
 
   td {
     font-size: small;
+    border-right: 1px solid $secondary !important;
   }
 
   @include resolution(mobile, max-width) {

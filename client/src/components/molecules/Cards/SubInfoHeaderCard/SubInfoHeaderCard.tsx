@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 import Styles from "./SubInfoHeaderCard.module.scss";
 import { Card } from "../../../atoms/Card/Card";
 import { DiscoverCategory } from "../../../../types";
+import { Link } from "react-router-dom";
 
 type SubInfoHeaderCardProps = {
   category: DiscoverCategory;
@@ -36,9 +37,26 @@ export const SubInfoHeaderCard = ({
             </p>
 
             <p>
-              The multi-stakeholder governance scheme is accompanied by
-              appendices providing a <span>toolbox</span> with a range of
-              relevant resources for data sharing, a{" "}
+              The{" "}
+              <Link
+                to={
+                  "https://static1.squarespace.com/static/63718ba2d90d0263d7fc1857/t/651ea670a884c256d84f4864/1696507511589/DS4SSCC_D2.2+Multi-stakeholder+governance+scheme.docx.pdf"
+                }
+                target="_blank"
+              >
+                multi-stakeholder governance scheme
+              </Link>{" "}
+              is accompanied by{" "}
+              <Link
+                to={
+                  "https://static1.squarespace.com/static/63718ba2d90d0263d7fc1857/t/6524298f5f9a6926c5697ccc/1696868790936/DS4SSCC_Deliverable+D.2.2+Appendices_FINAL.pdf"
+                }
+                target="_blank"
+              >
+                appendices
+              </Link>{" "}
+              providing a <span>toolbox</span> with a range of relevant
+              resources for data sharing, a{" "}
               <span>detailed overview of each WP2 use-cases</span> and a{" "}
               <span>
                 summary of the methodology underlying the development of the
@@ -148,6 +166,23 @@ export const SubInfoHeaderCard = ({
               numquam facere asperiores illum minima.
             </p>
           </>
+        );
+
+      case "catalogueOfSpecifications":
+        return (
+          <p>
+            You can filter the building blocks view by selecting the{" "}
+            <Link
+              to={"https://living-in.eu/news/mims-plus-version-60-approved"}
+              target="_blank"
+            >
+              MIM
+            </Link>{" "}
+            which building block is mapped; by choosing the scope of the
+            building block, generic for any domain or specific for Smart
+            Communities; by indicating the level of maturity according to how
+            deep adopted is in the domain (quite mature, evolving, few mature)
+          </p>
         );
 
       default:

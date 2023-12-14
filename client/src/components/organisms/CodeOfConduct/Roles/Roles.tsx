@@ -48,7 +48,7 @@ export const Roles = ({}: PropsWithChildren<RolesProps>) => {
 
       <div>
         <p>
-          We define three categories of roles (see Table 2) in the context of
+          We define three categories of roles (see below) in the context of
           DS4SSCC as follow:
         </p>
         <ul>

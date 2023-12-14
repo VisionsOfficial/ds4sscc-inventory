@@ -57,7 +57,7 @@ export type DiscoverCategory =
   | "priorityDatasets"
   | "collectedUseCases"
   | "actionPlan"
-  | "codeOfConducts"
+  | "codeOfConduct"
   | "DevelopingMultiStakeholder"
   | "governanceRules"
   | "roles"
@@ -93,6 +93,7 @@ export type UseCase = {
     name?: string;
     url: string;
   }[];
+  image?: string;
 };
 
 export type CategoryTableInCard =

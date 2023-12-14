@@ -21,22 +21,12 @@ export const HomePage = ({}: PropsWithChildren<HomePageProps>) => {
       <header className={Styles.HomePageHeader}>
         <div>
           <Title>
-            Interactive Catalogue of Specifications for building data spaces in
-            Smart and Sustainable Cities and Communities
+            Interactive portal for building data spaces in Smart Communities
           </Title>
           <p>
-            This interactive Catalogue of Specifications aims at providing an
-            overview of the identified building blocks (technical and
-            non-technical) required to set up and operate the data space for
-            smart and sustainable cities and communities. The listed eleven BBs
-            describe functionality required by data spaces in regard to data
-            interoperability, data trust and sovereignty, data value creation
-            and data spaces governance. For each BB, this Catalogue shows the
-            related and commonly used standards, industry body specifications
-            and reference implementations. The Catalogue is open for
-            contributions, so interested people may provide suggestions about
-            additional inputs. For general comments about the Catalogue, please
-            write us in our Contact form.
+            This is the entry point to the Data Space for Smart Communities. You
+            may find all the assets you need to build your data space classified
+            by categories below
           </p>
         </div>
       </header>

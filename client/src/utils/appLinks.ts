@@ -1,7 +1,7 @@
 export const APP_LINKS = {
   multiStakeholderGovernance: {
     index: "/multi-stakeholder-governance",
-    codeOfConducts: "/multi-stakeholder-governance/code-of-conducts",
+    codeOfConducts: "/multi-stakeholder-governance/code-of-conduct",
     developing: "/multi-stakeholder-governance/developing-multi-stakeholder",
   },
   catalogueOfSpecifications: "/catalogue-of-specifications",

@@ -4,6 +4,7 @@ import { Table } from "../../../atoms/Tables/Table/Table";
 import { TableHead } from "../../../atoms/Tables/TableHead/TableHead";
 import { TableRow } from "../../../atoms/Tables/TableRow/TableRow";
 import { TableBody } from "../../../atoms/Tables/TableBody/TableBody";
+import { Link } from "react-router-dom";
 
 type VisionsAndPrinciplesTableProps = {};
 
@@ -60,17 +61,11 @@ const CONTENT_TABLE: ContentTableVisionsAndPrinciples[] = [
     governance: "Common standards",
   },
   {
-    organisational: "Assessment of carbon footprint of digital",
-    governance: "Work with linked data (e.g. OSLO, LDES)",
+    organisational: "Assessment of carbon footprint of digital infrastructure",
+    governance: "Work with linked data (e.g. OSLO, LDES), Open Source software",
     links: [
       "https://joinup.ec.europa.eu/collection/oslo-open-standards-linked-organisations-0/about",
       "https://joinup.ec.europa.eu/collection/semic-support-centre/linked-data-event-streams-ldes",
-    ],
-  },
-  {
-    organisational: "infrastructure",
-    governance: "Open Source software",
-    links: [
       "https://joinup.ec.europa.eu/collection/free-and-open-source-software",
     ],
   },
@@ -108,7 +103,10 @@ export const VisionsAndPrinciplesTable =
                     <a href={content.links[1]} target="_blank">
                       LDES
                     </a>
-                    )
+                    ),{" "}
+                    <Link to={content.links[2]} target="_blank">
+                      Open Source software
+                    </Link>
                   </p>
                 )}
                 {!content.governance.includes("OSLO") && content?.links ? (

@@ -5,6 +5,7 @@ import { UseCase } from "../../../../types";
 import { LocationTitle } from "../../../atoms/Titles/LocationTitle/LocationTitle";
 import { Button } from "../../../atoms/Button/Button";
 import { UseCaseHowSection } from "../../../organisms/CollectedUseCases/UseCaseHowSection/UseCaseHowSection";
+import { Link } from "react-router-dom";
 
 type UseCaseCardProps = {
   useCase: UseCase;
@@ -16,6 +17,13 @@ type UseCaseCardProps = {
 type Nav = "What" | "How";
 
 const NAV_CONTENT: Nav[] = ["What", "How"];
+
+const useCasesWhithoutHowSection = [
+  "LxDataLab",
+  "DatCity Lab",
+  "Rubi Brilla - Rubi City Council",
+  "RUDI - Rennes Metropole",
+];
 
 export const UseCaseCard = ({
   useCase,
@@ -42,13 +50,22 @@ export const UseCaseCard = ({
     switch (navSelected) {
       case "What":
         return (
-          <p
-            dangerouslySetInnerHTML={{ __html: useCase?.description }}
-            className={Styles.what}
-          ></p>
+          <>
+            <p
+              dangerouslySetInnerHTML={{ __html: useCase?.description }}
+              className={Styles.what}
+            ></p>
+            {useCase.image && (
+              <Link to={useCase.image} target="_blank">
+                <img src={useCase.image} alt="" />
+              </Link>
+            )}
+          </>
         );
 
       case "How":
+        if (useCasesWhithoutHowSection.find((el) => el === useCase.name))
+          return null;
         return (
           <div className={Styles.howSection}>
             <UseCaseHowSection useCase={useCase} category="standards" />
@@ -96,17 +113,25 @@ export const UseCaseCard = ({
       {active && (
         <section className={Styles.activeContent}>
           <div className={Styles.nav}>
-            {NAV_CONTENT?.map((el, index) => (
-              <Button
-                key={el + index}
-                onClick={() => {
-                  setNavSelected(el);
-                }}
-                className={navSelected === el ? "btn-secondary" : ""}
-              >
-                {el}
-              </Button>
-            ))}
+            {NAV_CONTENT?.map((el, index) => {
+              if (
+                useCasesWhithoutHowSection.find((el) => el === useCase.name) &&
+                el === "How"
+              )
+                return null;
+
+              return (
+                <Button
+                  key={el + index}
+                  onClick={() => {
+                    setNavSelected(el);
+                  }}
+                  className={navSelected === el ? "btn-secondary" : ""}
+                >
+                  {el}
+                </Button>
+              );
+            })}
           </div>
           {contentActive()}
         </section>

@@ -38,7 +38,7 @@ function App() {
             element={<MultiStakeholderGovernancePage />}
           >
             <Route
-              path="code-of-conducts"
+              path="code-of-conduct"
               element={<CodeOfConductPage />}
             ></Route>
             <Route
