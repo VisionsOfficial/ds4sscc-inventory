@@ -61,7 +61,8 @@ const CONTENT_TABLE: ContentTableVisionsAndPrinciples[] = [
     governance: "Common standards",
   },
   {
-    organisational: "Assessment of carbon footprint of digital infrastructure",
+    organisational:
+      "Assessment of carbon footprint of digital and infrastructure",
     governance: "Work with linked data (e.g. OSLO, LDES), Open Source software",
     links: [
       "https://joinup.ec.europa.eu/collection/oslo-open-standards-linked-organisations-0/about",
