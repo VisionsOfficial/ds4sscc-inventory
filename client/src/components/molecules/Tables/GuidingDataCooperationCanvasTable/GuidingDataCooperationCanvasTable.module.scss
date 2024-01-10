@@ -1,0 +1,32 @@
+@use "../../../../shared/styles/index" as *;
+
+.GuidingDataCooperationCanvasTable {
+  margin: 0;
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tbody {
+    display: table-row-group !important;
+  }
+
+  tr {
+    display: table-row !important;
+    border-bottom: 0 !important;
+  }
+
+  td {
+    display: table-cell !important;
+    padding: $medium $small !important;
+  }
+
+  td,
+  p {
+    word-break: break-word;
+  }
+
+  @include resolution(mobile, max-width) {
+    font-size: small;
+  }
+}

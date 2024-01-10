@@ -1,14 +1,19 @@
 {
 	"name": "ds4sscc",
-	"version": "1.0.0",
-	"description": "",
+	"version": "2.0.0",
+	"description": "Inventory for Data Space for Smart & Sustainable Cities",
 	"main": "index.js",
 	"scripts": {
+		"start": "node dist/index.js",
 		"dev": "cd server && pnpx nodemon",
+		"postinsall": "cd client && npm install",
 		"dev:client": "cd client && pnpm dev",
-		"build": "pnpm build:server && pnpm build:client && cp .env server/dist",
+		"build": "npm run build:server && npm run build:client",
+		"build:local": "pnpm build:server && pnpm build:client && cp .env dist",
 		"build:server": "cd server && tsc",
-		"build:client": "cd client && pnpm build"
+		"build:client": "cd client && npm install && npm run build",
+		"build:client:local": "cd client && pnpm build",
+		"build:client:npm": "cd client && npm run build"
 	},
 	"keywords": [],
 	"author": "",

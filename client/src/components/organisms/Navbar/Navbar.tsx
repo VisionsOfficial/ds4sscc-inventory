@@ -8,25 +8,25 @@ import { Nav } from "../../molecules/Nav/Nav";
 type Props = {};
 
 export const Navbar = ({}: PropsWithChildren<Props>) => {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	return (
-		<div className={Styles.Navbar}>
-			<div>
-				<img
-					src={logo}
-					alt="Data space for smart cities logo"
-					onClick={() => {
-						navigate("/");
-					}}
-				/>
-			</div>
-			<Nav />
-			{/* <div>
+  return (
+    <div className={Styles.Navbar}>
+      <div>
+        <img
+          src={logo}
+          alt="Data space for smart cities logo"
+          onClick={() => {
+            navigate("/");
+          }}
+        />
+      </div>
+      <Nav />
+      {/* <div>
 				<button onClick={() => navigate("/newproject")}>
 					Add your project
 				</button>
 			</div> */}
-		</div>
-	);
+    </div>
+  );
 };

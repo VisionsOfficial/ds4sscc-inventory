@@ -1,0 +1,15 @@
+.VisionsAndPrinciplesTable {
+  margin-inline: 0;
+  thead {
+    th {
+      text-align: start;
+    }
+  }
+
+  td {
+    border-bottom: none !important;
+    &:first-child {
+      border-right: 1px solid #7ed958 !important;
+    }
+  }
+}

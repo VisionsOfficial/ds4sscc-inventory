@@ -1,0 +1,16 @@
+@use '../../../../shared/styles/index' as *;
+
+.LegalFramework {
+    @include flexColumn();
+    gap: $small;
+
+    h3 {
+        text-align: start;
+        width: 100%;
+        margin-top: $small;
+    }
+
+    table {
+        margin-inline: 0;
+    }
+}

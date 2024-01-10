@@ -1,0 +1,30 @@
+@use "../../../../shared/styles/index" as *;
+
+.MIMsLiaison {
+  @include flexColumn(center, flex-start);
+  gap: $medium;
+
+  .linkImg {
+    @include flexColumn();
+    margin-inline: auto;
+    max-width: 100%;
+
+    img {
+      max-width: 100%;
+      max-height: 700px;
+    }
+  }
+
+  h3 {
+    margin-bottom: $small;
+  }
+
+  p {
+    width: 100%;
+  }
+
+  ul {
+    list-style: inside;
+    padding-left: $medium;
+  }
+}

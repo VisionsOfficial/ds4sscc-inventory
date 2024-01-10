@@ -1,0 +1,16 @@
+@use "../../shared/styles/index" as *;
+
+.VisionFederationDataSpacesPage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .content {
+    padding: $padding-content;
+    @include flexColumn(flex-start);
+    gap: $medium;
+
+    ol {
+      padding-left: 1.25rem;
+    }
+  }
+}

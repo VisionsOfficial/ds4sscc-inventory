@@ -1,13 +1,14 @@
-@use '../../../shared/styles/colors';
+@use "../../../shared/styles/index" as *;
 
 .title {
-    color: colors.$secondary;
-    font-size: 3rem;
-    font-weight: bold;
-    padding: 25px 20px 20px 0;
+  color: $secondary;
+  font-size: $main-title;
+  font-weight: bold;
+  padding: 0;
+  // padding: 25px 20px 20px 0;
 
-    @media (max-width: 600px) {
-        font-size: 2rem;
-        padding-bottom: 10px;
-    }
+  @media (max-width: 600px) {
+    font-size: $small-device-main-title;
+    // padding-bottom: 10px;
+  }
 }

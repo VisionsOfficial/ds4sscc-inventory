@@ -15,7 +15,7 @@ app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
 	// Without this, we get a MIME type check error loading js files
-	app.use(express.static(path.join(__dirname, "..", "..", "client", "dist")));
+	app.use(express.static(path.join(__dirname, "public")));
 }
 
 routes(app);
@@ -23,7 +23,7 @@ routes(app);
 if (process.env.NODE_ENV === "production") {
 	// Let react handle all routing for client
 	app.get("*", async (req, res) => {
-		res.sendFile(path.join(__dirname, "..", "..", "client", "dist/index.html"));
+		res.sendFile(path.join(__dirname, "public/index.html"));
 	});
 }
 

@@ -1,0 +1,17 @@
+@use "../../../../shared/styles/index" as *;
+
+.ContractualAgreements {
+  width: 100%;
+  @include flexColumn();
+  gap: $large;
+
+  .card {
+    align-items: flex-start;
+    gap: $medium;
+
+    ul {
+      list-style: outside;
+      padding-left: 40px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "../../../../shared/styles/index" as *;
+
+.OverviewHL {
+  @include flexColumn();
+  gap: $x-large;
+  text-align: start;
+
+  .img {
+    @include flexColumn(flex-start);
+    gap: $medium;
+    text-align: start;
+    width: 100%;
+
+    a {
+      margin-inline: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .cards {
+    @include flexColumn(flex-start);
+    gap: $medium;
+    width: 100%;
+
+    &Content {
+      @include fluidGrid(230px);
+      gap: $medium;
+      width: 100%;
+
+      .componentCard {
+        background-color: $secondary;
+        @include flexColumn(center, space-between);
+        gap: $large;
+
+        p {
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

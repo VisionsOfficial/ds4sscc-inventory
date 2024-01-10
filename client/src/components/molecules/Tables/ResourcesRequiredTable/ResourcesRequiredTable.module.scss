@@ -1,0 +1,19 @@
+@use "../../../../shared/styles/index" as *;
+
+.ResourcesRequiredTable {
+  th {
+    text-align: start;
+    font-size: small;
+  }
+
+  td {
+    font-size: small;
+    border-right: 1px solid $secondary !important;
+  }
+
+  @include resolution(mobile, max-width) {
+    td span {
+      word-break: break-word;
+    }
+  }
+}

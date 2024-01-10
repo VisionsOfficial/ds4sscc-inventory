@@ -1,0 +1,20 @@
+@use "../../../../shared/styles/index" as *;
+
+.RecipesForScenarios {
+  @include flexColumn(stretch, flex-start);
+  gap: $large;
+
+  .card {
+    @include flexColumn(stretch, flex-start);
+    gap: $medium;
+    text-align: start;
+
+    ul {
+      @include flexColumn(stretch, flex-start);
+      gap: $medium;
+
+      list-style: inside;
+      padding-left: $medium;
+    }
+  }
+}

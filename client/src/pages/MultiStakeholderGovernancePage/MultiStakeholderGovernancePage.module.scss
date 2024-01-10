@@ -1,0 +1,30 @@
+@use "../../shared/styles/index" as *;
+
+.MultiStakeholderGovernancePage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .discover {
+    @include flexColumn();
+    gap: $medium;
+    padding: $padding-content;
+    padding-block: 0;
+
+    .card {
+      width: 100% !important;
+      max-width: none;
+      aspect-ratio: 3/1;
+      gap: $small;
+    }
+
+    @include resolution(tablet) {
+      @include fluidGrid(260px);
+      justify-items: center;
+
+      .card {
+        max-height: 280px;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+}

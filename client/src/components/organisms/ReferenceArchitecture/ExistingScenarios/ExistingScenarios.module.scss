@@ -1,0 +1,31 @@
+@use "../../../../shared/styles/index" as *;
+
+.ExistingScenarios {
+  @include flexColumn();
+  gap: $medium;
+
+  .scenarios {
+    @include fluidGrid(200px);
+    gap: $medium;
+
+    .card {
+      background-color: $primary;
+      color: $white;
+      justify-content: flex-start;
+      gap: $medium;
+      header {
+        @include flexColumn();
+        gap: $xx-small;
+        p {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+        h3 {
+          color: $secondary;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

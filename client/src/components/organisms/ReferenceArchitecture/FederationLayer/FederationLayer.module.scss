@@ -1,0 +1,17 @@
+@use "../../../../shared/styles/index" as *;
+
+.FederationLayer {
+  @include flexColumn();
+  gap: $large;
+  .card {
+    align-items: start;
+    gap: $medium;
+  }
+
+  .example {
+    background-color: $gray;
+    text-align: center;
+    @include flexColumn();
+    gap: $medium;
+  }
+}

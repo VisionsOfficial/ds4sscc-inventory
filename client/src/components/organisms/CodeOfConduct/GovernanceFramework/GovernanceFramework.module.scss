@@ -1,0 +1,41 @@
+@use "../../../../shared/styles/index" as *;
+
+.GovernanceFramework {
+  figure {
+    .images {
+      @include flexRow(center, flex-end);
+      flex-wrap: wrap-reverse;
+      gap: $small;
+
+      img {
+        &:last-child {
+          width: calc(100% - 250px);
+          min-width: 500px;
+        }
+      }
+    }
+  }
+
+  @include resolution(x-tablet, max-width) {
+    @include flexColumn();
+
+    figure {
+      .images {
+        img {
+          &:last-child {
+            min-width: 200px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    margin: $small 0;
+  }
+
+  table {
+    margin-inline: 0;
+  }
+}

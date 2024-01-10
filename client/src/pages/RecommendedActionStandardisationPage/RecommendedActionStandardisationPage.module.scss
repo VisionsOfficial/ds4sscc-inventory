@@ -1,0 +1,26 @@
+@use "../../shared/styles/index" as *;
+
+.RecommendedActionStandardisationPage {
+  background-color: $white;
+  padding-bottom: $large;
+
+  .content {
+    padding: $padding-content;
+    @include flexColumn(flex-start);
+    gap: $large;
+
+    .part {
+      @include flexColumn(flex-start);
+      gap: $xx-medium;
+
+      a {
+        margin-inline: auto;
+      }
+
+      img {
+        width: 100%;
+        max-height: 550px;
+      }
+    }
+  }
+}

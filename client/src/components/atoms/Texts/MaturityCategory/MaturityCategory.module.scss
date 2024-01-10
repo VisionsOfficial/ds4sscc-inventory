@@ -1,0 +1,31 @@
+@use "../../../../shared/styles/index" as *;
+
+.MaturityCategory {
+  display: inline-flex;
+  gap: $xx-small;
+  align-items: center;
+  position: relative;
+  transform: translateY(4px);
+
+  .dot {
+    width: 20px;
+    aspect-ratio: 1/1;
+    min-width: 20px;
+    height: 20px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    background-color: black;
+  }
+
+  .quiteMature {
+    background-color: rgb(15, 158, 15);
+  }
+
+  .evolving {
+    background-color: orange;
+  }
+
+  .fewMature {
+    background-color: red;
+  }
+}

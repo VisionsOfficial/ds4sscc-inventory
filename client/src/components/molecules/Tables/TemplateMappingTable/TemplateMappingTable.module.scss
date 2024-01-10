@@ -1,0 +1,36 @@
+@use "../../../../shared/styles/index" as *;
+
+.TemplateMappingTable {
+  tbody {
+    tr {
+      .role {
+        background-color: $secondary;
+        font-weight: bold;
+        padding: $large $small;
+        @include resolution(x-tablet, max-width) {
+          padding: 0;
+        }
+      }
+      td {
+        padding: 0;
+        word-break: break-word;
+        border-right: 1px solid $secondary !important;
+        .wrapper {
+          @include flexColumn(flex-start, flex-start);
+          gap: $small;
+          width: 100%;
+          height: 100%;
+          p {
+            font-size: medium;
+            padding-inline: $xx-small;
+            border-bottom: 1px solid $secondary;
+            width: 100%;
+            &:last-child {
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

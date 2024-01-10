@@ -1,0 +1,83 @@
+@use "../../../../shared/styles/index" as *;
+
+.ShortGuide {
+  @include flexColumn(stretch, flex-start);
+  gap: $large;
+
+  .guide {
+    @include flexColumn(flex-start, flex-start);
+    width: 100%;
+    gap: $medium;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-color: $primary;
+      height: 4000px;
+      width: 2px;
+      position: absolute;
+      z-index: 1;
+      top: 50px;
+      left: 34px;
+      z-index: 1;
+    }
+
+    .dropdown {
+      position: relative;
+      z-index: 2;
+      background-color: $card-bg;
+
+      header {
+        h4 {
+          font-size: 1.3rem;
+          font-style: italic;
+        }
+        svg {
+          background-color: $primary;
+          border-radius: 50%;
+          stroke: $secondary !important;
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+        }
+      }
+
+      &:is(:first-child) {
+        span {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &:is(:last-child) {
+        span {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      @include resolution(mobile, max-width) {
+        header {
+          h4 {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+
+    .active {
+      background-color: $gray;
+      header {
+        h4 {
+          color: $secondary;
+        }
+      }
+      > div {
+        padding: $small;
+      }
+    }
+  }
+}

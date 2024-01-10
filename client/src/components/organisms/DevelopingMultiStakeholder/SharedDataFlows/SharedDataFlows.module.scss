@@ -1,0 +1,20 @@
+@use "../../../../shared/styles/index" as *;
+
+.SharedDataFlows {
+  @include flexColumn();
+  gap: $large;
+  width: 100%;
+
+  .card {
+    align-items: flex-start;
+    gap: $medium;
+
+    .floatImg {
+      @include resolution(desktop) {
+        figure {
+          max-width: 650px;
+        }
+      }
+    }
+  }
+}

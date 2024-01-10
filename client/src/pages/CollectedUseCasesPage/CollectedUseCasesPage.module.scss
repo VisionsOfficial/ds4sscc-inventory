@@ -1,0 +1,15 @@
+@use "../../shared/styles/index" as *;
+
+.CollectedUseCasesPage {
+  background-color: $white;
+
+  .useCaseSelected {
+    padding: $large 10%;
+  }
+
+  .content {
+    padding: $large 10%;
+    @include fluidGrid(300px);
+    gap: $medium;
+  }
+}

@@ -1,59 +1,96 @@
 @font-face {
-	font-family: WorkSansRegular;
-	src: url("./assets/fonts/WorkSans-Regular.ttf");
+  font-family: WorkSansRegular;
+  src: url("./assets/fonts/WorkSans-Regular.ttf");
 }
 @font-face {
-	font-family: WorkSansBold;
-	src: url("./assets/fonts/WorkSans-Bold.ttf");
+  font-family: WorkSansBold;
+  src: url("./assets/fonts/WorkSans-Bold.ttf");
 }
 @font-face {
-	font-family: WorkSansMedium;
-	src: url("./assets/fonts/WorkSans-Medium.ttf");
+  font-family: WorkSansMedium;
+  src: url("./assets/fonts/WorkSans-Medium.ttf");
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: WorkSansRegular, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: WorkSansRegular, sans-serif;
 }
 
 html {
-	background: #ccf5e5;
-	color: #17214e;
+  background: #ccf5e5;
+  color: #17214e;
 }
 
 p {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 
 button {
-	padding: 10px 15px;
-	margin: 5px;
-	font-size: 18px;
-	cursor: pointer;
-	background: #17214e;
-	border: none;
-	color: white;
-	transition: all 0.1s ease;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #17214e;
+  border: none;
+  color: white;
+  transition: all 0.1s ease;
 }
 
 button:hover {
-	background: #5fa342;
+  background: #5fa342;
+}
+
+.btn-secondary {
+  background-color: #7ed958;
+  color: #17214e;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 table {
-	border-collapse: collapse;
+  border-collapse: collapse;
   margin: 20px 10px;
 }
 table tbody tr td {
-	border: 1px solid black;
+  border: 1px solid black;
 }
 
 .bg-gray {
-	background-color: #f4f4f4;
+  background-color: #f4f4f4;
+}
+
+.img-placeholder {
+  background-color: black;
+  width: 250px;
+  max-width: 250px;
+  height: 250px;
+  min-height: 250px;
+  float: right;
+  margin: 20px;
+  margin-right: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #7ed958;
+}
+
+figure figcaption {
+  text-align: center;
+  font-size: small;
+  font-style: italic;
 }

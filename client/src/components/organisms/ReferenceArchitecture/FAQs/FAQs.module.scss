@@ -1,0 +1,46 @@
+@use "../../../../shared/styles/index" as *;
+
+.FAQs {
+  @include flexColumn(stretch, flex-start);
+  gap: $large;
+
+  .dropdown {
+    background-color: $card-bg;
+    header {
+      padding: $small;
+      h4 {
+        font-size: 1.3rem;
+        font-style: italic;
+      }
+
+      svg {
+        background-color: $primary;
+        border-radius: 50%;
+        stroke: $secondary !important;
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+      }
+    }
+
+    @include resolution(mobile, max-width) {
+      header {
+        h4 {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .active {
+    background-color: $gray;
+    header {
+      h4 {
+        color: $secondary;
+      }
+    }
+    > div {
+      padding: $small;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../../../shared/styles/index" as *;
+
+.RevenueStreamsTable {
+  margin: 0;
+
+  th {
+    text-align: start;
+  }
+
+  th,
+  td,
+  p {
+    word-break: break-word;
+  }
+}

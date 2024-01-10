@@ -1,0 +1,7 @@
+@use "../../../../shared/styles/index" as *;
+
+.DevelopmentPhase {
+  align-items: flex-start;
+  gap: $medium;
+  text-align: start;
+}
