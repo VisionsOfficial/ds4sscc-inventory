@@ -61,7 +61,7 @@ export const CheckOutCard = ({
       case "actionPlan":
         return "Discover the initiatives and resources implemented in our action plan.";
       case "actionPlanCheatsheet":
-        return "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.";
+        return "";
 
       default:
         break;
@@ -72,7 +72,7 @@ export const CheckOutCard = ({
     <Card className={setProps()}>
       <div className={Styles.header}>
         <h3>Check out</h3>
-        <p>{contentTextCard()}</p>
+        {contentTextCard() && <p>{contentTextCard()}</p>}
       </div>
 
       <Button

@@ -161,14 +161,7 @@ export const HeaderPage = ({
         );
 
       case "roadmapForImplementing":
-        return (
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-            alias repellat dignissimos aliquid eos repellendus a molestias
-            inventore velit obcaecati. Labore quos exercitationem nesciunt
-            aliquam blanditiis voluptate incidunt neque quasi.
-          </p>
-        );
+        return <></>;
 
       case "actionPlan":
         return (
