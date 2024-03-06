@@ -71,7 +71,7 @@
     .contentRight,
     .contentLeft {
       transition: all 0.2s ease;
-      transform: translateY(-180px);
+      transform: translateY(-130px);
       align-items: flex-end;
       z-index: 1;
       position: relative;
@@ -86,7 +86,7 @@
     }
 
     .contentLeft {
-      transform: translateY(-280px);
+      transform: translateY(-220px);
       align-items: flex-start;
     }
   }
@@ -107,7 +107,7 @@
     }
 
     .contentRight {
-      transform: translateY(-160px);
+      transform: translateY(-130px);
     }
   }
 
@@ -127,11 +127,11 @@
     }
 
     .contentRight {
-      transform: translateY(-140px);
+      transform: translateY(-110px);
     }
 
     .contentLeft {
-      transform: translateY(-240px);
+      transform: translateY(-190px);
     }
   }
 
@@ -151,7 +151,7 @@
     }
 
     .contentRight {
-      transform: translateY(-120px);
+      transform: translateY(-100px);
     }
 
     .contentLeft {

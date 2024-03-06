@@ -78,7 +78,7 @@ export const DropdownCard = ({
           </svg>
         )}
 
-        <h4>{title}</h4>
+        <h4 className="font-italic">{title}</h4>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"

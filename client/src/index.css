@@ -42,6 +42,7 @@
   --ds4sscc-color-tertiary-1: #f9fae3;
 
   --ds4sscc-color-black-opacity: #00000085;
+  --ds4sscc-color-primary-opacity: #53c9f424;
 
   --ds4sscc-max-width-content: 1200px;
   --ds4sscc-padding-inline-content: 2rem;
@@ -85,6 +86,10 @@ h5 {
 
 .font-light {
   font-family: noyhslimr-light, sans-serif;
+}
+
+.font-italic {
+  font-family: noyhslimr-italic, sans-serif;
 }
 
 p {
@@ -159,4 +164,8 @@ figure figcaption {
   text-align: center;
   font-size: small;
   font-style: italic;
+}
+
+caption {
+  font-family: noyhslimr-italic, sans-serif;
 }
