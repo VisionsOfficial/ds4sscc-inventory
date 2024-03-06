@@ -1,4 +1,24 @@
 @font-face {
+  font-family: noyhslimr-regular;
+  src: url("./assets/fonts/noyhSlimRounded/noyhslimr-regular.otf");
+}
+@font-face {
+  font-family: noyhslimr-bold;
+  src: url("./assets/fonts/noyhSlimRounded/noyhslimr-bold.otf");
+}
+@font-face {
+  font-family: noyhslimr-medium;
+  src: url("./assets/fonts/noyhSlimRounded/noyhslimr-medium.otf");
+}
+@font-face {
+  font-family: noyhslimr-light;
+  src: url("./assets/fonts/noyhSlimRounded/noyhslimr-light.otf");
+}
+@font-face {
+  font-family: noyhslimr-italic;
+  src: url("./assets/fonts/noyhSlimRounded/noyhslimr-italic.otf");
+}
+/* @font-face {
   font-family: WorkSansRegular;
   src: url("./assets/fonts/WorkSans-Regular.ttf");
 }
@@ -9,13 +29,30 @@
 @font-face {
   font-family: WorkSansMedium;
   src: url("./assets/fonts/WorkSans-Medium.ttf");
+} */
+
+:root {
+  --ds4sscc-color-black: #000000;
+  --ds4sscc-color-white: #ffffff;
+  --ds4sscc-color-primary: #53c9f4;
+  --ds4sscc-color-primary-1: #8adaf8;
+  --ds4sscc-color-secondary: #5dbd7b;
+  --ds4sscc-color-secondary-1: #e8f6ed;
+  --ds4sscc-color-tertiary: #e1e671;
+  --ds4sscc-color-tertiary-1: #f9fae3;
+
+  --ds4sscc-color-black-opacity: #00000085;
+
+  --ds4sscc-max-width-content: 1200px;
+  --ds4sscc-padding-inline-content: 2rem;
+  --ds4sscc-padding-block-content: 2rem;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: WorkSansRegular, sans-serif;
+  font-family: noyhslimr-regular, sans-serif;
 }
 
 html {
@@ -23,8 +60,35 @@ html {
   color: #17214e;
 }
 
+h1,
+h2 {
+  font-family: noyhslimr-bold, sans-serif;
+  font-weight: bold;
+}
+
+h3,
+h4,
+h5 {
+  font-family: noyhslimr-medium, sans-serif;
+  font-weight: normal;
+}
+
+.font-bold {
+  font-family: noyhslimr-bold, sans-serif;
+  font-weight: bold;
+}
+
+.font-medium {
+  font-family: noyhslimr-medium, sans-serif;
+  font-weight: normal;
+}
+
+.font-light {
+  font-family: noyhslimr-light, sans-serif;
+}
+
 p {
-  font-size: 16px;
+  font-size: 1.125rem;
 }
 
 body {
@@ -36,14 +100,15 @@ button {
   margin: 5px;
   font-size: 18px;
   cursor: pointer;
-  background: #17214e;
+  background: var(--ds4sscc-color-primary);
   border: none;
   color: white;
   transition: all 0.1s ease;
+  border-radius: 4px;
 }
 
 button:hover {
-  background: #5fa342;
+  background: var(--ds4sscc-color-primary-1);
 }
 
 .btn-secondary {
@@ -90,6 +155,7 @@ a {
 }
 
 figure figcaption {
+  font-family: noyhslimr-italic, sans-serif;
   text-align: center;
   font-size: small;
   font-style: italic;

@@ -1,12 +1,12 @@
-@use '../../../shared/styles/colors';
+@use "../../../shared/styles/colors";
 
 .Copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    background: colors.$dark-primary;
-    color: colors.$secondary;
-    text-align: center;
-    font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background: colors.$black;
+  color: colors.$white;
+  text-align: center;
+  font-size: 18px;
 }

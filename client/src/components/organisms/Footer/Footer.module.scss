@@ -1,11 +1,34 @@
 @use "../../../shared/styles/index" as *;
 
 .Footer {
-  min-height: 250px;
-  background-color: $secondary;
-  display: flex;
-  color: white;
-  padding: 25px 10%;
+  background-color: $tertiary;
+  color: $black;
+  padding: 3.3vmax 10%;
+
+  .socialMedias {
+    a {
+      width: 24px;
+      height: 24px;
+    }
+
+    svg {
+      fill: $black;
+      transition: all 0.2s ease-in;
+      width: 24px;
+      height: 24px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  img {
+    width: 100px;
+  }
+
+  a {
+    color: $black;
+  }
 
   .left {
     flex: 3;
@@ -47,7 +70,7 @@
   }
 
   @include resolution(tablet, max-width) {
-    flex-direction: column;
+    flex-direction: column !important;
     max-height: 1000px;
 
     .leftHeader {

@@ -1,8 +1,13 @@
 import { PropsWithChildren } from "react";
 import Styles from "./Title.module.scss";
 
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-export const Title = ({ children }: PropsWithChildren<Props>) => {
-	return <h1 className={Styles.title}>{children}</h1>;
+export const Title = ({
+  className = "",
+  children,
+}: PropsWithChildren<Props>) => {
+  return <h1 className={`${Styles.title} ${className}`}>{children}</h1>;
 };

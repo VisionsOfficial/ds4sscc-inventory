@@ -75,6 +75,15 @@ export type UseCaseCollaborator = {
   flag: "be" | "es" | "fi" | "fr" | "it" | "nl" | "pt" | "si" | "se";
 };
 
+export type FlexJustify =
+  | "flex-start"
+  | "center"
+  | "flex-end"
+  | "stretch"
+  | "space-between"
+  | "space-around"
+  | "space-evenly";
+
 export type UseCase = {
   name: string;
   collaborators: UseCaseCollaborator[];
