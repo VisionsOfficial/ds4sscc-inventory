@@ -1,7 +1,7 @@
 @use "../../../../shared/styles/index" as *;
 
 .HeaderPage {
-  background-color: $primary;
+  background-color: $tertiary;
   padding: $padding-content;
   padding-bottom: 100px;
   @include flexColumn();
@@ -20,7 +20,7 @@
 
     p {
       text-align: justify;
-      color: $white;
+      color: $black;
 
       span {
         font-weight: bold;
@@ -42,7 +42,7 @@
     }
 
     li {
-      color: $white;
+      color: $black;
     }
 
     .btnDl {

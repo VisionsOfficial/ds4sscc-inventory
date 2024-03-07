@@ -1,8 +1,12 @@
-$primary: #17214e;
-$secondary: #7ed958;
-$card-bg: #e6f7de;
+$primary: var(--ds4sscc-color-primary);
+$primary-1: var(--ds4sscc-color-primary-1);
+$secondary: var(--ds4sscc-color-secondary);
+$tertiary: var(--ds4sscc-color-tertiary);
+$black: var(--ds4sscc-color-black);
+$black-opacity: var(--ds4sscc-color-black-opacity);
+$white: var(--ds4sscc-color-white);
+$card-bg: var(--ds4sscc-color-secondary-1);
 $gray: #f4f4f4;
-$white: #ffffff;
 
 $dark-primary: #17214e;
 $title: #e6f7de;

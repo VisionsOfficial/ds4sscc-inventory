@@ -25,7 +25,7 @@
           .checkbox {
             width: 25px;
             height: 25px;
-            border: 2px solid $secondary;
+            border: 2px solid $tertiary;
             position: relative;
             border-radius: 5px;
 
@@ -43,7 +43,7 @@
           }
 
           p {
-            color: $secondary;
+            color: $white;
             font-weight: bold;
             font-size: 1.3rem;
             text-align: center;
@@ -65,7 +65,7 @@
 
       .card {
         background-color: $secondary;
-        color: $primary;
+        color: $black;
         @include flexColumn(center, space-between);
         gap: $medium;
 
@@ -83,10 +83,13 @@
           .listContainer {
             @include flexRow(flex-start, flex-start);
             width: 100%;
+            svg {
+              background-color: $black;
+            }
           }
 
           a {
-            color: $primary;
+            color: $black;
           }
         }
       }

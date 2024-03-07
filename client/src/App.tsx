@@ -8,7 +8,6 @@ import { AdminPortal } from "./pages/AdminPortal/AdminPortal";
 import { AdminReviewPage } from "./pages/AdminReviewPage/AdminReviewPage";
 import { BuildingBlockPage } from "./pages/BuildingBlockPage/BuildingBlockPage";
 import { EditResourcePage } from "./pages/EditResourcePage/EditResourcePage";
-import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { ResourceDescriptionPage } from "./pages/ResourceDescriptionPage/ResourceDescriptionPage";
 import { SuggestionSubmitPage } from "./pages/SuggestionSubmitPage/SuggestionSubmitPage";
 import { HomePage } from "./pages/HomePage/HomePage";
