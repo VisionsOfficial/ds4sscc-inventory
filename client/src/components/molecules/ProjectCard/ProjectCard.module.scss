@@ -18,6 +18,5 @@
 
   p {
     @include lineClampText(8);
-    max-height: 155px;
   }
 }
