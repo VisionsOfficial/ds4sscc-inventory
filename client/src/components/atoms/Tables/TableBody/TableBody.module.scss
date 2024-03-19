@@ -36,7 +36,7 @@
 
       &:is(:not(:last-child)) {
         span {
-          border-bottom: 1px solid $primary;
+          border-bottom: 1px solid $black;
         }
       }
     }
@@ -133,7 +133,7 @@
       span {
         &:first-child {
           background-color: $secondary;
-          color: $primary;
+          color: $black;
         }
       }
     }
