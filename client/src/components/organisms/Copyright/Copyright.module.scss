@@ -1,12 +1,16 @@
-@use "../../../shared/styles/colors";
+@use "../../../shared/styles/colors" as *;
 
 .Copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-  background: colors.$black;
-  color: colors.$white;
   text-align: center;
   font-size: 18px;
+  color: $white;
+
+  a {
+    color: $black;
+    font-weight: bold;
+    font-size: 20px;
+  }
 }

@@ -8,8 +8,12 @@ export const Nav = () => {
       <ul>
         <li>
           <Link to="/">Home</Link>
-          <a href="https://www.ds4sscc.eu/">about</a>
-          <a href="https://www.ds4sscc.eu/contact">Contact</a>
+          <Link to="https://www.ds4sscc.eu/about/the-project" target="_blank">
+            About
+          </Link>
+          <Link to="https://www.ds4sscc.eu/contact" target="_blank">
+            Contact
+          </Link>
         </li>
       </ul>
       <BurgerMenu />

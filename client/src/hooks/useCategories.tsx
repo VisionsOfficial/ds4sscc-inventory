@@ -213,7 +213,7 @@ export const useCategories = ({ category }: Props) => {
               alt="Icon developing multi-stakeholder"
             />
           ),
-          title: "Developing a mutli-stakeholder data cooperation for DS4SSCC",
+          title: "Developing a multi-stakeholder data cooperation for DS4SSCC",
           link: APP_LINKS.multiStakeholderGovernance.developing,
         }));
         break;
