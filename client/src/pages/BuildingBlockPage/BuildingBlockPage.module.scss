@@ -2,7 +2,7 @@
 
 .BuildingBlockPage {
   section:nth-child(1) {
-    background-color: $dark-primary;
+    background-color: $tertiary;
     padding: $padding-content;
     // max-height: 500px;
     // height: 400px;
@@ -24,11 +24,11 @@
       }
 
       h1 {
-        color: white;
+        color: $secondary;
       }
 
       p {
-        color: white;
+        color: $secondary;
       }
 
       @include resolution(x-tablet, max-width) {
