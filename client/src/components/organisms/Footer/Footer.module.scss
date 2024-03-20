@@ -1,11 +1,43 @@
 @use "../../../shared/styles/index" as *;
 
-.Footer {
+.Footer,
+.FooterDescription {
   background-color: $tertiary;
   color: $black;
-  padding: 3.3vmax 10%;
+  padding: 2rem 10%;
+
+  .socialMediasContainer {
+    width: 100%;
+
+    img {
+      width: 160px;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      gap: $small;
+
+      li {
+        color: $black;
+        font-size: 20px;
+
+        a {
+          text-decoration-thickness: 1px;
+          text-underline-offset: 0.2rem;
+        }
+      }
+    }
+  }
 
   .socialMedias {
+    align-self: center;
     a {
       width: 24px;
       height: 24px;
@@ -14,8 +46,8 @@
     svg {
       fill: $black;
       transition: all 0.2s ease-in;
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       &:hover {
         opacity: 0.8;
       }
@@ -73,6 +105,18 @@
     flex-direction: column !important;
     max-height: 1000px;
 
+    .socialMediasContainer {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: $large;
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: $small;
+      }
+    }
+
     .leftHeader {
       flex-direction: column;
     }
@@ -91,5 +135,13 @@
         }
       }
     }
+  }
+}
+
+.FooterDescription {
+  background-color: $secondary;
+
+  p {
+    color: $white;
   }
 }
