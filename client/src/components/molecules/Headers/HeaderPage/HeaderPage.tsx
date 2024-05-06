@@ -156,7 +156,14 @@ export const HeaderPage = ({
             cities and communities domain, now the corresponding Reference
             Architecture which explains how to use those BBs in a coherent and
             consistent manner to develop the functionality which is expected to
-            be provided by a data space.
+            be provided by a data space.{" "}
+            <a
+              href="https://static1.squarespace.com/static/63718ba2d90d0263d7fc1857/t/651ec20acfcf626ce73d97df/1696514592952/DS4SSCC_D3.2_Architecture+Model.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow this link for accessing the full report
+            </a>
           </p>
         );
 
@@ -208,7 +215,14 @@ export const HeaderPage = ({
             various stakeholders and experts in providing digital solutions to
             cities, data spaces implementers, local governments and data
             management providers. The Catalogue is open for contributions in any
-            of the building blocks.
+            of the building blocks.{" "}
+            <a
+              href="https://drive.google.com/file/d/174_g8dAM3yxRiyTFUSvxvE4zEgYiAlaz/view"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow this link for accessing the full report
+            </a>
           </p>
         );
 
