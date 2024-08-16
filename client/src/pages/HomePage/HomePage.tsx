@@ -3,6 +3,7 @@ import Styles from "./HomePage.module.scss";
 import { Title } from "../../components/atoms/Title/Title";
 import { CategoryCard } from "../../components/molecules/Cards/CategoryCard/CategoryCard";
 import { DiscoverCategory } from "../../types";
+import { Link } from "react-router-dom";
 
 type HomePageProps = {};
 
@@ -36,6 +37,11 @@ export const HomePage = ({}: PropsWithChildren<HomePageProps>) => {
           <CategoryCard key={category + index} category={category} />
         ))}
       </section>
+
+      <p className={Styles.link}>
+        Please access a complete overview of reports by{" "}
+        <Link to={"https://www.ds4sscc.eu/reports"}>visiting this page</Link>.
+      </p>
     </main>
   );
 };
