@@ -48,6 +48,17 @@
     }
   }
 
+  .dataSpaceConcept {
+    background-color: $white;
+    @include flexColumn();
+    gap: $medium;
+    padding: 2.5% 10%;
+    min-height: 400px;
+    img {
+      max-width: 1200px;
+    }
+  }
+
   .link {
     padding: 0 10%;
     padding-bottom: 2rem;

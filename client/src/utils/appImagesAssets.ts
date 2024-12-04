@@ -68,6 +68,7 @@ import typicalDataPlatforms from "../assets/imgs/typical_data_platforms.png";
 import evolveArchitecture from "../assets/imgs/evolve_architecture.png";
 import dsscBBTaxonomy from "../assets/imgs/dssc_bb_taxonomy.png";
 import schemaRecommandedAction from "../assets/imgs/schema_recommended_action.png";
+import dataSpaceConcept from "../assets/imgs/svgs/Sketch_Data_Space_Concept.svg";
 
 // LOGOS
 import dataSpacesSupportCentre from "../assets/imgs/logos/data_space_support_centre.png";
@@ -167,6 +168,7 @@ export const APP_IMAGES_ASSETS = {
     evolveArchitecture,
     dsscBBTaxonomy,
     schemaRecommandedAction,
+    dataSpaceConcept,
   },
   useCase: {
     useCaseLxData,

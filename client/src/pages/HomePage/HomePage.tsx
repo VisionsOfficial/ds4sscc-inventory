@@ -4,6 +4,7 @@ import { Title } from "../../components/atoms/Title/Title";
 import { CategoryCard } from "../../components/molecules/Cards/CategoryCard/CategoryCard";
 import { DiscoverCategory } from "../../types";
 import { Link } from "react-router-dom";
+import { APP_IMAGES_ASSETS } from "../../utils/appImagesAssets";
 
 type HomePageProps = {};
 
@@ -36,6 +37,13 @@ export const HomePage = ({}: PropsWithChildren<HomePageProps>) => {
         {setCategoryCard.map((category, index) => (
           <CategoryCard key={category + index} category={category} />
         ))}
+      </section>
+
+      <section className={Styles.dataSpaceConcept}>
+        <img
+          src={APP_IMAGES_ASSETS.image.dataSpaceConcept}
+          alt="Icon multi-stakeholder governance scheme"
+        />
       </section>
 
       <p className={Styles.link}>
