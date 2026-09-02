@@ -17,7 +17,7 @@
 	},
 	"keywords": [],
 	"author": "",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
 		"validator": "^13.7.0",
 		"cors": "^2.8.5",
